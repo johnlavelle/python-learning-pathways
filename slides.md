@@ -90,71 +90,37 @@ For interactive code development. Not suitable for large code bases.
 
 ---
 
-https://www.pythoncheatsheet.org/cheatsheet
+https://www.pythoncheatsheet.org/
 
 ---
 
-## Learn the basic syntax: Kaggle
+## Key Python Libraries for Scientific Software: Numpy
 
+# NumPy: The Foundation of Scientific Computing in Python
 
-![kaggle1.png](images/kaggle1.png)
+## What is NumPy?
+NumPy (Numerical Python) is a fundamental package for scientific computing in Python that provides:
+- Fast, efficient multi-dimensional array objects
+- **Performance:** 10-100x faster than Python lists
 
-Kaggle offers course on Python...
+## Key Features
+- N-dimensional arrays (ndarray)
+- Broadcasting functions
+- Linear algebra operations
+- Fourier transforms
+- 
+## Simple Example
+```python
+import numpy as np
 
----
+# Create array
+arr = np.array([1, 2, 3, 4, 5])
 
-## Learn the basic syntax: tutorial
-
-![kaggle2.png](images/kaggle2.png)
-
-Kaggle offers course on Python...
-
----
-
-## Key Python Libraries for Scientific Software
-### Domain-Specific Libraries
-
-* **[Cartopy](https://scitools.org.uk/cartopy/docs/latest/getting_started/index.html)** - Geospatial data processing
-* **[scikit-learn](https://scikit-learn.org/stable/index.html)** - Machine learning
-* **[PyTorch](https://pytorch.org/)** - Deep learning
-
-### Scientific Computing
-* **Dask** - Parallel computing
-* **xarray / zarr** 
-* **Numba** - JIT compiler for accelerating code
-* **JAX** - High-performance numerical computing
-
----
-
-![book_fluent_python.jpeg](images/book_fluent_python.jpeg)
-
----
-
-## Use a LLM: Convert from Matlab to Python
-
-![llm_matlab_to_python.png](images/llm_matlab_to_python.png)
-An example using Claude
-
----
-
-## Clean Code Principles
-### Pythonic Practices
-
-* **PEP 8** - Python's style guide
-* **Descriptive naming** - Variables and functions should be self-explanatory
-* **List comprehensions** over explicit loops when appropriate
-* **Context managers** for resource handling (with statements)
-* **Type hints** for improved readability and IDE support
-* **Error handling** - Explicit exception handling with appropriate scope
-
----
-
-# Ask a LLM
-
-## Is this *clean code*?
-
-Give your code to a LLM (Large Language Model). 
-It will evaluate the code and show you how to improve it.
+# Perform operations
+print(arr * 2)          # [2 4 6 8 10]
+print(np.sum(arr))      # 15
+print(np.mean(arr))     # 3.0
+```
 
 ---
 
@@ -281,4 +247,147 @@ Would you like me to explain any particular aspect of the code in more detail?
 
 ---
 
+*NumPy is the foundation for data analysis and scientific computing in Python ecosystems like pandas, SciPy, matplotlib, and scikit-learn.*
+
+## Key Python Libraries for Scientific Software:Domain-Specific Libraries
+
+* **[Cartopy](https://scitools.org.uk/cartopy/docs/latest/getting_started/index.html)** - Geospatial data processing
+* **[scikit-learn](https://scikit-learn.org/stable/index.html)** - Machine learning
+* **[PyTorch](https://pytorch.org/)** - Deep learning
+
+### Scientific Computing
+* **Dask** - Parallel computing
+* **xarray / zarr** 
+* **Numba** - JIT compiler for accelerating code
+* **JAX** - High-performance numerical computing
+
+---
+
+## Use a LLM: Convert from Matlab to Python
+
+![llm_matlab_to_python.png](images/llm_matlab_to_python.png)
+An example using Claude
+
+---
+
+## Clean Code Principles
+
+1. Readable - clear and intuitive
+2. Simple - does one thing well
+3. Consistent - follows uniform patterns
+4. DRY - avoids duplication
+5. Self-explanatory - requires minimal comments
+6. Modular - easily testable and maintainable
+7. Well-structured - follows logical organization
+8. Focused on clarity over cleverness
+
+---
+
+# Ask an LLM
+
+## Is this *clean code*?
+
+Give your code to a LLM (Large Language Model). 
+It will evaluate the code and show you how to improve it.
+
+---
+
+
+## Best Practices in Scientific Software Development
+### Quality & Reproducibility
+
+* **Testing**:
+  * pytest for unit and integration tests
+  * Test early, test often
+  * Continuous Integration (GitHub Actions, GitLab CI)
+
+* **Environment Management**:
+  * Virtual environments (venv, conda)
+  * Requirements tracking (requirements.txt, environment.yml)
+  * Container solutions (Docker)
+
+* **Code Review**:
+  * Peer review before merging
+  * Automated quality checks
+
+---
+
+Advanced Python
+
+---
+
+![book_fluent_python.jpeg](images/book_fluent_python.jpeg)
+
+---
+
+ *"The Pragmatic Programmer"* by David Thomas & Andrew Hunt 
+
+---
+
+```mermaid
+flowchart TD
+    Start[Start Here] --> BasicSyntax
+    
+    subgraph Fundamentals
+        BasicSyntax[Basic Python Syntax]
+        BasicSyntax --> OfficialTutorial[Official Python Tutorial]
+        BasicSyntax --> KaggleCourses[Kaggle Python Courses]
+        BasicSyntax --> CheatSheets[Python Cheatsheets]
+    end
+    
+    Fundamentals --> DevEnvironments
+    
+    subgraph DevEnvironments[Development Environments]
+        VSCode[Visual Studio Code]
+        PyCharm[PyCharm]
+        Spyder[Spyder - Matlab-like]
+        JupyterLab[Jupyter Lab - Interactive]
+    end
+    
+    DevEnvironments --> ScientificLibraries
+    
+    subgraph ScientificLibraries[Scientific Libraries]
+        CoreLibs[Core Libraries<br>NumPy, Pandas, Matplotlib]
+        DomainSpecific[Domain Specific<br>Cartopy, scikit-learn, PyTorch]
+        HPComputing[High Performance<br>Dask, xarray, Numba, JAX]
+    end
+    
+    ScientificLibraries --> CleanCode
+    
+    subgraph CleanCode[Clean Code Practices]
+        PEP8[PEP 8 Style Guide]
+        Naming[Descriptive Naming]
+        ComprehensionPatterns[List Comprehensions]
+        TypeHints[Type Hints]
+        ErrorHandling[Error Handling]
+    end
+    
+    CleanCode --> LLMHelp
+    
+    subgraph LLMHelp[LLM Assistance]
+        CodeConversion[Code Conversion<br>Matlab to Python]
+        CodeReview[Code Review<br>Ask if code is clean]
+        SolutionGeneration[Generate Example Solutions]
+    end
+    
+    LLMHelp --> AdvancedPython[Advanced Python<br>Fluent Python Book]
+```
+
+
+---
+
+## Learn the basic syntax: Kaggle
+
+
+![kaggle1.png](images/kaggle1.png)
+
+Kaggle offers course on Python...
+
+---
+
+## Learn the basic syntax: tutorial
+
+![kaggle2.png](images/kaggle2.png)
+
+Kaggle offers course on Python...
 
