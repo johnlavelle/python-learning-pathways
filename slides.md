@@ -65,16 +65,7 @@ For interactive code development. Not suitable for large code bases.
 
 ## Learn the basic syntax: tutorial
 
- The official Python tutorial
-
----
-
-https://docs.python-guide.org/intro/learning/#beginner
-
-
----
-
-https://docs.python-guide.org/intro/learning/#beginner
+[The official Python tutorial](https://docs.python.org/3/tutorial/index.html)
 
 
 ---
@@ -100,11 +91,6 @@ Kaggle offers course on Python...
 
 ---
 
-![book_fluent_python.jpeg](images/book_fluent_python.jpeg)
-
-
----
-
 ## Key Python Libraries for Scientific Software
 ### Domain-Specific Libraries
 
@@ -114,9 +100,160 @@ Kaggle offers course on Python...
 
 ### Scientific Computing
 * **Dask** - Parallel computing
-* **xarray / zarr**  - 
+* **xarray / zarr** 
 * **Numba** - JIT compiler for accelerating code
 * **JAX** - High-performance numerical computing
 
 ---
 
+![book_fluent_python.jpeg](images/book_fluent_python.jpeg)
+
+---
+
+## Use a LLM: Convert from Matlab to Python
+
+![llm_matlab_to_python.png](images/llm_matlab_to_python.png)
+An example using Claude
+
+---
+
+## Clean Code Principles
+### Pythonic Practices
+
+* **PEP 8** - Python's style guide
+* **Descriptive naming** - Variables and functions should be self-explanatory
+* **List comprehensions** over explicit loops when appropriate
+* **Context managers** for resource handling (with statements)
+* **Type hints** for improved readability and IDE support
+* **Error handling** - Explicit exception handling with appropriate scope
+
+---
+
+# Ask a LLM
+
+## Is this *clean code*?
+
+---
+
+<!-- Note to LLM: Please embed this text in separate page the window -->
+
+Prompt: I have a time series of 3D air pressure measurements. Please demonstrate how I can effeciently anlyse the data using xarray.
+
+Response:
+
+I'd be happy to demonstrate how to efficiently analyze 3D air pressure measurements using xarray, which is an excellent library for working with labeled multi-dimensional arrays, particularly for atmospheric data.
+
+Let me create a comprehensive example showing how to work with your 3D air pressure data using xarray:
+
+# Analyzing 3D Air Pressure Data with xarray
+
+Xarray is an excellent tool for working with multi-dimensional labeled arrays, particularly atmospheric data like your 3D air pressure measurements. Here's how you can efficiently analyze such data:
+
+## Key Benefits of Using xarray
+
+1. **Labeled dimensions** - xarray uses named dimensions and coordinates, making data access intuitive
+2. **NetCDF compatibility** - seamless reading/writing of NetCDF files (standard format for climate data)
+3. **Built-in operations** - powerful aggregation, selection, and computation methods
+4. **Integration with other tools** - works well with pandas, numpy, dask, and visualization libraries
+
+## Typical Workflow
+
+### 1. Data Loading and Inspection
+
+```python
+import xarray as xr
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load data from a NetCDF file
+ds = xr.open_dataset('pressure_data.nc')
+
+# Examine dataset structure
+print(ds)
+print(ds.info())
+
+# Check for missing values
+print(ds.isnull().sum())
+```
+
+### 2. Selection and Subsetting
+
+```python
+# Select a specific time
+time_slice = ds.sel(time='2023-01-10')
+
+# Select a pressure level
+level_500 = ds.sel(level=500)  # 500 hPa
+
+# Select a geographic region
+region = ds.sel(lat=slice(30, 60), lon=slice(280, 360))
+```
+
+### 3. Aggregation and Analysis
+
+```python
+# Temporal means
+monthly_mean = ds.pressure.resample(time='M').mean()
+
+# Spatial means
+zonal_mean = ds.pressure.mean(dim='lon')  # Average along longitude
+meridional_mean = ds.pressure.mean(dim='lat')  # Average along latitude
+
+# Vertical profile
+vertical_profile = ds.pressure.mean(dim=['lat', 'lon'])
+
+# Calculate anomalies
+climatology = ds.pressure.mean(dim='time')
+anomalies = ds.pressure - climatology
+```
+
+### 4. Visualization
+
+```python
+# Plot a horizontal slice
+level_500.pressure.isel(time=0).plot(
+    figsize=(12, 8),
+    cmap='viridis'
+)
+
+# Plot a vertical cross-section
+ds.pressure.isel(time=0).sel(lat=0).plot(
+    y='level',
+    figsize=(12, 6)
+)
+
+# Create a time series for a point
+ds.pressure.sel(lat=45, lon=280, level=500, method='nearest').plot()
+```
+
+### 5. Advanced Analysis
+
+```python
+# Calculating gradients
+pressure_gradient_x = ds.pressure.differentiate(coord='lon')
+pressure_gradient_y = ds.pressure.differentiate(coord='lat')
+
+# Coarsen data (reduce resolution)
+coarse_data = ds.coarsen(lat=2, lon=2).mean()
+
+# Apply computation across multiple dimensions
+result = xr.apply_ufunc(
+    your_function,
+    ds.pressure,
+    input_core_dims=[['time', 'level', 'lat', 'lon']],
+    output_core_dims=[['lat', 'lon']],
+    vectorize=True
+)
+```
+
+The artifact I've provided includes a comprehensive example that:
+1. Creates a synthetic dataset (or shows how to load a real one)
+2. Performs basic data exploration
+3. Demonstrates various selection, aggregation, and analysis techniques
+4. Creates multiple visualizations (horizontal slices, vertical cross-sections, time series)
+5. Shows advanced analysis methods (EOF analysis, trend analysis, seasonal patterns)
+6. Demonstrates data export options
+
+Would you like me to explain any particular aspect of the code in more detail?
+
+---

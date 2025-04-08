@@ -1,66 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Pathways to Learn Python for Scientific Software Development</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/white.min.css">
   <style>
     .reveal .slides {
       text-align: left;
     }
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
       text-transform: none;
-      color: #333;
+      margin-bottom: 20px;
     }
-    .reveal h1 {
-      font-size: 2.2em;
-    }
-    .reveal h2 {
-      font-size: 1.8em;
-    }
-    .reveal h3 {
-      font-size: 1.4em;
-    }
-    .reveal ul {
+    .reveal ul, .reveal ol {
       display: block;
-    }
-    .reveal li {
-      margin: 0.5em 0;
-    }
-    .reveal strong {
-      color: #0066cc;
-    }
-    .reveal em {
-      color: #cc6600;
-      font-style: italic;
+      margin-left: 2em;
     }
     .reveal img {
       max-height: 500px;
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
-    .website-embed {
-      width: 90%;
-      height: 450px;
-      margin: 0 auto;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .reveal code {
+      font-family: monospace;
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
     }
-    .columns {
+    .reveal pre {
+      width: 100%;
+      margin: 20px auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    .reveal pre code {
+      padding: 10px;
+      font-size: 0.8em;
+      line-height: 1.2;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .placeholder-img {
+      width: 400px;
+      height: 300px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+    .two-column {
       display: flex;
       justify-content: space-between;
     }
     .column {
-      flex: 1;
-      padding: 0 10px;
-    }
-    .book-cover {
-      max-height: 400px;
-      display: block;
-      margin: 0 auto;
+      width: 48%;
     }
   </style>
 </head>
@@ -71,163 +68,271 @@
       <section>
         <h1>Pathways to Learn Python for Scientific Software Development</h1>
         <h3>A Guide for Researchers at DMI</h3>
-        <p><strong>Presenter:</strong> [Your Name/Department]</p>
-        <p><strong>Date:</strong> April 7, 2025</p>
-        <p><em>Note: This talk outlines practical learning paths, resources, tools, and best practices for researchers at DMI looking to start or improve their skills in scientific software development using Python.</em></p>
+        <p><b>Presenter:</b> [Your Name/Department]</p>
+        <p><b>Date:</b> April 7, 2025</p>
+        <p><i>(Optional: Add DMI Logo)</i></p>
+        <aside class="notes">
+          This talk outlines practical learning paths, resources, tools, and best practices for researchers at DMI looking to start or improve their skills in scientific software development using Python.
+        </aside>
       </section>
 
-      <!-- Python as a dynamic language -->
+      <!-- Dynamic vs Compiled -->
       <section>
-        <h2>Python is a <em>dynamic</em> language</h2>
-        <p>Meaning you can open it in the terminal and use it interactively.</p>
-        <img src="images/open_python_in_terminal.png" alt="python terminal">
+        <p>Python is a <em>dynamic</em> language, meaning you can open it in the terminal and use it interactively.</p>
+        <div class="placeholder-img">
+          <p>python terminal image</p>
+        </div>
         <p>... as opposed to a <em>compiled</em> language like Fortran.</p>
       </section>
 
-      <!-- Development Environments -->
+      <!-- Development Environments Intro -->
       <section>
         <h2>Development Environments</h2>
         <p>You can develop using your favourite text editor, VIM, etc., but there are benefits in using an IDE:</p>
         <ul>
-          <li><strong>Code Completion</strong>: Suggests function names, parameters, and imports as you type</li>
-          <li><strong>Integrated Debugging</strong>: Set breakpoints, inspect variables, and step through code execution</li>
-          <li><strong>Version Control Integration</strong>: Git support built directly into your development environment</li>
-          <li><strong>Virtual Environment Management</strong>: Create and manage Python environments with ease</li>
-          <li><strong>Scientific Tooling</strong>: Built-in support for Jupyter notebooks, data visualization, and scientific libraries</li>
-          <li><strong>Code Inspection</strong>: Automated detection of style issues, errors, and potential bugs</li>
+          <li><b>Code Completion</b>: Suggests function names, parameters, and imports as you type</li>
+          <li><b>Integrated Debugging</b>: Set breakpoints, inspect variables, and step through code execution</li>
+          <li><b>Version Control Integration</b>: Git support built directly into your development environment</li>
+          <li><b>Virtual Environment Management</b>: Create and manage Python environments with ease</li>
+          <li><b>Scientific Tooling</b>: Built-in support for Jupyter notebooks, data visualization, and scientific libraries</li>
+          <li><b>Code Inspection</b>: Automated detection of style issues, errors, and potential bugs</li>
         </ul>
       </section>
 
-      <!-- Visual Studio Code -->
+      <!-- VS Code -->
       <section>
         <h2>Visual Studio Code</h2>
-        <img src="images/vscode.png" alt="VS Code">
-        <p>Very popular, but requires some setup:</p>
-        <iframe class="website-embed" src="https://code.visualstudio.com/docs/languages/python"></iframe>
+        <div class="placeholder-img">
+          <p>VS Code image</p>
+        </div>
+        <p>Very popular, but requires some setup: <a href="https://code.visualstudio.com/docs/languages/python" target="_blank">https://code.visualstudio.com/docs/languages/python</a></p>
       </section>
 
       <!-- Spyder -->
       <section>
         <h2>Spyder</h2>
-        <img src="images/ide_spyder.png" alt="Spyder IDE">
+        <div class="placeholder-img">
+          <p>Spyder IDE image</p>
+        </div>
         <p>Matlab like interface, but more limited.</p>
       </section>
 
       <!-- PyCharm -->
       <section>
         <h2>PyCharm</h2>
-        <img src="images/ide_pycharm.png" alt="PyCharm IDE">
+        <div class="placeholder-img">
+          <p>PyCharm IDE image</p>
+        </div>
         <p>Sophisticated, Python orientated IDE. Requires a subscription.</p>
       </section>
 
       <!-- Jupyter Lab -->
       <section>
         <h2>Jupyter Lab</h2>
-        <img src="images/ide_jupyterlab.png" alt="Jupyter Lab Interface">
+        <div class="placeholder-img">
+          <p>Jupyter Lab Interface image</p>
+        </div>
         <p>For interactive code development. Not suitable for large code bases.</p>
       </section>
 
-      <!-- Learn the basic syntax: Official Tutorial -->
+      <!-- Python Tutorial -->
       <section>
         <h2>Learn the basic syntax: tutorial</h2>
-        <p>The official Python tutorial</p>
-      </section>
-
-      <!-- Python Guide for Beginners -->
-      <section>
-        <h2>Python Guide for Beginners</h2>
-        <iframe class="website-embed" src="https://docs.python-guide.org/intro/learning/#beginner"></iframe>
+        <p><a href="https://docs.python.org/3/tutorial/index.html" target="_blank">The official Python tutorial</a></p>
       </section>
 
       <!-- Python Cheatsheet -->
       <section>
-        <h2>Python Cheatsheet</h2>
-        <iframe class="website-embed" src="https://www.pythoncheatsheet.org/cheatsheet"></iframe>
+        <p><a href="https://www.pythoncheatsheet.org/cheatsheet" target="_blank">https://www.pythoncheatsheet.org/cheatsheet</a></p>
       </section>
 
-      <!-- Learn with Kaggle 1 -->
+      <!-- Kaggle 1 -->
       <section>
         <h2>Learn the basic syntax: Kaggle</h2>
-        <img src="images/kaggle1.png" alt="kaggle1.png">
+        <div class="placeholder-img">
+          <p>Kaggle 1 image</p>
+        </div>
         <p>Kaggle offers course on Python...</p>
       </section>
 
-      <!-- Learn with Kaggle 2 -->
+      <!-- Kaggle 2 -->
       <section>
         <h2>Learn the basic syntax: tutorial</h2>
-        <img src="images/kaggle2.png" alt="kaggle2.png">
-        <p>Kaggle offers course on Python...</p>
-      </section>
-
-      <!-- Books -->
-      <section>
-        <div class="columns">
-          <div class="column">
-            <img src="images/book_fluent_python.jpeg" alt="Fluent Python book cover" class="book-cover">
-          </div>
-          <div class="column">
-            <img src="images/book:_PythonCrashCourse3e_front.jpeg" alt="Python Crash Course book cover" class="book-cover">
-          </div>
+        <div class="placeholder-img">
+          <p>Kaggle 2 image</p>
         </div>
+        <p>Kaggle offers course on Python...</p>
       </section>
 
       <!-- Key Python Libraries -->
       <section>
         <h2>Key Python Libraries for Scientific Software</h2>
-
         <h3>Domain-Specific Libraries</h3>
         <ul>
-          <li><strong>Cartopy</strong> - Geospatial data processing</li>
-          <li><strong>scikit-learn</strong> - Machine learning</li>
-          <li><strong>PyTorch</strong> - Deep learning</li>
+          <li><b><a href="https://scitools.org.uk/cartopy/docs/latest/getting_started/index.html" target="_blank">Cartopy</a></b> - Geospatial data processing</li>
+          <li><b><a href="https://scikit-learn.org/stable/index.html" target="_blank">scikit-learn</a></b> - Machine learning</li>
+          <li><b><a href="https://pytorch.org/" target="_blank">PyTorch</a></b> - Deep learning</li>
         </ul>
-
         <h3>Scientific Computing</h3>
         <ul>
-          <li><strong>Dask</strong> - Parallel computing</li>
-          <li><strong>xarray / zarr</strong> - </li>
-          <li><strong>Numba</strong> - JIT compiler for accelerating code</li>
-          <li><strong>JAX</strong> - High-performance numerical computing</li>
+          <li><b>Dask</b> - Parallel computing</li>
+          <li><b>xarray / zarr</b></li>
+          <li><b>Numba</b> - JIT compiler for accelerating code</li>
+          <li><b>JAX</b> - High-performance numerical computing</li>
         </ul>
       </section>
 
-      <!-- Libraries Showcase -->
+      <!-- Fluent Python Book -->
       <section>
-        <h2>Scientific Libraries</h2>
-        <div class="columns">
-          <div class="column">
-            <h3>Cartopy</h3>
-            <iframe class="website-embed" style="height: 300px;" src="https://scitools.org.uk/cartopy/docs/latest/getting_started/index.html"></iframe>
-          </div>
-          <div class="column">
-            <h3>scikit-learn</h3>
-            <iframe class="website-embed" style="height: 300px;" src="https://scikit-learn.org/stable/index.html"></iframe>
-          </div>
+        <div class="placeholder-img">
+          <p>Fluent Python book image</p>
         </div>
       </section>
 
-      <!-- Deep Learning Library -->
+      <!-- LLM: Convert Matlab to Python -->
       <section>
-        <h2>PyTorch for Deep Learning</h2>
-        <iframe class="website-embed" src="https://pytorch.org/"></iframe>
+        <h2>Use a LLM: Convert from Matlab to Python</h2>
+        <div class="placeholder-img">
+          <p>LLM Matlab to Python conversion image</p>
+        </div>
+        <p>An example using Claude</p>
+      </section>
+
+      <!-- Clean Code Principles -->
+      <section>
+        <h2>Clean Code Principles</h2>
+        <h3>Pythonic Practices</h3>
+        <ul>
+          <li><b>PEP 8</b> - Python's style guide</li>
+          <li><b>Descriptive naming</b> - Variables and functions should be self-explanatory</li>
+          <li><b>List comprehensions</b> over explicit loops when appropriate</li>
+          <li><b>Context managers</b> for resource handling (with statements)</li>
+          <li><b>Type hints</b> for improved readability and IDE support</li>
+          <li><b>Error handling</b> - Explicit exception handling with appropriate scope</li>
+        </ul>
+      </section>
+
+      <!-- Ask a LLM -->
+      <section>
+        <h1>Ask a LLM</h1>
+        <h2>Is this <em>clean code</em>?</h2>
+      </section>
+
+      <!-- LLM Example -->
+      <section>
+        <h1>Ask a LLM</h1>
+        <h2>LLM Response Example</h2>
+        <div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; height: 70vh; overflow-y: auto;">
+          <h3>Prompt: I have a time series of 3D air pressure measurements. Please demonstrate how I can efficiently analyze the data using xarray.</h3>
+
+          <p>I'd be happy to demonstrate how to efficiently analyze 3D air pressure measurements using xarray, which is an excellent library for working with labeled multi-dimensional arrays, particularly for atmospheric data.</p>
+
+          <h2>Analyzing 3D Air Pressure Data with xarray</h2>
+
+          <p>Xarray is an excellent tool for working with multi-dimensional labeled arrays, particularly atmospheric data like your 3D air pressure measurements. Here's how you can efficiently analyze such data:</p>
+
+          <h3>Key Benefits of Using xarray</h3>
+          <ol>
+            <li><b>Labeled dimensions</b> - xarray uses named dimensions and coordinates, making data access intuitive</li>
+            <li><b>NetCDF compatibility</b> - seamless reading/writing of NetCDF files (standard format for climate data)</li>
+            <li><b>Built-in operations</b> - powerful aggregation, selection, and computation methods</li>
+            <li><b>Integration with other tools</b> - works well with pandas, numpy, dask, and visualization libraries</li>
+          </ol>
+
+          <h3>Typical Workflow</h3>
+
+          <h4>1. Data Loading and Inspection</h4>
+          <pre><code class="python">import xarray as xr
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load data from a NetCDF file
+ds = xr.open_dataset('pressure_data.nc')
+
+# Examine dataset structure
+print(ds)
+print(ds.info())
+
+# Check for missing values
+print(ds.isnull().sum())</code></pre>
+
+          <h4>2. Selection and Subsetting</h4>
+          <pre><code class="python"># Select a specific time
+time_slice = ds.sel(time='2023-01-10')
+
+# Select a pressure level
+level_500 = ds.sel(level=500)  # 500 hPa
+
+# Select a geographic region
+region = ds.sel(lat=slice(30, 60), lon=slice(280, 360))</code></pre>
+
+          <h4>3. Aggregation and Analysis</h4>
+          <pre><code class="python"># Temporal means
+monthly_mean = ds.pressure.resample(time='M').mean()
+
+# Spatial means
+zonal_mean = ds.pressure.mean(dim='lon')  # Average along longitude
+meridional_mean = ds.pressure.mean(dim='lat')  # Average along latitude
+
+# Vertical profile
+vertical_profile = ds.pressure.mean(dim=['lat', 'lon'])
+
+# Calculate anomalies
+climatology = ds.pressure.mean(dim='time')
+anomalies = ds.pressure - climatology</code></pre>
+
+          <h4>4. Visualization</h4>
+          <pre><code class="python"># Plot a horizontal slice
+level_500.pressure.isel(time=0).plot(
+    figsize=(12, 8),
+    cmap='viridis'
+)
+
+# Plot a vertical cross-section
+ds.pressure.isel(time=0).sel(lat=0).plot(
+    y='level',
+    figsize=(12, 6)
+)
+
+# Create a time series for a point
+ds.pressure.sel(lat=45, lon=280, level=500, method='nearest').plot()</code></pre>
+
+          <h4>5. Advanced Analysis</h4>
+          <pre><code class="python"># Calculating gradients
+pressure_gradient_x = ds.pressure.differentiate(coord='lon')
+pressure_gradient_y = ds.pressure.differentiate(coord='lat')
+
+# Coarsen data (reduce resolution)
+coarse_data = ds.coarsen(lat=2, lon=2).mean()
+
+# Apply computation across multiple dimensions
+result = xr.apply_ufunc(
+    your_function,
+    ds.pressure,
+    input_core_dims=[['time', 'level', 'lat', 'lon']],
+    output_core_dims=[['lat', 'lon']],
+    vectorize=True
+)</code></pre>
+
+          <p>Would you like me to explain any particular aspect of the code in more detail?</p>
+        </div>
       </section>
 
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
   <script>
     Reveal.initialize({
       controls: true,
       progress: true,
       center: false,
       hash: true,
+      slideNumber: true,
       transition: 'slide',
-      width: '100%',
-      height: '100%',
-      margin: 0.1,
-      minScale: 0.2,
-      maxScale: 1.5
+      plugins: [ RevealHighlight, RevealNotes ]
     });
   </script>
 </body>
