@@ -1,3 +1,23 @@
+<!---
+Note for converting to HTML
+
+Create scrollable chat-like window in the presentation where there is too much text to fit in the slide by:
+
+1. Using a div container with specific CSS properties:
+   ```html
+   <div style="background-color: #f9f9f9; border: 1px solid #ddd; 
+               padding: 20px; height: 70vh; overflow-y: auto;">
+   ```
+
+2. The key properties that enable scrolling are:
+   - `height: 70vh` - Makes it take up 70% of the screen height
+   - `overflow-y: auto` - Creates a scrollbar when content exceeds this height
+
+3. The styling (background color, border, padding) gives it a distinct chat window appearance within the slide.
+
+This approach keeps all LLM content in a single slide while allowing the audience to scroll through it.
+--->
+
 ## Pathways to Learn Python for Scientific Software Development
 
 ### A Guide for Researchers at DMI
@@ -133,6 +153,9 @@ An example using Claude
 
 ## Is this *clean code*?
 
+Give your code to a LLM (Large Language Model). 
+It will evaluate the code and show you how to improve it.
+
 ---
 
 <!-- Note to LLM: Please embed this text in separate page the window -->
@@ -257,3 +280,5 @@ The artifact I've provided includes a comprehensive example that:
 Would you like me to explain any particular aspect of the code in more detail?
 
 ---
+
+
