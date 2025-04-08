@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathways to Learn Python for Scientific Software Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+  <style>
+    .reveal .slides {
+      text-align: left;
+    }
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      text-transform: none;
+      color: #333;
+    }
+    .reveal h1 {
+      font-size: 2.2em;
+    }
+    .reveal h2 {
+      font-size: 1.8em;
+    }
+    .reveal h3 {
+      font-size: 1.4em;
+    }
+    .reveal ul {
+      display: block;
+    }
+    .reveal li {
+      margin: 0.5em 0;
+    }
+    .reveal strong {
+      color: #0066cc;
+    }
+    .reveal em {
+      color: #cc6600;
+      font-style: italic;
+    }
+    .reveal img {
+      max-height: 500px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .website-embed {
+      width: 90%;
+      height: 450px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .columns {
+      display: flex;
+      justify-content: space-between;
+    }
+    .column {
+      flex: 1;
+      padding: 0 10px;
+    }
+    .book-cover {
+      max-height: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section>
+        <h1>Pathways to Learn Python for Scientific Software Development</h1>
+        <h3>A Guide for Researchers at DMI</h3>
+        <p><strong>Presenter:</strong> [Your Name/Department]</p>
+        <p><strong>Date:</strong> April 7, 2025</p>
+        <p><em>Note: This talk outlines practical learning paths, resources, tools, and best practices for researchers at DMI looking to start or improve their skills in scientific software development using Python.</em></p>
+      </section>
+
+      <!-- Python as a dynamic language -->
+      <section>
+        <h2>Python is a <em>dynamic</em> language</h2>
+        <p>Meaning you can open it in the terminal and use it interactively.</p>
+        <img src="images/open_python_in_terminal.png" alt="python terminal">
+        <p>... as opposed to a <em>compiled</em> language like Fortran.</p>
+      </section>
+
+      <!-- Development Environments -->
+      <section>
+        <h2>Development Environments</h2>
+        <p>You can develop using your favourite text editor, VIM, etc., but there are benefits in using an IDE:</p>
+        <ul>
+          <li><strong>Code Completion</strong>: Suggests function names, parameters, and imports as you type</li>
+          <li><strong>Integrated Debugging</strong>: Set breakpoints, inspect variables, and step through code execution</li>
+          <li><strong>Version Control Integration</strong>: Git support built directly into your development environment</li>
+          <li><strong>Virtual Environment Management</strong>: Create and manage Python environments with ease</li>
+          <li><strong>Scientific Tooling</strong>: Built-in support for Jupyter notebooks, data visualization, and scientific libraries</li>
+          <li><strong>Code Inspection</strong>: Automated detection of style issues, errors, and potential bugs</li>
+        </ul>
+      </section>
+
+      <!-- Visual Studio Code -->
+      <section>
+        <h2>Visual Studio Code</h2>
+        <img src="images/vscode.png" alt="VS Code">
+        <p>Very popular, but requires some setup:</p>
+        <iframe class="website-embed" src="https://code.visualstudio.com/docs/languages/python"></iframe>
+      </section>
+
+      <!-- Spyder -->
+      <section>
+        <h2>Spyder</h2>
+        <img src="images/ide_spyder.png" alt="Spyder IDE">
+        <p>Matlab like interface, but more limited.</p>
+      </section>
+
+      <!-- PyCharm -->
+      <section>
+        <h2>PyCharm</h2>
+        <img src="images/ide_pycharm.png" alt="PyCharm IDE">
+        <p>Sophisticated, Python orientated IDE. Requires a subscription.</p>
+      </section>
+
+      <!-- Jupyter Lab -->
+      <section>
+        <h2>Jupyter Lab</h2>
+        <img src="images/ide_jupyterlab.png" alt="Jupyter Lab Interface">
+        <p>For interactive code development. Not suitable for large code bases.</p>
+      </section>
+
+      <!-- Learn the basic syntax: Official Tutorial -->
+      <section>
+        <h2>Learn the basic syntax: tutorial</h2>
+        <p>The official Python tutorial</p>
+      </section>
+
+      <!-- Python Guide for Beginners -->
+      <section>
+        <h2>Python Guide for Beginners</h2>
+        <iframe class="website-embed" src="https://docs.python-guide.org/intro/learning/#beginner"></iframe>
+      </section>
+
+      <!-- Python Cheatsheet -->
+      <section>
+        <h2>Python Cheatsheet</h2>
+        <iframe class="website-embed" src="https://www.pythoncheatsheet.org/cheatsheet"></iframe>
+      </section>
+
+      <!-- Learn with Kaggle 1 -->
+      <section>
+        <h2>Learn the basic syntax: Kaggle</h2>
+        <img src="images/kaggle1.png" alt="kaggle1.png">
+        <p>Kaggle offers course on Python...</p>
+      </section>
+
+      <!-- Learn with Kaggle 2 -->
+      <section>
+        <h2>Learn the basic syntax: tutorial</h2>
+        <img src="images/kaggle2.png" alt="kaggle2.png">
+        <p>Kaggle offers course on Python...</p>
+      </section>
+
+      <!-- Books -->
+      <section>
+        <div class="columns">
+          <div class="column">
+            <img src="images/book_fluent_python.jpeg" alt="Fluent Python book cover" class="book-cover">
+          </div>
+          <div class="column">
+            <img src="images/book:_PythonCrashCourse3e_front.jpeg" alt="Python Crash Course book cover" class="book-cover">
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Python Libraries -->
+      <section>
+        <h2>Key Python Libraries for Scientific Software</h2>
+
+        <h3>Domain-Specific Libraries</h3>
+        <ul>
+          <li><strong>Cartopy</strong> - Geospatial data processing</li>
+          <li><strong>scikit-learn</strong> - Machine learning</li>
+          <li><strong>PyTorch</strong> - Deep learning</li>
+        </ul>
+
+        <h3>Scientific Computing</h3>
+        <ul>
+          <li><strong>Dask</strong> - Parallel computing</li>
+          <li><strong>xarray / zarr</strong> - </li>
+          <li><strong>Numba</strong> - JIT compiler for accelerating code</li>
+          <li><strong>JAX</strong> - High-performance numerical computing</li>
+        </ul>
+      </section>
+
+      <!-- Libraries Showcase -->
+      <section>
+        <h2>Scientific Libraries</h2>
+        <div class="columns">
+          <div class="column">
+            <h3>Cartopy</h3>
+            <iframe class="website-embed" style="height: 300px;" src="https://scitools.org.uk/cartopy/docs/latest/getting_started/index.html"></iframe>
+          </div>
+          <div class="column">
+            <h3>scikit-learn</h3>
+            <iframe class="website-embed" style="height: 300px;" src="https://scikit-learn.org/stable/index.html"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deep Learning Library -->
+      <section>
+        <h2>PyTorch for Deep Learning</h2>
+        <iframe class="website-embed" src="https://pytorch.org/"></iframe>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: false,
+      hash: true,
+      transition: 'slide',
+      width: '100%',
+      height: '100%',
+      margin: 0.1,
+      minScale: 0.2,
+      maxScale: 1.5
+    });
+  </script>
+</body>
+</html>
