@@ -1,393 +1,610 @@
-<!---
-Note for converting to HTML
+---
+theme: default
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+highlighter: shiki
+lineNumbers: false
+info: |
+  ## Pathways to Learn Python for Scientific Software Development
+  A comprehensive learning guide for DMI researchers
+drawings:
+  persist: false
+transition: slide-left
+title: Python Learning Pathways
+---
 
-Create scrollable chat-like window in the presentation where there is too much text to fit in the slide by:
+# Pathways to Learn Python for Scientific Software Development
 
-1. Using a div container with specific CSS properties:
-   ```html
-   <div style="background-color: #f9f9f9; border: 1px solid #ddd; 
-               padding: 20px; height: 70vh; overflow-y: auto;">
-   ```
+A Comprehensive Learning Guide for DMI Researchers
 
-2. The key properties that enable scrolling are:
-   - `height: 70vh` - Makes it take up 70% of the screen height
-   - `overflow-y: auto` - Creates a scrollbar when content exceeds this height
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Press Space for next page <carbon:arrow-right class="inline"/>
+  </span>
+</div>
 
-3. The styling (background color, border, padding) gives it a distinct chat window appearance within the slide.
+---
+transition: fade-out
+---
 
-This approach keeps all LLM content in a single slide while allowing the audience to scroll through it.
---->
+# Why This Learning Path?
 
-## Pathways to Learn Python for Scientific Software Development
+<div class="grid grid-cols-2 gap-4">
+<div>
 
-### A Guide for Researchers at DMI
+## The Challenge
 
-* **Presenter:** [Your Name/Department]
-* **Date:** April 7, 2025
-* *(Optional: Add DMI Logo)*
+- Python ecosystem is vast
+- Scientific computing needs
+- Quality matters in research
+- Time is precious
 
-Note: This talk outlines practical learning paths, resources, tools, and best practices for researchers at DMI looking to start or improve their skills in scientific software development using Python.
+</div>
+<div>
+
+## Our Solution
+
+- Curated learning pathways
+- Practical resources
+- Scientific applications
+- Modern practices
+
+</div>
+</div>
+
+---
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# Learning Roadmap
+
+<div class="text-sm">
+
+### 🚀 Weeks 1-4: Fundamentals
+- Basic syntax and data types
+- Control structures and functions
+
+### 🔬 Weeks 5-12: Scientific Stack
+- NumPy, Pandas, Matplotlib
+- Domain-specific libraries
+
+### 🏗️ Weeks 13-20: Best Practices
+- Clean code and testing
+- Version control
+
+### 🎯 Ongoing: Advanced Topics
+- Performance optimization
+- Machine learning
+
+</div>
 
 ---
 
-Python is a *dynamic* language, meaning you can open it in the terminal and use it interactively.
+# Starting Your Journey
 
-![python terminal](images/open_python_in_terminal.png)
+## 🎓 Complete Beginner Resources
 
-... as opposed to a *compiled* language like Fortran.
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div>
 
----
+**Interactive Learning:**
+- [Codecademy Python](https://www.codecademy.com/learn/learn-python-3)
+- [Python.org Tutorial](https://docs.python.org/3/tutorial/)
+- [Google's Python Class](https://developers.google.com/edu/python)
 
-## Development Environments
+</div>
+<div>
 
-You can develop using your favourite text editor, VIM, etc., but there are benefits in using an IDE:
+**Essential Books:**
+- ["Python Crash Course"](https://nostarch.com/pythoncrashcourse2e)
+- ["Automate the Boring Stuff"](https://automatetheboringstuff.com/)
 
-* **Code Completion**: Suggests function names, parameters, and imports as you type
-* **Integrated Debugging**: Set breakpoints, inspect variables, and step through code execution
-* **Version Control Integration**: Git support built directly into your development environment
-* **Virtual Environment Management**: Create and manage Python environments with ease
-* **Scientific Tooling**: Built-in support for Jupyter notebooks, data visualization, and scientific libraries
-* **Code Inspection**: Automated detection of style issues, errors, and potential bugs
+**Time:** 20-30 hours for basics
 
----
-
-## Visual Studio Code
-
-![VS code](images/vscode.png)
-
-Very popular, but requires some setup: [https://code.visualstudio.com/docs/languages/python](https://code.visualstudio.com/docs/languages/python)
+</div>
+</div>
 
 ---
 
-## Spyder
+# Online Learning Platforms
 
-![Spyder IDE](images/ide_spyder.png)
+<div class="grid grid-cols-2 gap-6">
+<div>
 
-Matlab like interface, but more limited.
+## University Courses
 
----
+- [MIT 6.00.1x](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) (EdX)
+- [Python for Everybody](https://www.coursera.org/specializations/python) (Coursera)
 
-## PyCharm
+</div>
+<div>
 
-![PyCharm IDE](images/ide_pycharm.png)
+## Scientific Python
 
-Sophisticated, Python orientated IDE. Requires a subscription.
+- [Software Carpentry](https://swcarpentry.github.io/python-novice-inflammation/)
+- [Kaggle Learn](https://www.kaggle.com/learn/python)
+- [SciPy Lectures](https://scipy-lectures.org/)
 
----
-
-## Jupyter Lab
-
-![Jupyter Lab Interface](images/ide_jupyterlab.png)
-
-For interactive code development. Not suitable for large code bases.
-
----
-
-## Learn the basic syntax: tutorial
-
-[The official Python tutorial](https://docs.python.org/3/tutorial/index.html)
-
+</div>
+</div>
 
 ---
 
-https://www.pythoncheatsheet.org/
+# YouTube Learning Channels
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+## 🎥 Best Practices
+- [ArjanCodes](https://www.youtube.com/@ArjanCodes)
+  - Clean code & SOLID
+  - Design patterns
+- [Corey Schafer](https://www.youtube.com/c/Coreyms)
+  - Comprehensive tutorials
+
+</div>
+<div>
+
+## 🔬 Scientific Python
+- [sentdex](https://www.youtube.com/c/sentdex)
+  - Data science projects
+- [PyData](https://www.youtube.com/user/PyDataTV)
+  - Conference talks
+
+</div>
+</div>
+
+---
+layout: two-cols
+---
+
+# Essential Books
+
+::default::
+
+## Core Python
+- 🟢 ["Python Crash Course"](https://nostarch.com/pythoncrashcourse2e)
+- 🟡 ["Effective Python"](https://effectivepython.com/)
+- 🔴 ["Fluent Python"](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
+
+📺 Watch: [ArjanCodes: Python Books Review](https://www.youtube.com/watch?v=O7pqp_q6br4)
+
+::right::
+
+## Scientific & Engineering
+- ["Python for Data Analysis"](https://wesmckinney.com/book/)
+- ["Clean Code"](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
+- ["The Pragmatic Programmer"](https://pragprog.com/titles/tpp20/)
 
 ---
 
-## Key Python Libraries for Scientific Software: Numpy
+# Scientific Python Ecosystem
 
-# NumPy: The Foundation of Scientific Computing in Python
+<div class="grid grid-cols-3 gap-4 text-sm">
+<div>
 
-## What is NumPy?
-NumPy (Numerical Python) is a fundamental package for scientific computing in Python that provides:
-- Fast, efficient multi-dimensional array objects
-- **Performance:** 10-100x faster than Python lists
+## 🔧 Foundation
+- [NumPy](https://numpy.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [SciPy](https://scipy.org/)
 
-## Key Features
-- N-dimensional arrays (ndarray)
-- Broadcasting functions
-- Linear algebra operations
-- Fourier transforms
-- 
-## Simple Example
+</div>
+<div>
+
+## 🌍 Geo/Meteo
+- [Xarray](https://xarray.pydata.org/)
+- [MetPy](https://unidata.github.io/MetPy/)
+- [Cartopy](https://scitools.org.uk/cartopy/)
+- [Iris](https://scitools-iris.readthedocs.io/)
+
+</div>
+<div>
+
+## ⚡ Performance
+- [Numba](https://numba.pydata.org/)
+- [Dask](https://dask.org/)
+- [CuPy](https://cupy.dev/)
+
+</div>
+</div>
+
+---
+
+# Development Environments
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+## 💻 IDEs
+
+**[VS Code](https://code.visualstudio.com/)**
+- Free, extensible
+- Great Python support
+
+**[PyCharm](https://www.jetbrains.com/pycharm/)**
+- Professional features
+- Scientific mode
+
+**[JupyterLab](https://jupyter.org/)**
+- Interactive notebooks
+- Great for exploration
+
+</div>
+<div>
+
+## 📦 Package Management
+
+**[uv](https://github.com/astral-sh/uv)**
+- Ultra-fast installer
+- Modern alternative to pip
+
+**[Miniconda](https://docs.conda.io/en/latest/miniconda.html)**
+- Scientific packages
+- Environment management
+
+**[conda-forge](https://conda-forge.org/)**
+- Community packages
+
+</div>
+</div>
+
+---
+
+# Pythonic Code
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+## ❌ Non-Pythonic
 ```python
-import numpy as np
-
-# Create array
-arr = np.array([1, 2, 3, 4, 5])
-
-# Perform operations
-print(arr * 2)          # [2 4 6 8 10]
-print(np.sum(arr))      # 15
-print(np.mean(arr))     # 3.0
+data = []
+for line in file:
+    values = line.strip().split()
+    row = []
+    for val in values:
+        row.append(float(val))
+    data.append(row)
 ```
+
+</div>
+<div>
+
+## ✅ Pythonic
+```python
+data = [[float(val) for val in line.split()] 
+        for line in file]
+```
+
+**Key:** Use comprehensions, built-ins, and Python idioms
+
+</div>
+</div>
+
+📺 Watch: [ArjanCodes: 25 Python Tricks](https://www.youtube.com/watch?v=8OKTAedgFYg)
 
 ---
 
-<!-- Note to LLM: Please embed this text in separate page the window -->
+# Clean Code: SOLID Principles
 
-Prompt: I have a time series of 3D air pressure measurements. Please demonstrate how I can effeciently anlyse the data using xarray.
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div>
 
-Response:
+## ❌ God Class
+```python
+class WeatherSystem:
+    def process_data(self): ...
+    def generate_forecast(self): ...
+    def update_database(self): ...
+    def render_map(self): ...
+    def send_alerts(self): ...
+```
 
-I'd be happy to demonstrate how to efficiently analyze 3D air pressure measurements using xarray, which is an excellent library for working with labeled multi-dimensional arrays, particularly for atmospheric data.
+</div>
+<div>
 
-Let me create a comprehensive example showing how to work with your 3D air pressure data using xarray:
+## ✅ Single Responsibility
+```python
+class DataProcessor: ...
+class ForecastGenerator: ...
+class DatabaseManager: ...
+class MapRenderer: ...
+class AlertService: ...
+```
 
-# Analyzing 3D Air Pressure Data with xarray
+</div>
+</div>
 
-Xarray is an excellent tool for working with multi-dimensional labeled arrays, particularly atmospheric data like your 3D air pressure measurements. Here's how you can efficiently analyze such data:
+📺 Watch: [ArjanCodes SOLID](https://www.youtube.com/watch?v=pTB30aXl9l4)
 
-## Key Benefits of Using xarray
+---
 
-1. **Labeled dimensions** - xarray uses named dimensions and coordinates, making data access intuitive
-2. **NetCDF compatibility** - seamless reading/writing of NetCDF files (standard format for climate data)
-3. **Built-in operations** - powerful aggregation, selection, and computation methods
-4. **Integration with other tools** - works well with pandas, numpy, dask, and visualization libraries
+# DRY Principle
 
-## Typical Workflow
-
-### 1. Data Loading and Inspection
+## Don't Repeat Yourself
 
 ```python
-import xarray as xr
-import numpy as np
-import matplotlib.pyplot as plt
+# ❌ WET (Write Everything Twice)
+def celsius_to_fahrenheit(temps):
+    return [t * 9/5 + 32 for t in temps]
 
-# Load data from a NetCDF file
-ds = xr.open_dataset('pressure_data.nc')
+def kelvin_to_fahrenheit(temps):
+    return [(t - 273.15) * 9/5 + 32 for t in temps]
 
-# Examine dataset structure
-print(ds)
-print(ds.info())
-
-# Check for missing values
-print(ds.isnull().sum())
+# ✅ DRY
+def to_fahrenheit(temps, from_unit='celsius'):
+    converters = {
+        'celsius': lambda t: t * 9/5 + 32,
+        'kelvin': lambda t: (t - 273.15) * 9/5 + 32
+    }
+    return [converters[from_unit](t) for t in temps]
 ```
 
-### 2. Selection and Subsetting
+📺 Watch: [ArjanCodes: Code Smells](https://www.youtube.com/watch?v=LrtnLEkOwFE)
+
+---
+
+# Testing & Quality
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+## 🧪 Testing Pyramid
+
+1. **Unit Tests** (many)
+   - [pytest](https://pytest.org/)
+   - Test functions
+2. **Integration Tests** (some)
+   - Test interactions
+3. **E2E Tests** (few)
+   - Test workflows
+
+</div>
+<div>
+
+## 🚀 CI/CD
 
 ```python
-# Select a specific time
-time_slice = ds.sel(time='2023-01-10')
-
-# Select a pressure level
-level_500 = ds.sel(level=500)  # 500 hPa
-
-# Select a geographic region
-region = ds.sel(lat=slice(30, 60), lon=slice(280, 360))
+# test_temperature.py
+def test_conversion():
+    assert to_fahrenheit([0], 'celsius') == [32]
+    assert to_fahrenheit([273.15], 'kelvin') == [32]
 ```
 
-### 3. Aggregation and Analysis
+**[GitLab CI/CD](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/)**
+- Automated testing
+- Coverage reports
 
-```python
-# Temporal means
-monthly_mean = ds.pressure.resample(time='M').mean()
+</div>
+</div>
 
-# Spatial means
-zonal_mean = ds.pressure.mean(dim='lon')  # Average along longitude
-meridional_mean = ds.pressure.mean(dim='lat')  # Average along latitude
+📺 Watch: [ArjanCodes: Unit Testing](https://www.youtube.com/watch?v=6tNS--WetLI)
 
-# Vertical profile
-vertical_profile = ds.pressure.mean(dim=['lat', 'lon'])
+---
 
-# Calculate anomalies
-climatology = ds.pressure.mean(dim='time')
-anomalies = ds.pressure - climatology
+# Version Control
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+## Git Basics
+```bash
+git init
+git add .
+git commit -m "feat: add temperature converter"
+git push
 ```
 
-### 4. Visualization
+</div>
+<div>
 
-```python
-# Plot a horizontal slice
-level_500.pressure.isel(time=0).plot(
-    figsize=(12, 8),
-    cmap='viridis'
-)
-
-# Plot a vertical cross-section
-ds.pressure.isel(time=0).sel(lat=0).plot(
-    y='level',
-    figsize=(12, 6)
-)
-
-# Create a time series for a point
-ds.pressure.sel(lat=45, lon=280, level=500, method='nearest').plot()
+## Commit Messages
+```
+feat: Add temperature conversion
+fix: Handle edge case in parser
+docs: Update installation guide
+test: Add unit tests for converter
 ```
 
-### 5. Advanced Analysis
+</div>
+</div>
 
-```python
-# Calculating gradients
-pressure_gradient_x = ds.pressure.differentiate(coord='lon')
-pressure_gradient_y = ds.pressure.differentiate(coord='lat')
+**Branching:** `main` → `develop` → `feature/*`
 
-# Coarsen data (reduce resolution)
-coarse_data = ds.coarsen(lat=2, lon=2).mean()
+---
 
-# Apply computation across multiple dimensions
-result = xr.apply_ufunc(
-    your_function,
-    ds.pressure,
-    input_core_dims=[['time', 'level', 'lat', 'lon']],
-    output_core_dims=[['lat', 'lon']],
-    vectorize=True
-)
+# Leveraging LLMs
+
+## 🤖 AI-Assisted Development
+
+<div class="grid grid-cols-3 gap-4 text-sm">
+<div>
+
+### Generate
+"Create a function to calculate wind chill factor"
+
+</div>
+<div>
+
+### Convert
+"Convert this MATLAB code to Python with NumPy"
+
+</div>
+<div>
+
+### Improve
+"Refactor using SOLID principles and add type hints"
+
+</div>
+</div>
+
+**Tools:** [GitHub Copilot](https://github.com/features/copilot) • ChatGPT • Claude • [Cursor](https://cursor.sh/)
+
+---
+
+# Effective LLM Prompting
+
+## 📝 Good Prompt Example
+
+```text
+Create a Python class for handling meteorological data with:
+- Reading NetCDF files
+- Calculating daily averages
+- Handling missing data
+- Following clean code principles
+Include docstrings and type hints
 ```
 
-The artifact I've provided includes a comprehensive example that:
-1. Creates a synthetic dataset (or shows how to load a real one)
-2. Performs basic data exploration
-3. Demonstrates various selection, aggregation, and analysis techniques
-4. Creates multiple visualizations (horizontal slices, vertical cross-sections, time series)
-5. Shows advanced analysis methods (EOF analysis, trend analysis, seasonal patterns)
-6. Demonstrates data export options
+**Best Practices:**
+✅ Be specific • ✅ Request tests • ✅ Verify output • ✅ Iterate
 
-Would you like me to explain any particular aspect of the code in more detail?
+---
+layout: center
+---
+
+# Advanced Topics
+
+<div class="grid grid-cols-3 gap-4">
+<div>
+
+## 🚀 HPC
+- Parallel processing
+- [Dask](https://dask.org/)
+- GPU with [CuPy](https://cupy.dev/)
+
+</div>
+<div>
+
+## 🧠 ML/AI
+- [Scikit-learn](https://scikit-learn.org/)
+- [PyTorch](https://pytorch.org/)
+- Weather prediction
+
+</div>
+<div>
+
+## 📊 Big Data
+- [Xarray + Dask](https://xarray.pydata.org/en/stable/user-guide/dask.html)
+- Cloud storage
+- [Zarr](https://zarr.readthedocs.io/)
+
+</div>
+</div>
 
 ---
 
-*NumPy is the foundation for data analysis and scientific computing in Python ecosystems like pandas, SciPy, matplotlib, and scikit-learn.*
+# Your Learning Plan
 
-## Key Python Libraries for Scientific Software:Domain-Specific Libraries
+<div class="grid grid-cols-3 gap-4 text-sm">
+<div>
 
-* **[Cartopy](https://scitools.org.uk/cartopy/docs/latest/getting_started/index.html)** - Geospatial data processing
-* **[scikit-learn](https://scikit-learn.org/stable/index.html)** - Machine learning
-* **[PyTorch](https://pytorch.org/)** - Deep learning
+## 📅 Month 1-2
+- [ ] Python basics (30h)
+- [ ] NumPy fundamentals (20h)
+- [ ] Git basics (10h)
 
-### Scientific Computing
-* **Dask** - Parallel computing
-* **xarray / zarr** 
-* **Numba** - JIT compiler for accelerating code
-* **JAX** - High-performance numerical computing
+</div>
+<div>
 
----
+## 📅 Month 3-4
+- [ ] Pandas & visualization
+- [ ] Jupyter notebooks
+- [ ] Domain libraries
 
-## Use a LLM: Convert from Matlab to Python
+</div>
+<div>
 
-![llm_matlab_to_python.png](images/llm_matlab_to_python.png)
-An example using Claude
+## 📅 Month 5-6
+- [ ] Clean code
+- [ ] Testing with pytest
+- [ ] CI/CD pipelines
 
----
+</div>
+</div>
 
-## Clean Code Principles
-
-1. Readable - clear and intuitive
-2. Simple - does one thing well
-3. Consistent - follows uniform patterns
-4. DRY - avoids duplication
-5. Self-explanatory - requires minimal comments
-6. Modular - easily testable and maintainable
-7. Well-structured - follows logical organization
-8. Focused on clarity over cleverness
+**Remember:** Practice daily, even just 30 minutes! 🎯
 
 ---
 
-# Ask an LLM
+# Community & Learning
 
-## Is this *clean code*?
+<div class="grid grid-cols-2 gap-6">
+<div>
 
-Give your code to a LLM (Large Language Model). 
-It will evaluate the code and show you how to improve it.
+## 🌐 Online
+- [Python Forum](https://discuss.python.org/)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/python)
+- [r/Python](https://www.reddit.com/r/Python/)
 
----
+</div>
+<div>
 
+## 🎤 Conferences
+- [PyCon](https://pycon.org/)
+- [PyData](https://pydata.org/)
+- [SciPy](https://conference.scipy.org/)
 
-## Best Practices in Scientific Software Development
-### Quality & Reproducibility
+</div>
+</div>
 
-* **Testing**:
-  * pytest for unit and integration tests
-  * Test early, test often
-  * Continuous Integration (GitHub Actions, GitLab CI)
-
-* **Environment Management**:
-  * Virtual environments (venv, conda)
-  * Requirements tracking (requirements.txt, environment.yml)
-  * Container solutions (Docker)
-
-* **Code Review**:
-  * Peer review before merging
-  * Automated quality checks
+**Contribute:** Docs → Bugs → Tools → Mentor
 
 ---
-
-Advanced Python
-
+layout: center
+class: text-center
 ---
 
-![book_fluent_python.jpeg](images/book_fluent_python.jpeg)
+# Quick Reference
+
+<div class="grid grid-cols-3 gap-4 text-sm">
+<div>
+
+## 🎓 Learn
+[MIT 6.00.1x](https://www.edx.org/course/introduction-to-computer-science-and-programming-7)
+[Kaggle](https://www.kaggle.com/learn/python)
+[Software Carpentry](https://swcarpentry.github.io/python-novice-inflammation/)
+
+</div>
+<div>
+
+## 📹 Watch
+[ArjanCodes](https://www.youtube.com/@ArjanCodes)
+[Corey Schafer](https://www.youtube.com/@coreyms)
+[Real Python](https://www.youtube.com/@realpython)
+
+</div>
+<div>
+
+## 🛠️ Tools
+[VS Code](https://code.visualstudio.com/)
+[uv](https://github.com/astral-sh/uv)
+[pytest](https://pytest.org/)
+
+</div>
+</div>
 
 ---
-
- *"The Pragmatic Programmer"* by David Thomas & Andrew Hunt 
-
+layout: center
+class: text-center
 ---
 
-```mermaid
-flowchart TD
-    Start[Start Here] --> BasicSyntax
-    
-    subgraph Fundamentals
-        BasicSyntax[Basic Python Syntax]
-        BasicSyntax --> OfficialTutorial[Official Python Tutorial]
-        BasicSyntax --> KaggleCourses[Kaggle Python Courses]
-        BasicSyntax --> CheatSheets[Python Cheatsheets]
-    end
-    
-    Fundamentals --> DevEnvironments
-    
-    subgraph DevEnvironments[Development Environments]
-        VSCode[Visual Studio Code]
-        PyCharm[PyCharm]
-        Spyder[Spyder - Matlab-like]
-        JupyterLab[Jupyter Lab - Interactive]
-    end
-    
-    DevEnvironments --> ScientificLibraries
-    
-    subgraph ScientificLibraries[Scientific Libraries]
-        CoreLibs[Core Libraries<br>NumPy, Pandas, Matplotlib]
-        DomainSpecific[Domain Specific<br>Cartopy, scikit-learn, PyTorch]
-        HPComputing[High Performance<br>Dask, xarray, Numba, JAX]
-    end
-    
-    ScientificLibraries --> CleanCode
-    
-    subgraph CleanCode[Clean Code Practices]
-        PEP8[PEP 8 Style Guide]
-        Naming[Descriptive Naming]
-        ComprehensionPatterns[List Comprehensions]
-        TypeHints[Type Hints]
-        ErrorHandling[Error Handling]
-    end
-    
-    CleanCode --> LLMHelp
-    
-    subgraph LLMHelp[LLM Assistance]
-        CodeConversion[Code Conversion<br>Matlab to Python]
-        CodeReview[Code Review<br>Ask if code is clean]
-        SolutionGeneration[Generate Example Solutions]
-    end
-    
-    LLMHelp --> AdvancedPython[Advanced Python<br>Fluent Python Book]
-```
+# Thank You! 🐍
 
+## Next Steps
 
----
+1. **Assess** your current level
+2. **Choose** 2-3 resources
+3. **Practice** daily
+4. **Join** the community
 
-## Learn the basic syntax: Kaggle
+<br>
 
+### Questions?
 
-![kaggle1.png](images/kaggle1.png)
-
-Kaggle offers course on Python...
-
----
-
-## Learn the basic syntax: tutorial
-
-![kaggle2.png](images/kaggle2.png)
-
-Kaggle offers course on Python...
-
+<div class="abs-br m-6 flex gap-2">
+  <a href="https://github.com" target="_blank" alt="GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
