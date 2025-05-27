@@ -66,16 +66,12 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 - Control structures and functions
 
 ### 🔬 Weeks 5-12: Scientific Stack
-- NumPy, Pandas, Matplotlib
+- NumPy, Pandas, Xarray, Matplotlib
 - Domain-specific libraries
 
 ### 🏗️ Weeks 13-20: Best Practices
 - Clean code and testing
 - Version control
-
-### 🎯 Ongoing: Advanced Topics
-- Performance optimization
-- Machine learning
 
 </div>
 
@@ -159,16 +155,14 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 layout: two-cols
 ---
 
-# Essential Books
-
 ::default::
+
+# Essential Books
 
 ## Core Python
 - 🟢 ["Python Crash Course"](https://nostarch.com/pythoncrashcourse2e)
 - 🟡 ["Effective Python"](https://effectivepython.com/)
 - 🔴 ["Fluent Python"](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
-
-📺 Watch: [ArjanCodes: Python Books Review](https://www.youtube.com/watch?v=O7pqp_q6br4)
 
 ::right::
 
@@ -176,7 +170,7 @@ layout: two-cols
 - ["Python for Data Analysis"](https://wesmckinney.com/book/)
 - ["Clean Code"](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
 - ["The Pragmatic Programmer"](https://pragprog.com/titles/tpp20/)
-
+- 
 ---
 
 # Scientific Python Ecosystem
@@ -282,7 +276,7 @@ data = [[float(val) for val in line.split()]
 </div>
 </div>
 
-📺 Watch: [ArjanCodes: 25 Python Tricks](https://www.youtube.com/watch?v=8OKTAedgFYg)
+📺 Watch: [Patrick Loeber: 25 Python Tricks](https://www.youtube.com/watch?v=8OKTAedgFYg)
 
 ---
 
@@ -316,7 +310,7 @@ class AlertService: ...
 </div>
 </div>
 
-📺 Watch: [ArjanCodes SOLID](https://www.youtube.com/watch?v=pTB30aXl9l4)
+📺 Watch: [ArjanCodes SOLID Principles](https://www.youtube.com/watch?v=pTB30aXS77U)
 
 ---
 
@@ -379,7 +373,7 @@ def test_conversion():
 </div>
 </div>
 
-📺 Watch: [ArjanCodes: Unit Testing](https://www.youtube.com/watch?v=6tNS--WetLI)
+📺 Watch: [ArjanCodes: Unit Testing](https://www.youtube.com/watch?v=ULxMQ57engo)
 
 ---
 
@@ -439,7 +433,24 @@ test: Add unit tests for converter
 </div>
 </div>
 
-**Tools:** [GitHub Copilot](https://github.com/features/copilot) • ChatGPT • Claude • [Cursor](https://cursor.sh/)
+<div class="mt-8 flex justify-center items-center gap-8">
+  <a href="https://github.com/features/copilot" target="_blank" class="flex flex-col items-center gap-2 no-underline">
+    <img src="https://github.githubassets.com/images/modules/site/copilot/copilot.png" alt="GitHub Copilot" class="h-12 w-12">
+    <span class="text-xs">GitHub Copilot</span>
+  </a>
+  <a href="https://openai.com/chatgpt" target="_blank" class="flex flex-col items-center gap-2 no-underline">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="h-12 w-12">
+    <span class="text-xs">ChatGPT</span>
+  </a>
+  <a href="https://claude.ai" target="_blank" class="flex flex-col items-center gap-2 no-underline">
+    <img src="https://claude.ai/images/claude-app-icon.png" alt="Claude" class="h-12 w-12">
+    <span class="text-xs">Claude</span>
+  </a>
+  <a href="https://cursor.sh" target="_blank" class="flex flex-col items-center gap-2 no-underline">
+    <img src="https://cursor.sh/brand/icon.svg" alt="Cursor" class="h-12 w-12">
+    <span class="text-xs">Cursor</span>
+  </a>
+</div>
 
 ---
 
