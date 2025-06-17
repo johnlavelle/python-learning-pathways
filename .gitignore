@@ -39,4 +39,20 @@ Thumbs.db
 # Package manager files
 pnpm-lock.yaml
 yarn.lock
-package-lock.json
+# Keep package-lock.json for GitHub Actions
+
+# Puppeteer test files
+slide-screenshots/
+improved-screenshots/
+visual-improvements/
+analyze-*.js
+capture-*.js
+example.js
+check-*.js
+debug-*.js
+test-*.js
+puppeteer-info.js
+*.png
+
+# Local settings
+.claude/settings.local.json

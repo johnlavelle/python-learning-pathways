@@ -67,7 +67,11 @@
       "Bash(npm run build:*)",
       "Bash(awk:*)",
       "Bash(grep:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(find:*)",
+      "Bash(node:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": []
   }

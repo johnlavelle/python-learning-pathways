@@ -18,6 +18,7 @@
     "playwright-chromium": "^1.53.0"
   },
   "dependencies": {
-    "@slidev/theme-default": "^0.25.0"
+    "@slidev/theme-default": "^0.25.0",
+    "puppeteer": "^24.10.1"
   }
 }
