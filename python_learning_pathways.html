@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Pathways - DMI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide.title {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            min-height: 600px;
+        }
+
+        .slide.section {
+            background: linear-gradient(135deg, #2a5298 0%, #3e7cb8 100%);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: inherit;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #2a5298;
+        }
+
+        .slide.title h1, .slide.section h1,
+        .slide.title h2, .slide.section h2 {
+            color: white;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #3e7cb8;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: #333;
+        }
+
+        a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-sm {
+            font-size: 0.9em;
+        }
+
+        .mt-8 {
+            margin-top: 2rem;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navigation button {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .navigation button:hover {
+            background: #1e3c72;
+        }
+
+        .navigation button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            .grid-cols-2,
+            .grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .flow-diagram {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .flow-box {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .flow-arrow {
+            display: inline-block;
+            margin: 0 5px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Title -->
+        <div class="slide title" id="slide-1">
+            <h1>Pathways to Learn Python for Scientific Software Development</h1>
+            <h2>A Comprehensive Learning Guide for DMI Researchers</h2>
+        </div>
+
+        <!-- Slide 2: Why This Learning Path -->
+        <div class="slide" id="slide-2">
+            <h1>Why This Learning Path?</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2>The Challenge</h2>
+                    <ul>
+                        <li>Python ecosystem is vast</li>
+                        <li>Scientific computing needs</li>
+                        <li>Quality matters in research</li>
+                        <li>Time is precious</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Our Approach</h2>
+                    <ul>
+                        <li>Curated pathways by level</li>
+                        <li>Focus on meteorology & oceanography</li>
+                        <li>Modern best practices</li>
+                        <li>Active communities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Your Learning Journey -->
+        <div class="slide" id="slide-3">
+            <h1>Your Learning Journey</h1>
+            <div class="flow-diagram">
+                <span class="flow-box">Beginner</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-box">Scientific Python</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-box">Domain Tools</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-box">Best Practices</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-box">Contributing</span>
+            </div>
+            <div class="grid grid-cols-3 mt-8">
+                <div class="card">
+                    <h3><span class="emoji">📘</span>Phase 1: Foundations</h3>
+                    <ul>
+                        <li>Python syntax & concepts</li>
+                        <li>Basic data structures</li>
+                        <li>Simple scripts</li>
+                    </ul>
+                    <p style="font-style: italic; font-size: 0.9em;">Typical: 1-2 months</p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Phase 2: Scientific Stack</h3>
+                    <ul>
+                        <li>NumPy, Pandas, Xarray</li>
+                        <li>Plotting with Matplotlib</li>
+                        <li>Jupyter workflows</li>
+                    </ul>
+                    <p style="font-style: italic; font-size: 0.9em;">Typical: 2-3 months</p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🚀</span>Phase 3: Professional</h3>
+                    <ul>
+                        <li>Clean code principles</li>
+                        <li>Testing & debugging</li>
+                        <li>Collaboration tools</li>
+                    </ul>
+                    <p style="font-style: italic; font-size: 0.9em;">Typical: 2-3 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Section - Getting Started -->
+        <div class="slide section" id="slide-4">
+            <h1>Part 1: Getting Started</h1>
+            <h2>Choosing Your First Steps</h2>
+        </div>
+
+        <!-- Slide 5: Learning Paths by Background -->
+        <div class="slide" id="slide-5">
+            <h1>Learning Paths by Background</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">🆕</span>Complete Beginner</h2>
+                    <p><strong>Start Here:</strong></p>
+                    <ol>
+                        <li><a href="https://docs.python.org/3/tutorial/">Python.org Tutorial</a> - Official guide</li>
+                        <li><a href="https://swcarpentry.github.io/python-novice-inflammation/">Software Carpentry</a> - Research focus</li>
+                        <li><a href="https://nostarch.com/pythoncrashcourse2e">Python Crash Course</a> - Book</li>
+                    </ol>
+                    <p><strong>Time:</strong> 4-6 weeks (1-2 hrs/day)</p>
+                    <p><strong>First Project:</strong> Temperature converter</p>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">🔄</span>Coming from MATLAB/R</h2>
+                    <p><strong>Start Here:</strong></p>
+                    <ol>
+                        <li><a href="https://numpy.org/doc/stable/user/numpy-for-matlab-users.html">NumPy for MATLAB users</a></li>
+                        <li><a href="https://projectpythia.org/">Project Pythia</a> - Earth sciences</li>
+                        <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a> - Jake VanderPlas</li>
+                    </ol>
+                    <p><strong>Time:</strong> 2-3 weeks (1-2 hrs/day)</p>
+                    <p><strong>First Project:</strong> Port existing analysis</p>
+                </div>
+            </div>
+            <div class="highlight">
+                <p><span class="emoji">💡</span><strong>Pro tip:</strong> Pick ONE resource and complete it before trying others</p>
+            </div>
+        </div>
+
+        <!-- Slide 6: Modern Learning Resources Comparison -->
+        <div class="slide" id="slide-6">
+            <h1>Modern Learning Resources Comparison</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource</th>
+                            <th>Best For</th>
+                            <th>Format</th>
+                            <th>Time</th>
+                            <th>Cost</th>
+                            <th>DMI Relevance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://swcarpentry.github.io/python-novice-inflammation/"><strong>Software Carpentry</strong></a></td>
+                            <td>Research beginners</td>
+                            <td>Workshop-style</td>
+                            <td>2 days</td>
+                            <td>Free</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://projectpythia.org/"><strong>Project Pythia</strong></a></td>
+                            <td>Atmospheric scientists</td>
+                            <td>Tutorials + Videos</td>
+                            <td>Self-paced</td>
+                            <td>Free</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://realpython.com/"><strong>Real Python</strong></a></td>
+                            <td>All levels</td>
+                            <td>Articles + Courses</td>
+                            <td>Ongoing</td>
+                            <td>Free/Paid</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.codecademy.com/learn/learn-python-3"><strong>Codecademy Python</strong></a></td>
+                            <td>Absolute beginners</td>
+                            <td>Interactive</td>
+                            <td>25 hours</td>
+                            <td>Free/Pro</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://learning.ecmwf.int/"><strong>ECMWF eLearning</strong></a></td>
+                            <td>Weather/climate focus</td>
+                            <td>Courses</td>
+                            <td>Varies</td>
+                            <td>Free</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.coursera.org/specializations/python"><strong>Python for Everybody</strong></a></td>
+                            <td>General programming</td>
+                            <td>Video lectures</td>
+                            <td>8 months</td>
+                            <td>Free/Paid</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt-8"><strong>Recommendation:</strong> Start with Software Carpentry + Project Pythia for the perfect research focus</p>
+        </div>
+
+        <!-- Slide 7: Section - Scientific & Domain Tools -->
+        <div class="slide section" id="slide-7">
+            <h1>Part 2: Scientific & Domain Tools</h1>
+            <h2>Building Your Technical Stack</h2>
+        </div>
+
+        <!-- Slide 8: Essential Scientific Stack -->
+        <div class="slide" id="slide-8">
+            <h1>Essential Scientific Stack</h1>
+            <div class="grid grid-cols-3">
+                <div class="card">
+                    <h3><span class="emoji">📊</span>Data Handling</h3>
+                    <pre><code>import numpy as np
+import pandas as pd
+import xarray as xr</code></pre>
+                    <p><a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy</a> → <a href="https://pandas.pydata.org/docs/user_guide/10min.html">Pandas</a> → <a href="https://docs.xarray.dev/en/stable/getting-started-guide/quick-overview.html">Xarray</a></p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">📈</span>Visualization</h3>
+                    <pre><code>import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+import holoviews as hv</code></pre>
+                    <p><a href="https://matplotlib.org/stable/tutorials/index.html">Matplotlib</a> • <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html">Cartopy</a> • <a href="https://holoviews.org/getting_started/Introduction.html">HoloViews</a></p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🌍</span>Domain Tools</h3>
+                    <pre><code># Atmosphere
+import metpy
+import satpy
+# Ocean  
+import xarray
+import gsw  # oceanography</code></pre>
+                    <p><a href="https://unidata.github.io/MetPy/latest/tutorials/index.html">MetPy</a> • <a href="https://teos-10.github.io/GSW-Python/">GSW</a> • <a href="https://xgcm.readthedocs.io/">xgcm</a></p>
+                </div>
+            </div>
+            <p class="text-center mt-8"><strong>Learning Order:</strong> <a href="https://numpy.org/learn/">NumPy basics</a> (1 week) → <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/">Pandas intro</a> (1 week) → <a href="https://tutorial.xarray.dev/intro.html">Xarray tutorial</a> (2 weeks) → Domain tools</p>
+        </div>
+
+        <!-- Slide 9: Weather & Climate Data Access -->
+        <div class="slide" id="slide-9">
+            <h1>Weather & Climate Data Access</h1>
+            <div class="grid grid-cols-3">
+                <div class="card">
+                    <h3><span class="emoji">🌤️</span>Atmosphere/Land</h3>
+                    <h4><a href="https://github.com/ecmwf/ecmwf-opendata">ECMWF Open Data</a></h4>
+                    <pre><code>from ecmwf.opendata import Client
+client = Client()
+# Real-time forecasts</code></pre>
+                    <h4><a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels">ERA5 Reanalysis</a></h4>
+                    <pre><code>import cdsapi
+c = cdsapi.Client()
+# Historical weather</code></pre>
+                    <p><a href="https://cds.climate.copernicus.eu/how-to-api">CDS setup</a></p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🌊</span>Ocean/Marine</h3>
+                    <h4><a href="https://marine.copernicus.eu/">Copernicus Marine</a></h4>
+                    <pre><code>import copernicus_marine_client as cm
+cm.open_dataset(
+    dataset_id="cmems_mod_glo_phy_anfc_0.083deg_P1D-m"
+)</code></pre>
+                    <p><a href="https://pypi.org/project/copernicus-marine-client/">Python Toolbox</a> • <a href="https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-introduction">Documentation</a></p>
+                    <h4><a href="https://climate.copernicus.eu/">C3S Climate Data</a></h4>
+                    <ul>
+                        <li>Sea ice, SST, ocean indicators</li>
+                        <li>Climate projections</li>
+                        <li><a href="https://cds.climate.copernicus.eu/toolbox/doc/index.html">Toolbox API</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🛰️</span>Satellite</h3>
+                    <h4><a href="https://satpy.readthedocs.io/">Satpy</a> (Multi-sensor)</h4>
+                    <pre><code>from satpy import Scene
+scn = Scene(filenames=files)
+scn.load(['natural_color'])</code></pre>
+                    <h4><a href="https://pypi.org/project/eumdac/">EUMDAC</a></h4>
+                    <pre><code>import eumdac
+# EUMETSAT archive</code></pre>
+                    <p><a href="https://user.eumetsat.int/resources/user-guides/eumetsat-data-access-client-eumdac-guide">Setup guide</a></p>
+                </div>
+            </div>
+            <p class="mt-8"><span class="emoji">🔧</span><strong>Setup:</strong> <code>conda install -c conda-forge satpy xarray cfgrib</code> • <code>uv pip install copernicus-marine-client</code></p>
+        </div>
+
+        <!-- Slide 10: Section - Development Environment -->
+        <div class="slide section" id="slide-10">
+            <h1>Part 3: Development Environment</h1>
+            <h2>Setting Up for Success</h2>
+        </div>
+
+        <!-- Slide 11: Your Development Setup -->
+        <div class="slide" id="slide-11">
+            <h1>Your Development Setup</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">🖥️</span>IDE Choice</h2>
+                    <h3><a href="https://code.visualstudio.com/">VS Code</a> (Recommended)</h3>
+                    <ul>
+                        <li>Free, lightweight</li>
+                        <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Great Python extension</a></li>
+                        <li>Integrated terminal</li>
+                        <li><a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote development</a></li>
+                    </ul>
+                    <p><strong>Alternatives:</strong></p>
+                    <ul>
+                        <li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> (full-featured)</li>
+                        <li><a href="https://jupyter.org/">JupyterLab</a> (notebooks)</li>
+                        <li><a href="https://www.spyder-ide.org/">Spyder</a> (MATLAB-like)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">📦</span>Environment Management</h2>
+                    <h3>Using <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> - the standard for scientific Python</h3>
+                    <ul>
+                        <li>Free and open source</li>
+                        <li>No licensing restrictions</li>
+                        <li>Preferred by research institutions</li>
+                        <li>Same features as Anaconda</li>
+                    </ul>
+                    <pre><code># Create environment
+conda create -n dmi-work python=3.11
+conda activate dmi-work
+
+# Install scientific stack from conda-forge
+# https://conda-forge.org/
+conda install -c conda-forge \
+  numpy pandas xarray \
+  matplotlib cartopy \
+  jupyter satpy
+
+# Install from PyPI
+pip install ecmwf-opendata</code></pre>
+                    <p><strong>Speed up your workflow:</strong></p>
+                    <ul>
+                        <li><a href="https://mamba.readthedocs.io/"><code>mamba</code></a> - faster conda alternative</li>
+                        <li><a href="https://github.com/astral-sh/uv"><code>uv</code></a> - blazing-fast pip replacement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Modern Package Management with uv -->
+        <div class="slide" id="slide-12">
+            <h1>Modern Package Management with uv</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">🚀</span>What is uv?</h2>
+                    <p><a href="https://github.com/astral-sh/uv"><code>uv</code></a> is an extremely fast Python package installer and resolver written in Rust</p>
+                    <p><strong>Benefits:</strong></p>
+                    <ul>
+                        <li>10-100x faster than pip</li>
+                        <li>Better dependency resolution</li>
+                        <li>Drop-in pip replacement</li>
+                        <li>Works perfectly with Miniconda</li>
+                    </ul>
+                    <p><strong>Install uv:</strong></p>
+                    <pre><code># Using pip
+pip install uv
+
+# Using conda (recommended)
+conda install -c conda-forge uv
+
+# Standalone installer
+curl -LsSf https://astral.sh/uv/install.sh | sh</code></pre>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">📦</span>Best Practice Workflow</h2>
+                    <pre><code># 1. Use Miniconda for base environment
+conda create -n project python=3.11
+conda activate project
+
+# 2. Install complex packages with conda
+conda install -c conda-forge \
+  cartopy gdal netcdf4
+
+# 3. Use uv for pure Python packages
+uv pip install pandas xarray
+
+# 4. Create requirements.txt
+uv pip freeze > requirements.txt
+
+# 5. Reproduce environment elsewhere
+conda env export > environment.yml</code></pre>
+                    <p><strong>Why this approach?</strong> Miniconda handles complex dependencies, uv provides speed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Effective Development Workflow -->
+        <div class="slide" id="slide-13">
+            <h1>Effective Development Workflow</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">🔄</span>Version Control</h2>
+                    <pre><code># Start every project with
+git init
+git add .
+git commit -m "Initial commit"
+
+# Create feature branch
+git checkout -b feature/add-analysis
+
+# Share your work
+git push origin main</code></pre>
+                    <p><strong>Learn:</strong> Basic Git in first month</p>
+                    <ul>
+                        <li><a href="https://git-scm.com/book">Pro Git Book</a> (free)</li>
+                        <li><a href="https://skills.github.com/">GitHub Skills</a></li>
+                        <li><a href="https://marklodato.github.io/visual-git-guide/index-en.html">Visual Git Guide</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">📓</span>Jupyter Best Practices</h2>
+                    <ol>
+                        <li><strong>Notebooks for exploration</strong> (<a href="https://jupyter.org/documentation">Jupyter docs</a>)</li>
+                        <li><strong>Scripts for production</strong></li>
+                        <li><strong>Clear cell outputs before commit</strong></li>
+                        <li><strong>Use meaningful names</strong></li>
+                    </ol>
+                    <pre><code># Good notebook structure
+# 1. Imports
+# 2. Configuration  
+# 3. Data loading
+# 4. Analysis
+# 5. Visualization</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Section - Writing Better Code -->
+        <div class="slide section" id="slide-14">
+            <h1>Part 4: Writing Better Code</h1>
+            <h2>From Scripts to Software</h2>
+        </div>
+
+        <!-- Slide 15: Code Quality Progression -->
+        <div class="slide" id="slide-15">
+            <h1>Code Quality Progression</h1>
+            <div class="grid grid-cols-3">
+                <div class="card">
+                    <h3><span class="emoji">🥉</span>Starting Out</h3>
+                    <pre><code># Works but not ideal
+data = []
+for i in range(len(temps)):
+    if temps[i] > 0:
+        data.append(temps[i])</code></pre>
+                    <p>Focus on: <strong>Making it work</strong></p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🥈</span>Getting Better</h3>
+                    <pre><code># Pythonic approach
+data = [t for t in temps 
+        if t > 0]
+
+# Or using NumPy
+data = temps[temps > 0]</code></pre>
+                    <p>Focus on: <strong>Readability</strong></p>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🥇</span>Professional</h3>
+                    <pre><code>def filter_positive_temps(
+    temps: np.ndarray
+) -> np.ndarray:
+    """Filter positive temperatures.
+    
+    Args:
+        temps: Temperature array
+        
+    Returns:
+        Positive temperatures only
+    """
+    return temps[temps > 0]</code></pre>
+                    <p>Focus on: <strong>Maintainability</strong></p>
+                </div>
+            </div>
+            <p class="mt-8"><span class="emoji">📺</span><strong>Learn from:</strong> <a href="https://www.youtube.com/@ArjanCodes">ArjanCodes</a> • <a href="https://www.youtube.com/@mCoding">mCoding</a> • <a href="https://www.youtube.com/@realpython">Real Python</a></p>
+            <p><span class="emoji">📚</span><strong>Read:</strong> <a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python</a> • <a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/">The Pragmatic Programmer</a></p>
+        </div>
+
+        <!-- Slide 16: Testing Your Code -->
+        <div class="slide" id="slide-16">
+            <h1>Testing Your Code</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">🧪</span>Start Simple</h2>
+                    <pre><code># test_temperature.py
+def test_celsius_to_kelvin():
+    assert celsius_to_kelvin(0) == 273.15
+    assert celsius_to_kelvin(-273.15) == 0
+    
+def test_invalid_temperature():
+    with pytest.raises(ValueError):
+        celsius_to_kelvin(-300)</code></pre>
+                    <p><strong>Run:</strong> <code>pytest test_temperature.py</code></p>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">📈</span>Testing Benefits</h2>
+                    <ol>
+                        <li><strong>Confidence</strong> in changes</li>
+                        <li><strong>Documentation</strong> via examples</li>
+                        <li><strong>Better design</strong> thinking</li>
+                        <li><strong>Faster debugging</strong></li>
+                    </ol>
+                    <p><strong>Start when:</strong> You use code twice</p>
+                    <p><strong>Tools:</strong> <a href="https://pytest.org/">pytest</a>, <a href="https://hypothesis.readthedocs.io/">hypothesis</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 17: Section - AI-Assisted Development -->
+        <div class="slide section" id="slide-17">
+            <h1>Part 5: AI-Assisted Development</h1>
+            <h2>Modern Tools for Faster Learning</h2>
+        </div>
+
+        <!-- Slide 18: Leveraging AI Tools -->
+        <div class="slide" id="slide-18">
+            <h1>Leveraging AI Tools</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">🤖</span>Good Use Cases</h2>
+                    <p>✅ <strong>Boilerplate code</strong></p>
+                    <ul>
+                        <li>"Create argparse CLI for data processing"</li>
+                    </ul>
+                    <p>✅ <strong>Algorithm implementation</strong></p>
+                    <ul>
+                        <li>"Implement Kalman filter in NumPy"</li>
+                    </ul>
+                    <p>✅ <strong>Code translation</strong></p>
+                    <ul>
+                        <li>"Convert this MATLAB to Python/Xarray"</li>
+                    </ul>
+                    <p>✅ <strong>Documentation</strong></p>
+                    <ul>
+                        <li>"Add docstrings to this class"</li>
+                    </ul>
+                    <p><strong>Tools:</strong> <a href="https://github.com/features/copilot">GitHub Copilot</a> • <a href="https://chat.openai.com/">ChatGPT</a> • <a href="https://claude.ai/">Claude</a></p>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">⚠️</span>Important Practices</h2>
+                    <ol>
+                        <li><strong>Always review</strong> generated code</li>
+                        <li><strong>Test thoroughly</strong></li>
+                        <li><strong>Understand</strong> what it does</li>
+                        <li><strong>Learn patterns</strong>, not copy-paste</li>
+                    </ol>
+                    <p><strong>Example Prompt:</strong></p>
+                    <pre><code>Create a Python function to calculate 
+relative humidity from temperature 
+and dewpoint. Include:
+- Type hints
+- Docstring with units
+- Input validation
+- Test examples</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 19: Section - Your Personal Learning Plan -->
+        <div class="slide section" id="slide-19">
+            <h1>Part 6: Your Personal Learning Plan</h1>
+            <h2>Putting It All Together</h2>
+        </div>
+
+        <!-- Slide 20: Choose Your Learning Track -->
+        <div class="slide" id="slide-20">
+            <h1>Choose Your Learning Track</h1>
+            <div class="grid grid-cols-3">
+                <div class="card">
+                    <h3><span class="emoji">🌦️</span>NWP/Model Track</h3>
+                    <p><strong>Month 1-2:</strong> Python + NumPy<br>
+                    <strong>Month 3:</strong> <a href="https://xarray.dev/">Xarray</a> + GRIB<br>
+                    <strong>Month 4:</strong> <a href="https://pypi.org/project/ecmwf-opendata/">ECMWF tools</a><br>
+                    <strong>Month 5:</strong> <a href="https://dask.org/">Dask</a> + parallel<br>
+                    <strong>Month 6:</strong> Verification system</p>
+                    <p><strong>Resources:</strong></p>
+                    <ul>
+                        <li><a href="https://foundations.projectpythia.org/">Project Pythia</a></li>
+                        <li><a href="https://learning.ecmwf.int/">ECMWF eLearning</a></li>
+                        <li><a href="https://gallery.pangeo.io/">Pangeo Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🌊</span>Ocean/Marine Track</h3>
+                    <p><strong>Month 1-2:</strong> Python + NumPy<br>
+                    <strong>Month 3:</strong> Xarray + NetCDF<br>
+                    <strong>Month 4:</strong> <a href="https://marine.copernicus.eu/">Copernicus Marine</a><br>
+                    <strong>Month 5:</strong> Ocean analysis tools<br>
+                    <strong>Month 6:</strong> Operational monitoring</p>
+                    <p><strong>Resources:</strong></p>
+                    <ul>
+                        <li><a href="https://marine.copernicus.eu/services/learn-and-apply">CMEMS Training</a></li>
+                        <li><a href="https://oceanpython.org/">OceanPython</a></li>
+                        <li><a href="https://ferret.pmel.noaa.gov/Ferret/">PyFerret</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🛰️</span>Satellite Track</h3>
+                    <p><strong>Month 1-2:</strong> Python + NumPy<br>
+                    <strong>Month 3:</strong> <a href="https://satpy.readthedocs.io/">Satpy</a> + imagery<br>
+                    <strong>Month 4:</strong> Real-time processing<br>
+                    <strong>Month 5:</strong> Custom products<br>
+                    <strong>Month 6:</strong> Operational pipeline</p>
+                    <p><strong>Resources:</strong></p>
+                    <ul>
+                        <li><a href="https://pytroll.github.io/">Pytroll Tutorials</a></li>
+                        <li><a href="https://training.eumetsat.int/">EUMETSAT Training</a></li>
+                        <li><a href="https://satpy.readthedocs.io/en/stable/gallery.html">Satpy Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 21: Weekly Learning Schedule -->
+        <div class="slide" id="slide-21">
+            <h1>Weekly Learning Schedule</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">📅</span>Suggested Schedule</h2>
+                    <p><strong>Monday:</strong> New concepts (1h)<br>
+                    <strong>Tuesday:</strong> Practice exercises (1h)<br>
+                    <strong>Wednesday:</strong> Project work (1h)<br>
+                    <strong>Thursday:</strong> Code review/refactor (1h)<br>
+                    <strong>Friday:</strong> Community/reading (1h)</p>
+                    <p><strong>Total:</strong> 5 hours/week minimum</p>
+                    <p><strong>Progress tracking:</strong> <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects">GitHub Projects</a></p>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">🎯</span>Monthly Goals</h2>
+                    <p><strong>Month 1:</strong> Complete Python basics<br>
+                    <strong>Month 2:</strong> First data analysis<br>
+                    <strong>Month 3:</strong> Domain tool mastery<br>
+                    <strong>Month 4:</strong> Share first project<br>
+                    <strong>Month 5:</strong> Contribute to OSS<br>
+                    <strong>Month 6:</strong> Mentor others</p>
+                    <p><strong>Track progress</strong> in <a href="https://github.com/">GitHub</a></p>
+                    <p><strong>Example projects:</strong> Forecast verification • SST analysis • Satellite composites</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 22: Joining the Community -->
+        <div class="slide" id="slide-22">
+            <h1>Joining the Community</h1>
+            <div class="grid grid-cols-3">
+                <div class="card">
+                    <h3><span class="emoji">🌐</span>General Python</h3>
+                    <ul>
+                        <li><a href="https://realpython.com/community/">Real Python Slack</a></li>
+                        <li><a href="https://pythondiscord.com/">Python Discord</a></li>
+                        <li><a href="https://reddit.com/r/learnpython">r/learnpython</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🌍</span>Scientific Python</h3>
+                    <ul>
+                        <li><a href="https://discourse.pangeo.io/">Pangeo Discourse</a></li>
+                        <li><a href="https://projectpythia.org/community.html">Project Pythia</a></li>
+                        <li><a href="https://scipy.org/community/">SciPy Mailing Lists</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><span class="emoji">🌊🛰️</span>Domain-Specific</h3>
+                    <ul>
+                        <li><a href="https://pytroll.slack.com">Pytroll Slack</a> (<a href="https://pytroll.github.io/#getting-in-touch">Join here</a>)</li>
+                        <li><a href="https://forum.marine.copernicus.eu/">CMEMS Forums</a></li>
+                        <li><a href="https://confluence.ecmwf.int/">ECMWF Support</a></li>
+                        <li><a href="https://oceanpython.org/">OceanPython</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight">
+                <p><span class="emoji">💡</span><strong>Tip:</strong> Join Pytroll Slack on Day 1 - incredibly helpful community!</p>
+            </div>
+        </div>
+
+        <!-- Slide 23: Essential Resources -->
+        <div class="slide" id="slide-23">
+            <h1>Essential Resources</h1>
+            <div class="grid grid-cols-2">
+                <div class="card">
+                    <h2><span class="emoji">📚</span>Books (Pick One)</h2>
+                    <p><strong>Beginner:</strong></p>
+                    <ul>
+                        <li><a href="https://nostarch.com/pythoncrashcourse3e">Python Crash Course</a></li>
+                    </ul>
+                    <p><strong>Scientific:</strong></p>
+                    <ul>
+                        <li><a href="https://wesmckinney.com/book/">Python for Data Analysis</a></li>
+                    </ul>
+                    <p><strong>Advanced Python:</strong></p>
+                    <ul>
+                        <li><a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python</a> - Deep Python idioms & patterns</li>
+                    </ul>
+                    <p><strong>Professional Development:</strong></p>
+                    <ul>
+                        <li><a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/">The Pragmatic Programmer</a> - Software craftsmanship</li>
+                    </ul>
+                    <p><strong>Domain-Specific:</strong></p>
+                    <ul>
+                        <li><a href="https://www.johnny-lin.com/pyintro/">A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences</a></li>
+                        <li><a href="https://www.cambridge.org/core/books/an-introduction-to-ocean-remote-sensing/551915A4FAE5D2013DFBA027A5DF1F07">An Introduction to Ocean Remote Sensing</a></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2><span class="emoji">🔗</span>Bookmarks</h2>
+                    <p><strong>Documentation:</strong></p>
+                    <ul>
+                        <li><a href="https://docs.python.org/3/">Python.org</a></li>
+                        <li><a href="https://numpy.org/doc/stable/">NumPy</a></li>
+                        <li><a href="https://docs.xarray.dev/">Xarray</a></li>
+                        <li><a href="https://satpy.readthedocs.io/">Satpy</a></li>
+                        <li><a href="https://help.marine.copernicus.eu/">Copernicus Marine</a></li>
+                    </ul>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li><a href="https://cookbooks.projectpythia.org/">Pythia Cookbooks</a></li>
+                        <li><a href="https://gallery.pangeo.io/">Pangeo Gallery</a></li>
+                        <li><a href="https://github.com/pytroll/pytroll-examples">Pytroll Examples</a></li>
+                        <li><a href="https://marine.copernicus.eu/services/use-cases">CMEMS Use Cases</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 24: Start Your Journey Today -->
+        <div class="slide title" id="slide-24">
+            <h1>Start Your Journey Today! 🐍</h1>
+            <h2>Next Steps</h2>
+            <ol style="text-align: left; max-width: 600px; margin: 30px auto;">
+                <li><strong>Pick your track</strong> (NWP, Ocean, or Satellite)</li>
+                <li><strong><a href="https://docs.conda.io/en/latest/miniconda.html">Install Miniconda</a></strong> for Python environment management</li>
+                <li><strong><a href="https://github.com/astral-sh/uv">Install uv</a></strong> for fast package management</li>
+                <li><strong><a href="https://pytroll.github.io/#getting-in-touch">Join Pytroll Slack</a></strong> for support</li>
+                <li><strong>Start with ONE resource</strong></li>
+                <li><strong>Code daily</strong>, even 15 minutes</li>
+            </ol>
+        </div>
+
+        <!-- Slide 25: Multiple Ways to Learn -->
+        <div class="slide" id="slide-25">
+            <h1>Multiple Ways to Learn</h1>
+            <div class="grid grid-cols-3">
+                <div class="card text-center">
+                    <h2><span class="emoji">📖</span>Read</h2>
+                    <p>These slides and detailed documentation</p>
+                </div>
+                <div class="card text-center">
+                    <h2><span class="emoji">🎧</span>Listen</h2>
+                    <p>25-minute AI podcast discussion covering all resources</p>
+                    <audio controls style="margin-top: 10px; width: 100%;">
+                        <source src="./assets/Python_Pathways_Podcast.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="card text-center">
+                    <h2><span class="emoji">👀</span>Watch</h2>
+                    <p>Video tutorials and conference talks linked throughout</p>
+                </div>
+            </div>
+            <h3 class="text-center mt-8">Remember: Everyone started as a beginner!</h3>
+            <p class="text-center mt-8">Questions? Find me on <a href="https://pytroll.slack.com">Slack</a> or <a href="https://github.com">GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button onclick="previousSlide()" id="prevBtn">← Previous</button>
+        <span id="slideInfo">1 / 25</span>
+        <button onclick="nextSlide()" id="nextBtn">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 25;
+
+        function showSlide(n) {
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+            
+            // Hide all slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.style.display = 'none');
+            
+            // Show current slide
+            document.getElementById(`slide-${currentSlide}`).style.display = 'flex';
+            
+            // Update navigation
+            document.getElementById('slideInfo').textContent = `${currentSlide} / ${totalSlides}`;
+            
+            // Update button states
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>

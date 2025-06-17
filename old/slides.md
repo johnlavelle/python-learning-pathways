@@ -95,7 +95,7 @@ Note: This talk outlines practical learning paths, resources, tools, and best pr
 
 Python is a *dynamic* language, meaning you can open it in the terminal and use it interactively.
 
-![python terminal](../images/open_python_in_terminal.png)
+![python terminal](../assets/images/open_python_in_terminal.png)
 
 ... as opposed to a *compiled* language like Fortran.
 
@@ -116,7 +116,7 @@ You can develop using your favourite text editor, VIM, etc., but there are benef
 
 ## Visual Studio Code
 
-![VS code](../images/vscode.png)
+![VS code](../assets/images/vscode.png)
 
 Very popular, but requires some setup: [https://code.visualstudio.com/docs/languages/python](https://code.visualstudio.com/docs/languages/python)
 
@@ -124,7 +124,7 @@ Very popular, but requires some setup: [https://code.visualstudio.com/docs/langu
 
 ## Spyder
 
-![Spyder IDE](../images/ide_spyder.png)
+![Spyder IDE](../assets/images/ide_spyder.png)
 
 Matlab like interface, but more limited.
 
@@ -132,7 +132,7 @@ Matlab like interface, but more limited.
 
 ## PyCharm
 
-![PyCharm IDE](../images/ide_pycharm.png)
+![PyCharm IDE](../assets/images/ide_pycharm.png)
 
 Sophisticated, Python orientated IDE. Requires a subscription.
 
@@ -140,7 +140,7 @@ Sophisticated, Python orientated IDE. Requires a subscription.
 
 ## Jupyter Lab
 
-![Jupyter Lab Interface](../images/ide_jupyterlab.png)
+![Jupyter Lab Interface](../assets/images/ide_jupyterlab.png)
 
 For interactive code development. Not suitable for large code bases.
 
@@ -328,7 +328,7 @@ Would you like me to explain any particular aspect of the code in more detail?
 
 ## Use a LLM: Convert from Matlab to Python
 
-![llm_matlab_to_python.png](../images/llm_matlab_to_python.png)
+![llm_matlab_to_python.png](../assets/images/llm_matlab_to_python.png)
 An example using Claude
 
 ---
@@ -379,7 +379,7 @@ Advanced Python
 
 ---
 
-![book_fluent_python.jpeg](../images/book_fluent_python.jpeg)
+![book_fluent_python.jpeg](../assets/images/book_fluent_python.jpeg)
 
 ---
 
@@ -442,7 +442,7 @@ flowchart TD
 ## Learn the basic syntax: Kaggle
 
 
-![kaggle1.png](../images/kaggle1.png)
+![kaggle1.png](../assets/images/kaggle1.png)
 
 Kaggle offers course on Python...
 
@@ -450,7 +450,7 @@ Kaggle offers course on Python...
 
 ## Learn the basic syntax: tutorial
 
-![kaggle2.png](../images/kaggle2.png)
+![kaggle2.png](../assets/images/kaggle2.png)
 
 Kaggle offers course on Python...
 

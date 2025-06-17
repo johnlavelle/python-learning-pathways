@@ -1,0 +1,23 @@
+{
+  "name": "pathways_to_learn_python_for_scientific_software_development",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx slidev slides.md",
+    "build": "npx slidev build slides.md",
+    "export": "npx slidev export slides.md",
+    "serve": "npx http-server dist -p 3030",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@slidev/cli": "^51.8.2",
+    "playwright-chromium": "^1.53.0"
+  },
+  "dependencies": {
+    "@slidev/theme-default": "^0.25.0"
+  }
+}

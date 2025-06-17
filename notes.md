@@ -1,486 +1,205 @@
-# Speaker Notes - Python Learning Pathways for Scientific Software Development
+# Speaker Notes: Python Learning Pathways for DMI Researchers
 
 ## Slide 1: Title Slide
-**Duration: 1-2 minutes**
-
-Welcome everyone! Today I'm excited to share a comprehensive learning guide for mastering Python in scientific software development. 
-
-This presentation is different from a typical Python tutorial - we won't be teaching syntax today. Instead, I'll be your guide through the vast Python ecosystem, helping you find the most efficient path to build the skills you need for your research.
-
-Whether you're completely new to programming or looking to level up your existing Python skills, this roadmap will help you navigate the learning journey more effectively.
-
----
+**Time: 1 minute**
+- Welcome everyone
+- Introduce yourself and your Python journey
+- Set expectations: "This is NOT a Python tutorial - it's a roadmap to help you learn efficiently"
+- Mention this will save them months of trial and error
 
 ## Slide 2: Why This Learning Path?
-**Duration: 2-3 minutes**
+**Time: 2 minutes**
+- Acknowledge the challenge: "I know many of you want to learn Python but feel overwhelmed"
+- Share a brief story about confusion when starting (too many resources, which to choose?)
+- Emphasize: "We've curated the best resources specifically for meteorological/oceanographic work"
+- This presentation is the guide I wish I had when starting
 
-Let me start with why we created this specific learning path.
+## Slide 3: Your Learning Journey
+**Time: 2 minutes**
+- Walk through the journey visualization
+- Emphasize it's not linear - people may skip or revisit stages
+- Key message: "Everyone moves at their own pace"
+- Point out the 6-month timeline is realistic for part-time learning (1-2 hours/day)
+- Mention that contributing back is part of the journey
 
-**The Challenge:**
-- The Python ecosystem can be overwhelming - there are thousands of libraries, dozens of learning platforms, and countless tutorials. Where do you even start?
-- Scientific computing has specific needs that general Python courses often don't address
-- In research, code quality directly impacts the reliability of your results
-- As researchers, your time is precious - you need efficient ways to learn
+## Slide 4: Part 1 - Getting Started (Section intro)
+**Time: 30 seconds**
+- "Let's start with choosing your first steps"
+- Emphasize picking the right starting point saves time
 
-**Our Solution:**
-- We've curated the best resources specifically for scientific applications
-- Every recommendation focuses on practical skills you'll actually use
-- We emphasize modern practices that will make your code more reliable and maintainable
-- This isn't just about learning Python - it's about becoming an effective scientific programmer
+## Slide 5: Learning Paths by Background
+**Time: 3 minutes**
+- **Ask the audience**: "Who here is completely new to programming?" (show of hands)
+- "Who's coming from MATLAB or R?" (show of hands)
+- For beginners: Emphasize Python.org tutorial is FREE and official
+- For MATLAB users: "You'll love NumPy - it's like MATLAB arrays but free and more powerful"
+- **Key message**: Pick ONE resource and finish it before trying another
 
----
+## Slide 6: Modern Learning Resources Comparison
+**Time: 2 minutes**
+- "This table is your cheat sheet for choosing resources"
+- Highlight Software Carpentry: "Designed by researchers, for researchers"
+- Point out Project Pythia: "Brand new, specifically for atmospheric sciences"
+- Note the 5-star ratings for DMI relevance
+- **Recommendation**: "Start with Software Carpentry + Project Pythia combo"
 
-## Slide 3: Learning Roadmap
-**Duration: 2-3 minutes**
+## Slide 7: Part 2 - Scientific & Domain Tools (Section intro)
+**Time: 30 seconds**
+- "Now let's look at the tools you'll actually use in your work"
 
-Here's the big picture of your learning journey. Think of this as a roughly 20-week commitment, though everyone moves at their own pace.
+## Slide 8: Essential Scientific Stack
+**Time: 3 minutes**
+- "These are your bread and butter tools"
+- **NumPy**: "Everything in scientific Python builds on this"
+- **Pandas**: "Like Excel but programmable and handles millions of rows"
+- **Xarray**: "Game-changer for NetCDF/GRIB data - labeled arrays!"
+- Emphasize the learning order is important
+- Share example: "Xarray lets you do `data.sel(time='2023-01', lat=55.7, lon=12.6)`"
 
-**Weeks 1-4: Fundamentals**
-- Focus on core Python syntax, data types, and control structures
-- Don't rush this phase - solid fundamentals will pay dividends later
-- Aim for 1-2 hours of practice daily
+## Slide 9: Weather & Climate Data Access
+**Time: 4 minutes**
+- "This slide alone will save you weeks of searching"
+- Walk through each column:
+  - **Atmosphere**: "ECMWF Open Data is free real-time forecasts!"
+  - **Ocean**: "Copernicus Marine has everything - currents, temperature, biogeochemistry"
+  - **Satellite**: "Satpy handles ALL satellites - GOES, Meteosat, MODIS, etc."
+- **Live demo** (if possible): Show one line of code downloading data
+- Mention: "All of these have excellent documentation"
 
-**Weeks 5-12: Scientific Stack**
-- This is where things get exciting for researchers
-- You'll learn NumPy for numerical computing, Pandas for data manipulation, Xarray for multidimensional datasets
-- We'll also cover visualization with Matplotlib
-- Start applying these to your own research data
+## Slide 10: Part 3 - Development Environment (Section intro)
+**Time: 30 seconds**
+- "Tools matter - good setup makes you 10x more productive"
 
-**Weeks 13-20: Best Practices**
-- Learn to write clean, maintainable code
-- Introduction to testing - crucial for research reproducibility
-- Version control with Git - never lose your work again
-- These practices separate amateur coders from professionals
+## Slide 11: Your Development Setup
+**Time: 3 minutes**
+- **VS Code**: "Free, works everywhere, amazing Python support"
+- Show VS Code if possible - highlight Python extension
+- **Conda environments**: "Like having multiple clean Python installations"
+- Explain: "Never install packages globally - always use environments"
+- **Tip**: "Start every project with a new environment"
 
----
+## Slide 12: Effective Development Workflow
+**Time: 3 minutes**
+- **Git**: "Not optional anymore - it's like 'track changes' for code"
+- Share story about losing code before using Git
+- **Jupyter**: "Great for exploring, but move to scripts for production"
+- Mention: "DMI GitLab available for private repos"
+- **Key**: "Commit early, commit often"
 
-## Slide 4: Starting Your Journey
-**Duration: 3-4 minutes**
+## Slide 13: Part 4 - Writing Better Code (Section intro)
+**Time: 30 seconds**
+- "The difference between code that works and code that lasts"
 
-For complete beginners, here are the resources I recommend starting with:
+## Slide 14: Code Quality Progression
+**Time: 3 minutes**
+- Show the progression: "We all start at bronze"
+- **Bronze**: "It works! That's great for learning"
+- **Silver**: "Now it's readable - your colleagues will thank you"
+- **Gold**: "Future you will thank you - maintainable and documented"
+- Emphasize: "Don't aim for gold on day 1 - progress naturally"
+- Mention code reviews help progression
 
-**Interactive Learning:**
-- **Codecademy Python** is great for absolute beginners - it runs in your browser, no setup needed
-- **Python.org Tutorial** is the official tutorial - comprehensive but can be dry
-- **Google's Python Class** includes video lectures and exercises - good for those who like structured learning
+## Slide 15: Testing Your Code
+**Time: 2 minutes**
+- "Testing seems like extra work until it saves you from a critical bug"
+- Share example: "Unit test caught an edge case in temperature conversion"
+- **When to start**: "As soon as you use code twice"
+- pytest is the standard - much better than unittest
+- "Tests are living documentation"
 
-**Essential Books:**
-- **"Python Crash Course"** is my top recommendation - it's practical, well-paced, and includes projects
-- **"Automate the Boring Stuff"** is perfect if you want to see immediate practical applications
+## Slide 16: Part 5 - AI-Assisted Development (Section intro)
+**Time: 30 seconds**
+- "Let's talk about the elephant in the room - AI coding assistants"
 
-**Time Investment:** Expect to spend 20-30 hours to grasp the basics. That's roughly 1-2 hours daily for 3-4 weeks. Consistency is more important than long sessions.
+## Slide 17: Leveraging AI Tools
+**Time: 3 minutes**
+- "AI is your junior assistant, not your replacement"
+- **Good uses**: Show the examples
+- **Critical**: "ALWAYS review and understand AI code"
+- Share cautionary tale: "AI once gave me code that looked perfect but had subtle bugs"
+- Recommend: "Use AI to learn patterns, not just copy code"
+- "Great for MATLAB to Python conversion!"
 
-Pro tip: Don't try to memorize everything. Focus on understanding concepts - you can always look up syntax.
+## Slide 18: Part 6 - Your Personal Learning Plan (Section intro)
+**Time: 30 seconds**
+- "Let's make this concrete with specific learning tracks"
 
----
+## Slide 19: Choose Your Learning Track
+**Time: 4 minutes**
+- **Ask audience**: "Who works primarily with NWP models? Ocean data? Satellites?"
+- Walk through each track
+- **NWP**: "You'll love Xarray and ECMWF tools"
+- **Ocean**: "Copernicus Marine is incredibly comprehensive"
+- **Satellite**: "Satpy is like magic for satellite data"
+- Mention: "You can switch tracks or combine them later"
+- Point out the gradual progression in each track
 
-## Slide 5: Online Learning Platforms
-**Duration: 3 minutes**
+## Slide 20: Weekly Learning Schedule
+**Time: 2 minutes**
+- "Consistency beats intensity"
+- **5 hours/week**: "That's just 1 hour per workday"
+- Suggest: "Block calendar time for learning"
+- **Friday community time**: "Questions you struggle with Monday are often answered by Friday"
+- Mention: "Many people do Python over morning coffee"
+- **GitHub tracking**: "Your contribution graph motivates you"
 
-Once you have the basics, these platforms offer more structured learning:
+## Slide 21: Joining the Community
+**Time: 3 minutes**
+- "The Python community is incredibly welcoming"
+- **Pytroll Slack**: "Join TODAY - seriously, during this talk if you want"
+- Share: "I've gotten help from Pytroll developers within minutes"
+- **Pangeo**: "Where all the atmospheric/ocean scientists hang out"
+- Mention: "Don't be shy - everyone was a beginner once"
+- "Your 'stupid' question helps 10 other people"
 
-**University Courses:**
-- **MIT 6.00.1x** on EdX is exceptional - it's the actual MIT intro course, taught by excellent professors
-- **Python for Everybody** on Coursera is gentler, perfect if MIT feels too intense
-- Both offer certificates if that's important for your career
+## Slide 22: Essential Resources
+**Time: 2 minutes**
+- "Screenshot this slide!"
+- **Books**: "One book thoroughly is better than skimming five"
+- **Python Crash Course**: "If you've never programmed, start here"
+- Point out Johnny Lin's book: "Written specifically for atmospheric scientists"
+- **Bookmarks**: "Add these to your browser bookmarks bar"
 
-**Scientific Python:**
-- **Software Carpentry** is specifically designed for researchers - highly recommended
-- **Kaggle Learn** combines tutorials with real datasets and competitions
-- **SciPy Lectures** are the definitive resource for the scientific Python stack
-
-My advice: Pick ONE platform and stick with it. Don't jump between courses - completion is more valuable than sampling everything.
-
----
-
-## Slide 6: YouTube Learning Channels
-**Duration: 2-3 minutes**
-
-YouTube is an incredible free resource if you know where to look:
-
-**Best Practices:**
-- **ArjanCodes** is my top recommendation - he focuses on writing professional, clean Python code
-- His videos on SOLID principles and design patterns will transform how you structure your programs
-- **Corey Schafer** has the most comprehensive Python tutorial series on YouTube
-- His explanations are clear and thorough
-
-**Scientific Python:**
-- **sentdex** covers practical data science projects - great for seeing real applications
-- **PyData** uploads conference talks - cutting-edge techniques from experts
-
-Tip: Watch at 1.5x speed once you're comfortable - you'll learn faster and stay engaged.
-
----
-
-## Slide 7: Essential Books
-**Duration: 2-3 minutes**
-
-Books remain invaluable for deep learning. Here's my recommended progression:
-
-**Core Python:**
-- 🟢 **"Python Crash Course"** - Start here if you're new
-- 🟡 **"Effective Python"** - Read this after 6 months of coding to level up
-- 🔴 **"Fluent Python"** - Advanced techniques for when you're ready to master the language
-
-**Scientific & Engineering:**
-- **"Python for Data Analysis"** by Wes McKinney (Pandas creator) - essential for data work
-- **"Clean Code"** - not Python-specific but will transform your programming
-- **"The Pragmatic Programmer"** - timeless advice for your entire career
-
-Don't feel you need to read all of these. One good book thoroughly studied beats skimming five.
-
----
-
-## Slide 8: Scientific Python Ecosystem
-**Duration: 3-4 minutes**
-
-Let me map out the key libraries you'll encounter:
-
-**Foundation:**
-- **NumPy** - the bedrock of scientific Python, handles arrays and mathematical operations
-- **Pandas** - makes data manipulation intuitive
-- **Matplotlib** - your go-to for publication-quality plots
-- **SciPy** - advanced scientific algorithms
-
-**Geo/Meteo** (especially relevant for DMI):
-- **Xarray** - game-changer for multidimensional data like NetCDF files
-- **MetPy** - meteorological calculations made easy
-- **Cartopy** - beautiful map projections
-- **Iris** - UK Met Office's powerful toolkit
-
-**Performance:**
-- **Numba** - make Python code run at C speeds with minimal changes
-- **Dask** - scale to larger-than-memory datasets
-- **CuPy** - GPU acceleration with NumPy-compatible syntax
-
-Start with the foundation, then add domain-specific tools as needed.
-
----
-
-## Slide 9: Development Environments
-**Duration: 3-4 minutes**
-
-Your choice of tools significantly impacts productivity:
-
-**IDEs:**
-- **VS Code** - Free, lightweight, incredible Python support. This is what I recommend for most users
-- Install the Python extension pack for full features
-- **PyCharm** - More powerful but heavier. Great if you're working on large projects
-- Has a free Community Edition
-- **JupyterLab** - Perfect for exploratory data analysis and creating reports
-- Not a replacement for an IDE, but a complementary tool
-
-**Package Management:**
-- **uv** - The new kid on the block, blazingly fast. The future of Python packaging
-- **Miniconda** - Still the standard for scientific Python, especially for complex dependencies
-- **conda-forge** - Community-maintained packages, often more up-to-date than defaults
-
-Pro tip: Start with VS Code + Miniconda. You can always add tools later.
+## Slide 23: Start Your Journey Today!
+**Time: 3 minutes**
+- Recap the key message: "Pick your track, install Python, join community"
+- **Emphasize**: "The best time to start was yesterday, second best is today"
+- "Code daily, even 15 minutes counts"
+- Share success story: "Colleague went from zero to contributing to Satpy in 6 months"
+- End with: "You'll be amazed what you can build in 6 months"
+- **Questions**: "I'll stay after for specific questions"
 
 ---
 
-## Slide 10: Pythonic Code
-**Duration: 3-4 minutes**
-
-This example shows the difference between writing Python like another language versus embracing Python's elegance:
-
-**Non-Pythonic approach:**
-- Verbose, C-style loops
-- Missing Python's built-in features
-- Harder to read and maintain
-
-**Pythonic approach:**
-- List comprehension makes the intent clear
-- One line instead of six
-- Faster execution too!
-
-This isn't about being clever - Pythonic code is:
-- More readable to experienced Python developers
-- Often more performant
-- Less prone to bugs
-
-The video recommendation here - Patrick Loeber's "25 Python Tricks" - is fantastic for learning these patterns.
-
-Remember: "Pythonic" means writing code that follows Python's philosophy of simplicity and readability.
-
----
-
-## Slide 11: Clean Code: SOLID Principles
-**Duration: 3-4 minutes**
-
-SOLID principles aren't just academic concepts - they're practical guidelines that will save you hours of debugging:
-
-**The God Class problem:**
-- One class trying to do everything
-- Becomes impossible to maintain
-- Changes in one area break others
-- Testing is a nightmare
-
-**Single Responsibility solution:**
-- Each class has ONE job
-- Easy to understand, test, and modify
-- Changes are isolated
-- Can reuse components
-
-In the weather system example, separating concerns means:
-- DataProcessor can be tested independently
-- You can swap ForecastGenerator algorithms without touching other code
-- Multiple developers can work on different components
-
-ArjanCodes' video on SOLID is the best practical introduction I've found.
-
----
-
-## Slide 12: DRY Principle
-**Duration: 2-3 minutes**
-
-DRY - Don't Repeat Yourself - is fundamental to maintainable code.
-
-**The WET problem:**
-- Same logic in multiple places
-- Bug fixes need to be applied everywhere
-- Easy to miss updating one location
-- Violates the principle of single source of truth
-
-**The DRY solution:**
-- Centralize the logic
-- Use parameters for variations
-- One place to fix bugs or add features
-- Consider using dictionaries for mapping operations
-
-In our temperature conversion example, adding a new unit (like Rankine) requires:
-- WET: Creating an entire new function
-- DRY: Adding one line to the dictionary
-
-This principle extends beyond functions to data structures, configuration, and documentation.
-
----
-
-## Slide 13: Testing & Quality
-**Duration: 3-4 minutes**
-
-Testing isn't optional in scientific computing - your research depends on correct code!
-
-**The Testing Pyramid:**
-- **Unit Tests** - Test individual functions. You'll write hundreds of these
-- Quick to run, easy to write
-- **Integration Tests** - Test how components work together
-- Catch issues unit tests miss
-- **E2E Tests** - Test complete workflows
-- Fewer but crucial for confidence
-
-**CI/CD with GitLab:**
-- Every push runs your tests automatically
-- Catches errors before they reach production
-- Coverage reports show untested code
-- Builds confidence in your research code
-
-The example shows how simple testing can be with pytest. Start by testing critical calculations in your research code.
-
----
-
-## Slide 14: Version Control
-**Duration: 2-3 minutes**
-
-Git isn't just for software developers - it's essential for reproducible research:
-
-**Basic Git workflow:**
-- These four commands cover 90% of daily use
-- Don't be intimidated by Git's complexity - start simple
-
-**Commit messages:**
-- Use conventional commits (feat, fix, docs, test)
-- Future you will thank present you for clear messages
-- Good messages make finding old code easy
-
-**Branching strategy:**
-- main: stable, tested code
-- develop: integration branch
-- feature/*: isolated development
-
-For research: Consider tagging versions used for publications. This ensures reproducibility.
-
----
-
-## Slide 15: Leveraging LLMs
-**Duration: 4-5 minutes**
-
-AI assistants are transforming how we write code. Here's how to use them effectively:
-
-**Three main use cases:**
-
-1. **Generate** - Great for boilerplate code or algorithms you understand conceptually
-   - Always review and test generated code
-   - Use for starting points, not final solutions
-
-2. **Convert** - Excellent for translating between languages
-   - Especially useful for MATLAB to Python conversions
-   - Check that Python idioms are used, not just syntax translation
-
-3. **Improve** - My favorite use case
-   - Paste working code and ask for improvements
-   - Request specific patterns (SOLID, DRY, type hints)
-
-**Available tools:**
-- **GitHub Copilot** - Integrates into your IDE, great for autocomplete
-- **ChatGPT/Claude** - Better for complex refactoring and explanations
-- **Cursor** - IDE built around AI assistance
-
-Remember: These tools are assistants, not replacements for understanding. Always verify the output.
-
----
-
-## Slide 16: Effective LLM Prompting
-**Duration: 3 minutes**
-
-The quality of AI assistance depends entirely on your prompts.
-
-**Good prompt characteristics:**
-- Specific requirements (mention libraries, patterns)
-- Request best practices (docstrings, type hints)
-- Ask for tests alongside code
-- Specify your use case (scientific computing)
-
-**Best practices:**
-- ✅ **Be specific** - Vague requests get vague responses
-- ✅ **Request tests** - Helps verify the code works
-- ✅ **Verify output** - Run and understand the code
-- ✅ **Iterate** - Refine based on initial results
-
-Think of AI as a knowledgeable colleague - the clearer your request, the better their help.
-
----
-
-## Slide 17: Advanced Topics
-**Duration: 2-3 minutes**
-
-Once you're comfortable with the basics, these areas offer powerful capabilities:
-
-**HPC (High-Performance Computing):**
-- Dask scales Pandas and NumPy to clusters
-- CuPy brings GPU acceleration with familiar syntax
-- Essential for processing large climate datasets
-
-**ML/AI:**
-- Scikit-learn for traditional machine learning
-- PyTorch for deep learning applications
-- Growing applications in weather prediction
-
-**Big Data:**
-- Xarray + Dask handles datasets larger than memory
-- Zarr format optimizes cloud storage
-- Critical for modern earth system modeling
-
-Don't rush into these - build a solid foundation first.
-
----
-
-## Slide 18: Your Learning Plan
-**Duration: 3-4 minutes**
-
-Here's a concrete 6-month plan you can adapt:
-
-**Month 1-2: Foundation**
-- 30 hours on Python basics - this investment pays off
-- 20 hours on NumPy - the foundation of scientific Python
-- 10 hours on Git - start version controlling immediately
-
-**Month 3-4: Scientific Tools**
-- Learn Pandas for any tabular data
-- Master Jupyter for exploratory work
-- Add domain-specific libraries as needed
-
-**Month 5-6: Professional Skills**
-- Clean code principles transform your programming
-- Testing gives confidence in your results
-- CI/CD automates quality checks
-
-**Key point:** 30 minutes daily beats weekend marathons. Consistency builds skills and habits.
-
----
-
-## Slide 19: Community & Learning
-**Duration: 2-3 minutes**
-
-Programming is a team sport - engage with the community:
-
-**Online Communities:**
-- Python Forum for thoughtful discussions
-- Stack Overflow for specific problems
-- r/Python for news and trends
-
-**Conferences:**
-- Start by watching talks online
-- Attend virtually before committing to travel
-- Consider presenting your work eventually
-
-**Contributing back:**
-- Start with documentation improvements
-- Report bugs you encounter
-- Share tools you develop
-- Mentor newcomers
-
-The Python community is exceptionally welcoming to scientists.
-
----
-
-## Slide 20: Quick Reference
-**Duration: 2 minutes**
-
-Here's your cheat sheet to get started:
-
-This slide is designed as a reference - screenshot it or bookmark these resources.
-
-Pick one resource from each category:
-- One learning platform
-- One YouTube channel to follow
-- One tool to master
-
-Remember: It's better to fully complete one course than to start five.
-
----
-
-## Slide 21: Thank You!
-**Duration: 2-3 minutes**
-
-Let's recap your next steps:
-
-1. **Assess** - Be honest about your current level
-2. **Choose** - Pick 2-3 resources that match your learning style
-3. **Practice** - Daily practice, even 30 minutes, builds expertise
-4. **Join** - Engage with the community for support and motivation
-
-Remember: Every expert was once a beginner. The journey of a thousand miles begins with a single step - or in our case, a single `print("Hello, World!")`.
-
-Questions? Let's discuss what specific challenges you're facing or what aspects of Python you're most excited to explore.
-
-[Open floor for Q&A]
-
----
-
-## Additional Q&A Preparation
-
-**Common questions to prepare for:**
-
-1. **"How long until I'm proficient?"**
-   - Basic proficiency: 3-6 months of regular practice
-   - Research-ready: 6-12 months
-   - Expert level: 2-3 years of active use
-
-2. **"Should I learn Python 2 or 3?"**
-   - Always Python 3. Python 2 is obsolete since 2020
-
-3. **"IDE vs Jupyter notebooks?"**
-   - Both! IDE for development, Jupyter for exploration
-   - They serve different purposes
-
-4. **"What about R vs Python?"**
-   - Python for general scientific computing
-   - R still excellent for statistics
-   - Many researchers use both
-
-5. **"How do I stay motivated?"**
-   - Work on problems you care about
-   - Join study groups
-   - Celebrate small wins
-   - Track your progress
+## General Tips for Presenter:
+
+1. **Total time**: Aim for 45 minutes, leaving 15 for questions
+
+2. **Engagement**: 
+   - Ask for shows of hands
+   - Share personal anecdotes
+   - Live demos if possible (have backups ready)
+
+3. **Key messages to repeat**:
+   - "One resource at a time"
+   - "Join Pytroll Slack today"
+   - "Consistency over intensity"
+   - "You're not alone in this journey"
+
+4. **Have ready**:
+   - Links to share in chat
+   - QR code for Pytroll Slack signup
+   - Your own Python journey story
+   - Backup slides if demos fail
+
+5. **Common questions to prepare for**:
+   - "Python 2 vs 3?" (Always Python 3, Python 2 is dead)
+   - "Which IDE is best?" (VS Code for most, but personal preference)
+   - "How long until I'm productive?" (1-2 months for basic tasks)
+   - "Should I learn Julia/R instead?" (Python has the biggest community)
+   - "Conda vs pip?" (Use conda for scientific packages, pip for the rest)
+
+6. **After the talk**:
+   - Share slides link
+   - Post in Pytroll Slack introducing DMI cohort
+   - Consider organizing follow-up Python coffee sessions

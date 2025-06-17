@@ -15,5 +15,5 @@ Key Goals:
 Target Audience: DMI researchers ranging from complete beginners to those seeking
 to improve their existing Python skills with better practices and advanced techniques.
 
-Format: Designed for Slidev (https://sli.dev) - a developer-friendly presentation tool
+Format: Designed for (https://sli.dev) - a developer-friendly presentation tool
 that uses Markdown and allows for interactive code examples and modern web features.
