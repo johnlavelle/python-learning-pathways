@@ -32,12 +32,12 @@ title: Python Learning Pathways
 transition: fade-out
 ---
 
-# 🤔 Why This Learning Path?
+# Why This Learning Path?
 
 <div class="grid grid-cols-2 gap-8">
 <div>
 
-## 🚧 The Challenge
+## The Challenge
 
 - Python ecosystem is **vast**
 - Scientific computing needs
@@ -47,11 +47,11 @@ transition: fade-out
 </div>
 <div>
 
-## 🎯 Our Approach
+## Our Approach
 
-- 📚 Curated pathways by level
-- 🌍 Focus on meteorology & oceanography
-- ✨ Modern best practices
+- Curated pathways by level
+- Focus on meteorology & oceanography
+- Modern best practices
 
 </div>
 </div>
@@ -64,9 +64,9 @@ transition: fade-out
 
 ```mermaid
 graph LR
-    A[🌱 Beginner] --> B[🔬 Scientific Python]
-    B --> C[🛠️ Domain Tools]
-    C --> D[✨ Best Practices]
+    A[Beginner] --> B[Scientific Python]
+    B --> C[Domain Tools]
+    C --> D[Best Practices]
 ```
 
 </div>
@@ -74,7 +74,7 @@ graph LR
 <div class="grid grid-cols-3 gap-4 text-sm">
 <div>
 
-## 🌱 Phase 1: Foundations
+## Phase 1: Foundations
 - Python syntax & concepts
 - Basic data structures
 - Simple scripts
@@ -82,7 +82,7 @@ graph LR
 </div>
 <div>
 
-## 🔬 Phase 2: Scientific Stack
+## Phase 2: Scientific Stack
 - NumPy, Pandas, Xarray
 - Plotting with Matplotlib
 - Jupyter workflows
@@ -90,7 +90,7 @@ graph LR
 </div>
 <div>
 
-## ✨ Phase 3: Advanced
+## Phase 3: Advanced
 - Clean code principles
 - Version control
 - Testing & debugging
@@ -102,12 +102,9 @@ graph LR
 layout: section
 ---
 
-# 🚀 Part 1: Getting Started
+# Part 1: Getting Started
 ## Choosing Your First Steps
 
-<div class="text-6xl opacity-20 absolute top-20 right-20">
-  🌱
-</div>
 
 ---
 
@@ -116,105 +113,123 @@ layout: section
 ## Complete Beginner
 
 **Start Here:**
-* 🔗 **[Python.org Tutorial](https://docs.python.org/3/tutorial/)** - Official guide
-* 🔗 **[Software Carpentry](https://swcarpentry.github.io/python-novice-inflammation/)** - Research-focused workshops
-* 📖 **[Python Crash Course (3rd Edition)](https://nostarch.com/python-crash-course-3rd-edition)** - Comprehensive with projects
-* 🏫 **[Lær at programmere i Python](https://ida.dk/arrangementer-og-kurser/kurser/it-udvikling/laer-at-programmere-i-python)** - IDA's Python Course
+* **<a href="https://docs.python.org/3/tutorial/" style="color: #0066cc;">Python.org Tutorial</a>** - Official guide
+* **<a href="https://swcarpentry.github.io/python-novice-inflammation/" style="color: #0066cc;">Software Carpentry</a>** - Research-focused workshops
+* **<a href="https://nostarch.com/python-crash-course-3rd-edition" style="color: #0066cc;">Python Crash Course (3rd Edition)</a>** - Comprehensive with projects
+* **<a href="https://ida.dk/arrangementer-og-kurser/kurser/it-udvikling/laer-at-programmere-i-python" style="color: #0066cc;">Lær at programmere i Python</a>** - IDA's Python Course
 
 **Time:** 4-6 weeks (1-2 hrs/day)
-
-<div class="mt-6 p-4 bg-blue-100 bg-opacity-20 border-l-4 border-blue-400 rounded">
-  <strong>🚀 Action Item:</strong> Join Pytroll Slack on Day 1!
-  <br><br>
-  <a href="https://pytroll.github.io/#getting-in-touch" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors inline-block">
-    💬 Join Pytroll Slack →
-  </a>
-</div>
 
 ---
 
 # Coming from MATLAB/R/Fortran
 
 **Start Here:**
-1. 🔗 **[NumPy for MATLAB users](https://numpy.org/doc/stable/user/numpy-for-matlab-users.html)** - Direct translation guide
-2. 🌍 **[Project Pythia](https://projectpythia.org/)** - Earth sciences focus
-3. 📖 **[Python for Data Analysis (3rd Ed)](https://wesmckinney.com/book/)** - By pandas creator
+1. **<a href="https://numpy.org/doc/stable/user/numpy-for-matlab-users.html" style="color: #0066cc;">NumPy for MATLAB users</a>** - Direct translation guide
+2. **<a href="https://projectpythia.org/" style="color: #0066cc;">Project Pythia</a>** - Earth sciences focus
+3. **<a href="https://wesmckinney.com/book/" style="color: #0066cc;">Python for Data Analysis (3rd Ed)</a>** - By pandas creator
 
 **Time:** 2-3 weeks (1-2 hrs/day)
 
 **First Project:** Port existing analysis
 
-**Next Book:** [Fluent Python](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/) for Python mastery
+**Next Book:** <a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" style="color: #0066cc;">Fluent Python</a> for Python mastery
 
 ---
 
-# 📊 Modern Learning Resources Comparison
+# Modern Learning Resources Comparison
 
 | Resource | Best For | Format | Time | Cost | 
 |----------|----------|---------|------|------|
-| 🔬 **[Software Carpentry 🔗](https://swcarpentry.github.io/python-novice-inflammation/)** | Research beginners | Workshop-style | 2 days | 🆓 Free |
-| 🌍 **[Project Pythia 🔗](https://projectpythia.org/)** | Atmospheric scientists | Tutorials + Videos | Self-paced | 🆓 Free | 
-| 📚 **[Real Python 🔗](https://realpython.com/)** | All levels | Articles + Courses | Ongoing | 💰 Free/Paid |
-| 💻 **[Codecademy Python 🔗](https://www.codecademy.com/learn/learn-python-3)** | Absolute beginners | Interactive | 25 hours | 💰 Free/Pro |
-| 🎓 **[Python for Everybody 🔗](https://www.coursera.org/specializations/python)** | General programming | Video lectures | 8 months | 💰 Free/Paid |
+| **<a href="https://swcarpentry.github.io/python-novice-inflammation/" style="color: #0066cc;">Software Carpentry</a>** | Research beginners | Workshop-style | 2 days | Free |
+| **<a href="https://projectpythia.org/" style="color: #0066cc;">Project Pythia</a>** | Atmospheric scientists | Tutorials + Videos | Self-paced | Free | 
+| **<a href="https://realpython.com/" style="color: #0066cc;">Real Python</a>** | All levels | Articles + Courses | Ongoing | Free/Paid |
+| **<a href="https://www.codecademy.com/learn/learn-python-3" style="color: #0066cc;">Codecademy Python</a>** | Absolute beginners | Interactive | 25 hours | Free/Pro |
+| **<a href="https://www.coursera.org/specializations/python" style="color: #0066cc;">Python for Everybody</a>** | General programming | Video lectures | 8 months | Free/Paid |
 
 <div class="mt-8 p-4 bg-green-100 bg-opacity-10 rounded-lg">
-  <strong>💡 Recommendation:</strong> Start with Software Carpentry + Project Pythia for the perfect research focus
+  <strong>Recommendation:</strong> Start with Software Carpentry + Project Pythia for the perfect research focus
 </div>
 
 ---
 layout: section
 ---
 
-# 🔬 Part 2: Scientific & Domain Tools
+# Part 2: Scientific & Domain Tools
 ## Building Your Technical Stack
 
-<div class="text-6xl opacity-20 absolute top-20 right-20">
-  ⚗️
-</div>
 
 ---
 
-# Essential Scientific Stack
+# Essential Scientific Stack: Data Handling
 
-## Data Handling
+
+<div class="grid grid-cols-2 gap-8">
+<div>
+
 ```python
 import numpy as np
 import pandas as pd
 import xarray as xr
 ```
-- <strong>NumPy</strong>: Efficient array computing and mathematical operations
-- <strong>Pandas</strong>: Tabular data analysis with DataFrames
-- <strong>Xarray</strong>: Labeled multi-dimensional arrays for NetCDF/climate data
 
-<div class="flex gap-4 justify-center mt-4">
-  <a href="https://numpy.org/doc/stable/user/absolute_beginners.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">🔢 NumPy Guide</a>
-  <a href="https://pandas.pydata.org/docs/user_guide/10min.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">🐼 Pandas Tutorial</a>
-  <a href="https://docs.xarray.dev/en/stable/getting-started-guide/quick-overview.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">🌍 Xarray Intro</a>
 </div>
+<div>
+
+**Core Libraries:**
+* **NumPy**: Efficient array computing and mathematical operations
+* **Pandas**: Tabular data analysis with DataFrames  
+* **Xarray**: Labeled multi-dimensional arrays for NetCDF/climate data
+
+</div>
+</div>
+
+<div class="flex gap-6 justify-center mt-6">
+  <a href="https://numpy.org/doc/stable/user/absolute_beginners.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">NumPy Guide</a>
+  <a href="https://pandas.pydata.org/docs/user_guide/10min.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Pandas Tutorial</a>
+  <a href="https://docs.xarray.dev/en/stable/getting-started-guide/quick-overview.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Xarray Intro</a>
+</div>
+
+**Learning Order:** NumPy (1 week) → Pandas (1 week) → Xarray (2 weeks) → Domain tools
 
 ---
 
-# Visualization Tools
+# Essential Scientific Stack: Visualization Tools
+
+
+<div class="grid grid-cols-2 gap-8">
+<div>
 
 ```python
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 import holoviews as hv
 ```
-- <strong>Matplotlib</strong>: Foundation plotting library for static graphs
-- <strong>Cartopy</strong>: Map projections and geospatial plotting
-- <strong>HoloViews</strong>: High-level data visualization with interactivity
 
-<div class="flex gap-4 justify-center mt-4">
-  <a href="https://matplotlib.org/stable/tutorials/index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">📈 Matplotlib</a>
-  <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">🗺️ Cartopy</a>
-  <a href="https://holoviews.org/getting_started/Introduction.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">✨ HoloViews</a>
+</div>
+<div>
+
+**Core Libraries:**
+* **Matplotlib**: Foundation plotting library for static graphs
+* **Cartopy**: Map projections and geospatial plotting
+* **HoloViews**: High-level data visualization with interactivity
+
+</div>
+</div>
+
+<div class="flex gap-6 justify-center mt-6">
+  <a href="https://matplotlib.org/stable/tutorials/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Matplotlib</a>
+  <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Cartopy</a>
+  <a href="https://holoviews.org/getting_started/Introduction.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">HoloViews</a>
 </div>
 
 ---
 
-# Domain-Specific Tools
+# Scientific Stack: Domain-Specific Tools
+
+
+<div class="grid grid-cols-2 gap-8">
+<div>
 
 ```python
 # Atmosphere
@@ -224,22 +239,35 @@ import satpy
 import xarray
 import gsw  # oceanography
 ```
-- <strong>MetPy</strong>: Meteorological calculations and weather analysis
-- <strong>Satpy</strong>: Reading and processing satellite data
-- <strong>GSW</strong>: Oceanographic thermodynamics (TEOS-10)
-- <strong>xgcm</strong>: Grid-aware operations for ocean/atmosphere models
 
-[MetPy](https://unidata.github.io/MetPy/latest/tutorials/index.html) • [GSW](https://teos-10.github.io/GSW-Python/) • [xgcm](https://xgcm.readthedocs.io/)
+<a href="https://pytroll.github.io/#getting-in-touch" style="color: #0066cc;">Join Pytroll Slack →</a>
 
-**Learning Order:** NumPy (1 week) → Pandas (1 week) → Xarray (2 weeks) → Domain tools
+</div>
+<div>
+
+**Core Libraries:**
+* **MetPy**: Meteorological calculations and weather analysis
+* **Satpy**: Reading and processing satellite data
+* **GSW**: Oceanographic thermodynamics (TEOS-10)
+* **xgcm**: Grid-aware operations for ocean/atmosphere models
+
+</div>
+</div>
+
+<div class="flex gap-6 justify-center mt-6">
+  <a href="https://unidata.github.io/MetPy/latest/tutorials/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">MetPy</a>
+  <a href="https://teos-10.github.io/GSW-Python/" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">GSW</a>
+  <a href="https://xgcm.readthedocs.io/" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">xgcm</a>
+</div>
+
 
 ---
 
 # Weather & Climate Data Access
 
-## 🌤️ Atmosphere/Land Data
+## Atmosphere/Land Data
 
-**[ECMWF Open Data](https://github.com/ecmwf/ecmwf-opendata)**
+**<a href="https://github.com/ecmwf/ecmwf-opendata" style="color: #0066cc;">ECMWF Open Data</a>**
 ```python
 from ecmwf.opendata import Client
 client = Client()
@@ -247,7 +275,7 @@ client = Client()
 ```
 Access real-time ECMWF weather forecasts from high-resolution and ensemble models
 
-**[ERA5 Reanalysis](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels)**
+**<a href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels" style="color: #0066cc;">ERA5 Reanalysis</a>**
 ```python
 import cdsapi
 c = cdsapi.Client()
@@ -255,13 +283,13 @@ c = cdsapi.Client()
 ```
 Comprehensive atmospheric reanalysis from 1940-present with hourly data
 
-[CDS setup](https://cds.climate.copernicus.eu/how-to-api)
+<a href="https://cds.climate.copernicus.eu/how-to-api" style="color: #0066cc;">CDS setup</a>
 
 ---
 
 # Ocean & Marine Data
 
-**[Copernicus Marine](https://marine.copernicus.eu/)**
+**<a href="https://marine.copernicus.eu/" style="color: #0066cc;">Copernicus Marine</a>**
 ```python
 import copernicusmarine as cm
 cm.open_dataset(
@@ -270,18 +298,18 @@ cm.open_dataset(
 ```
 Provides ocean observations, analyses, forecasts, and reanalyses for European seas and global ocean
 
-**[C3S Climate Data](https://climate.copernicus.eu/)**
+**<a href="https://climate.copernicus.eu/" style="color: #0066cc;">C3S Climate Data</a>**
 - Sea ice, SST, ocean indicators
 - Climate projections
-- [CDS API](https://cds.climate.copernicus.eu/api-how-to)
+- <a href="https://cds.climate.copernicus.eu/api-how-to" style="color: #0066cc;">CDS API</a>
 
-[Python Toolbox](https://pypi.org/project/copernicus-marine-client/) • [Documentation](https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-introduction)
+<a href="https://pypi.org/project/copernicus-marine-client/" style="color: #0066cc;">Python Toolbox</a> • <a href="https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-introduction" style="color: #0066cc;">Documentation</a>
 
 ---
 
 # Satellite Data
 
-**[Satpy](https://satpy.readthedocs.io/)** (Multi-sensor)
+**<a href="https://satpy.readthedocs.io/" style="color: #0066cc;">Satpy</a>** (Multi-sensor)
 ```python
 from satpy import Scene
 scn = Scene(filenames=files)
@@ -289,48 +317,62 @@ scn.load(['natural_color'])
 ```
 Python library for reading and processing earth-observing satellite data
 
-**[EUMDAC](https://pypi.org/project/eumdac/)**
+**<a href="https://user.eumetsat.int/resources/user-guides/eumetsat-data-access-client-eumdac-guide" style="color: #0066cc;">EUMDAC</a>**
 ```python
 import eumdac
-# EUMETSAT archive
 ```
 Access EUMETSAT's entire satellite data archive programmatically
 
-[Setup guide](https://user.eumetsat.int/resources/user-guides/eumetsat-data-access-client-eumdac-guide)
+**Setup:** 
+ * `conda install -c conda-forge satpy xarray cfgrib`
+ * `uv pip install copernicusmarine`
 
-**Setup:** `conda install -c conda-forge satpy xarray cfgrib` • `uv pip install copernicusmarine`
+----
+
+
+<div class="flex items-center justify-center h-full text-center">
+Ask your colleagues what libraries they use for your domain.
+</div>
 
 ---
 layout: section
 ---
 
-# 💻 Part 3: Development Environment
+# Part 3: Development Environment
 
 
-<div class="text-6xl opacity-20 absolute top-20 right-20">
-  🛠️
-</div>
 
 ---
 
 # IDE Choice
 
-**[VS Code](https://code.visualstudio.com/)** (Recommended)
-- Free, lightweight
-- [Great Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- Integrated terminal
-- [Remote development](https://code.visualstudio.com/docs/remote/remote-overview)
+<div class="grid grid-cols-2 gap-8">
+<div>
 
-**Alternatives:**
-- [PyCharm](https://www.jetbrains.com/pycharm/) (full-featured)
-- [JupyterLab](https://jupyter.org/) (notebooks)
-- [Spyder](https://www.spyder-ide.org/) (MATLAB-like)
+## Recommended: 
+**<a href="https://code.visualstudio.com/" style="color: #0066cc;">VS Code</a>**
+- Free, lightweight
+- <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" style="color: #0066cc;">Good Python extension</a>
+- Can be used for other languages
+- Integrated terminal
+- <a href="https://code.visualstudio.com/docs/remote/remote-overview" style="color: #0066cc;">Remote development</a>
+
+</div>
+<div>
+
+## **Alternatives:**
+- <a href="https://www.jetbrains.com/pycharm/" style="color: #0066cc;">PyCharm</a> (full-featured)
+- <a href="https://jupyter.org/" style="color: #0066cc;">JupyterLab</a> (notebooks)
+- <a href="https://www.spyder-ide.org/" style="color: #0066cc;">Spyder</a> (MATLAB-like)
+
+</div>
+</div>
 
 ---
 
 # Jupyter Best Practices
 
-1. **Notebooks for exploration** ([Jupyter docs](https://jupyter.org/documentation))
+1. **Notebooks for exploration** (<a href="https://jupyter.org/documentation" style="color: #0066cc;">Jupyter docs</a>)
 2. **Scripts for production**
 3. **Clear cell outputs before commit**
 4. **Use meaningful names**
@@ -348,7 +390,7 @@ layout: section
 
 # Environment Management: Miniconda
 
-**Using [Miniconda](https://docs.conda.io/en/latest/miniconda.html)** - the standard for scientific Python
+**Using <a href="https://docs.conda.io/en/latest/miniconda.html" style="color: #0066cc;">Miniconda</a>** - the standard for scientific Python
 - No licensing restrictions
 - Same features as Anaconda
 - Installs pre-compiled binaries (not just Python packages)
@@ -366,13 +408,13 @@ conda install -c conda-forge \
 **Main Benefit over pip-only:**
 - Handles non-Python dependencies (GDAL, PROJ, etc.)
 
-**Resources:** [Conda cheat sheet](https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html) • [Conda-forge packages](https://conda-forge.org/packages/)
+**Resources:** <a href="https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html" style="color: #0066cc;">Conda cheat sheet</a> • <a href="https://conda-forge.org/packages/" style="color: #0066cc;">Conda-forge packages</a>
 
 ---
 
 # Environment Management: uv
 
-[`uv`](https://github.com/astral-sh/uv) is an extremely fast Python package installer and resolver written in Rust
+<a href="https://github.com/astral-sh/uv" style="color: #0066cc;">`uv`</a> is an extremely fast Python package installer and resolver written in Rust
 
 **Benefits:**
 - 10-100x faster than pip
@@ -380,7 +422,6 @@ conda install -c conda-forge \
 
 **Install uv:**
 ```bash
-# Using pip
 pip install uv
 ```
 
@@ -388,14 +429,12 @@ pip install uv
 ```bash
 # Install packages
 uv pip install numpy pandas xarray
-# Install from requirements
-uv pip install -r requirements.txt
 # Create virtual environment
 uv venv myenv
 source myenv/bin/activate  # Linux/Mac
 ```
-**When to use:** After conda for Python-only packages, CI/CD pipelines, faster dependency resolution
-**Video:** [ArjanCodes/uv](https://www.youtube.com/watch?v=qh98qOND6MI)
+
+**Video:** <a href="https://www.youtube.com/watch?v=qh98qOND6MI" style="color: #0066cc;">ArjanCodes/uv</a>
 
 ---
 
@@ -419,7 +458,8 @@ git checkout -b feature/add-analysis
 git push origin main
 ```
 
-**Confluence Wiki:** [How to use git](https://confluence.dmi.dk/display/NSOA/How+to+use+git)
+**Confluence Wiki:** <a href="https://confluence.dmi.dk/display/NSOA/How+to+use+git" style="color: #0066cc;">How to use git</a>
+
 **Tip:** Use an LLM for help with git commands 
 
 </div>
@@ -429,12 +469,9 @@ git push origin main
 layout: section
 ---
 
-# ✨ Part 4: Writing Better Code
+# Part 4: Writing Better Code
 ## From Scripts to Software
 
-<div class="text-6xl opacity-20 absolute top-20 right-20">
-  📝
-</div>
 
 ---
 
@@ -443,7 +480,7 @@ layout: section
 <div class="grid grid-cols-2 gap-4 text-sm">
 <div>
 
-## ❌ C-style Python Code
+## Poor Python Code
 ```python
 data = []
 for i in range(len(temps)):
@@ -454,7 +491,7 @@ for i in range(len(temps)):
 </div>
 <div>
 
-## ✅ Pythonic Code
+## Pythonic Code
 ```python
 
 data = [t for t in temps if t > 0]
@@ -466,11 +503,11 @@ data = temps[temps > 0]
 </div>
 </div>
 
-**Learn from:** [ArjanCodes](https://www.youtube.com/@ArjanCodes) • [mCoding](https://www.youtube.com/@mCoding) • [Real Python](https://www.youtube.com/@realpython)
+**Learn from:** <a href="https://www.youtube.com/@ArjanCodes" style="color: #0066cc;">ArjanCodes</a> • <a href="https://www.youtube.com/@mCoding" style="color: #0066cc;">mCoding</a> • <a href="https://www.youtube.com/@realpython" style="color: #0066cc;">Real Python</a>
 
 **Professional Development Books:**
-- **[Fluent Python](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)** - Deep Python idioms
-- **[The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/)** - Software craftsmanship
+- **<a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" style="color: #0066cc;">Fluent Python</a>** - Deep Python idioms
+- **<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer</a>** - Software craftsmanship
 
 ---
 
@@ -503,9 +540,9 @@ def test_celsius_to_kelvin():
 
 **Start when:** You use code twice
 
-**Tools:** [pytest](https://pytest.org/), [hypothesis](https://hypothesis.readthedocs.io/)
+**Tools:** <a href="https://pytest.org/" style="color: #0066cc;">pytest</a>, <a href="https://hypothesis.readthedocs.io/" style="color: #0066cc;">hypothesis</a>
 
-**Video:** [ArjanCodes/Pytest](https://www.youtube.com/watch?v=jxqGsJEhiAg)
+**Video:** <a href="https://www.youtube.com/watch?v=jxqGsJEhiAg" style="color: #0066cc;">ArjanCodes/Pytest</a>
 
 </div>
 </div>
@@ -513,7 +550,7 @@ def test_celsius_to_kelvin():
 
 ---
 
-# Clean Code Principles
+# <a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29" style="color: #0066cc;">Clean Code Principles</a>
 
 1.  **Readable:** Clear, intuitive, easy to follow.
 2.  **Simple:** Does one thing well (functions/classes). Avoid unnecessary complexity.
@@ -525,14 +562,14 @@ def test_celsius_to_kelvin():
 8.  **Clarity over Cleverness:** Write for humans first.
 9.  **Be Pragmatic:** Balance ideals with practical needs and deadlines. Choose appropriate complexity.
 
-**Book:**
-- **[Clean Code in Python](https://www.packtpub.com/en-us/product/clean-code-in-python-9781800560215)** - Develop maintainable and efficient code, Second Edition
 
-**Video:** [Clean Code - Why You Should Care](https://www.youtube.com/watch?v=ZZs0nsNyuqg)
+**Book:** **<a href="https://www.packtpub.com/en-us/product/clean-code-in-python-9781800560215" style="color: #0066cc;">Clean Code in Python</a>** - Develop maintainable and efficient code, Second Edition
+
+**Video:** <a href="https://www.youtube.com/watch?v=ZZs0nsNyuqg" style="color: #0066cc;">Clean Code - Why You Should Care</a>
 
 ---
 
-# Book: **[The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/)** 
+# Book: **<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer</a>** 
 
 * **Not just about Python:** A classic book on the philosophy and practice of software development.
 * **Why read it?** Offers timeless advice on becoming a more effective and productive programmer.
@@ -550,12 +587,9 @@ def test_celsius_to_kelvin():
 layout: section
 ---
 
-# 🤖 Part 5: AI-Assisted Development
+# Part 5: AI-Assisted Development
 ## Modern Tools for Faster Learning
 
-<div class="text-6xl opacity-20 absolute top-20 right-20">
-  🧠
-</div>
 
 ---
 
@@ -574,22 +608,22 @@ layout: section
 
 # LLM Comparison
 
-**[ChatGPT](https://chat.openai.com/)** 🇺🇸 - *Best for: General coding*  
+**<a href="https://chat.openai.com/" style="color: #0066cc;">ChatGPT</a>** - *Good for: General purpose*  
 Excellent at explaining complex concepts, debugging code, and providing step-by-step tutorials.
 
-**[Claude](https://claude.ai/)** 🇺🇸 - *Best for: Code analysis*  
+**<a href="https://claude.ai/" style="color: #0066cc;">Claude</a>** - *Best for: Coding*  
 Handles large codebases (200K+ tokens), excellent at refactoring and architectural analysis.
 
-**[Gemini](https://gemini.google.com/)** 🇺🇸 - *Best for: Multimodal tasks*  
+**<a href="https://gemini.google.com/" style="color: #0066cc;">Gemini</a>** - *Good for: Multimodal tasks*  
 Excellent at processing images, documents, and code together.
 
-**[Le Chat](https://chat.mistral.ai/)** 🇫🇷 - *Best for: Fast responses*  
+**<a href="https://chat.mistral.ai/" style="color: #0066cc;">Le Chat</a>** - *Best for: Fast responses*  
 Ultra-fast generation with transparent reasoning mode.
 
-**[JetBrains AI](https://www.jetbrains.com/ai/)** 🇨🇿 - *Best for: PyCharm users*  
+**<a href="https://www.jetbrains.com/ai/" style="color: #0066cc;">JetBrains AI</a>** - *Good for: PyCharm users*  
 Native PyCharm integration with intelligent refactoring suggestions.
 
-**[GitHub Copilot](https://github.com/features/copilot)** 🇺🇸 - *Best for: Code completion*  
+**<a href="https://github.com/features/copilot" style="color: #0066cc;">GitHub Copilot</a>** - *Good for: Code completion*  
 Seamless IDE integration across VS Code, PyCharm, and Vim.
 
 **Remember:** AI is a powerful learning accelerator, but real mastery comes from understanding fundamentals.
@@ -598,44 +632,37 @@ Seamless IDE integration across VS Code, PyCharm, and Vim.
 layout: section
 ---
 
-# 🌐 Part 6: Community & Continuous Learning  
-## Building Your Support Network
-
-<div class="text-6xl opacity-20 absolute top-20 right-20">
-  🤝
-</div>
+# Part 6: Additional Resources
 
 ---
 
-# Resources
-
-## Quick Reference Bookmarks
+# Quick Reference Bookmarks
 
 **Core Documentation:**
-- 🐍 [Python.org 🔗](https://docs.python.org/3/) - Language reference
-- 🔢 [NumPy User Guide 🔗](https://numpy.org/doc/stable/user/) - Array computing
-- 🌍 [Xarray Docs 🔗](https://docs.xarray.dev/) - Multidimensional data
-- 📈 [Matplotlib Tutorials 🔗](https://matplotlib.org/stable/tutorials/) - Plotting
+- <a href="https://docs.python.org/3/" style="color: #0066cc;">Python.org</a> - Language reference
+- <a href="https://numpy.org/doc/stable/user/" style="color: #0066cc;">NumPy User Guide</a> - Array computing
+- <a href="https://docs.xarray.dev/" style="color: #0066cc;">Xarray Docs</a> - Multidimensional data
+- <a href="https://matplotlib.org/stable/tutorials/" style="color: #0066cc;">Matplotlib Tutorials</a> - Plotting
 
 **Domain Tools:**
-- 🛰️ [Satpy Gallery 🔗](https://satpy.readthedocs.io/en/stable/auto_examples/index.html) - Satellite examples
-- 🗺️ [Cartopy Examples 🔗](https://scitools.org.uk/cartopy/docs/latest/gallery/index.html) - Map plotting
-- 🌦️ [MetPy Tutorials 🔗](https://unidata.github.io/MetPy/latest/tutorials/index.html) - Meteorology
-- 🌊 [Copernicus Marine Help 🔗](https://help.marine.copernicus.eu/) - Ocean data
+- <a href="https://satpy.readthedocs.io/en/stable/auto_examples/index.html" style="color: #0066cc;">Satpy Gallery</a> - Satellite examples
+- <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html" style="color: #0066cc;">Cartopy Examples</a> - Map plotting
+- <a href="https://unidata.github.io/MetPy/latest/tutorials/index.html" style="color: #0066cc;">MetPy Tutorials</a> - Meteorology
+- <a href="https://help.marine.copernicus.eu/" style="color: #0066cc;">Copernicus Marine Help</a> - Ocean data
 
 **Bookmark Strategy:** Save one link per tool as you learn it
 
 <div class="mt-4 p-3 bg-blue-50 bg-opacity-50 rounded text-sm">
-  💡 <strong>Tip:</strong> All 🔗 links are clickable and will open in a new tab
+  <strong>Tip:</strong> All links are clickable and will open in a new tab
 </div>
 
 ---
 
 # Data Analysis Examples
-- **[Pythia Cookbooks](https://cookbooks.projectpythia.org/)** - Step-by-step tutorials
-- **[Pangeo Gallery](https://gallery.pangeo.io/)** - Real-world workflows
-- **[Pytroll Examples](https://github.com/pytroll/pytroll-examples)** - Satellite processing
-- **[CMEMS Use Cases](https://marine.copernicus.eu/services/use-cases)** - Ocean data applications
+- **<a href="https://cookbooks.projectpythia.org/" style="color: #0066cc;">Pythia Cookbooks</a>** - Step-by-step tutorials
+- **<a href="https://gallery.pangeo.io/" style="color: #0066cc;">Pangeo Gallery</a>** - Real-world workflows
+- **<a href="https://github.com/pytroll/pytroll-examples" style="color: #0066cc;">Pytroll Examples</a>** - Satellite processing
+- **<a href="https://gitlab.dmi.dk/" style="color: #0066cc;">Search for relevant code</a>** - General
 
 ---
 layout: center

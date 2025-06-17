@@ -30,6 +30,29 @@ The main presentation (`slides.md`) is built for **Slidev** (https://sli.dev), a
 - Line numbers: disabled
 - Background: Unsplash collection imagery
 
+### Building the Slides
+
+To build the presentation for production:
+
+```bash
+# Install dependencies (first time only)
+npm install
+
+# Build the slides for production
+npm run build
+
+# Development server (for editing)
+npm run dev
+```
+
+The build process:
+- Processes `slides.md` into static HTML/CSS/JS files
+- Outputs to the `dist/` directory
+- Creates a self-contained web presentation
+- Optimizes assets and applies the configured theme
+
+After building, the presentation files are ready for deployment to web servers or GitHub Pages.
+
 ## Content Themes
 
 The presentation covers five key learning areas:
