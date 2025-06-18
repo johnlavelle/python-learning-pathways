@@ -59,18 +59,36 @@
 ## Slide 9: Weather & Climate Data Access
 **Time: 4 minutes**
 - "This slide alone will save you weeks of searching"
-- Walk through each column:
-  - **Atmosphere**: "ECMWF Open Data is free real-time forecasts!"
-  - **Ocean**: "Copernicus Marine has everything - currents, temperature, biogeochemistry"
-  - **Satellite**: "Satpy handles ALL satellites - GOES, Meteosat, MODIS, etc."
-- **Live demo** (if possible): Show one line of code downloading data
-- Mention: "All of these have excellent documentation"
+- **ECMWF Open Data**: "Free real-time forecasts - no registration needed!"
+- **ERA5 Reanalysis**: "Historical weather data from 1940 - the gold standard"
+- "Both use simple Python APIs - just a few lines of code"
+- **Key point**: "The CDS API setup is the gateway to massive climate datasets"
+- **Live demo** (if possible): Show `cdsapi` downloading ERA5 data
+- Mention: "ECMWF documentation is excellent"
 
-## Slide 10: Part 3 - Development Environment (Section intro)
+## Slide 10: Ocean & Marine Data
+**Time: 3 minutes**
+- "Ocean data access has been revolutionized by Copernicus"
+- **Copernicus Marine Service**: "Comprehensive ocean data - observations, forecasts, reanalysis"  
+- Show the simple Python code: "One function call gets you ocean data"
+- **Additional datasets**: "Remember the CDS API from the previous slide? It also has ocean/climate data"
+- **Sea ice, SST, ocean heat content**: "All accessible through the same CDS interface"
+- "CMIP6 climate projections are also available - future climate scenarios"
+- **Practical tip**: "Start with Copernicus Marine for operational data, CDS for climate studies"
+
+## Slide 11: Satellite Data  
+**Time: 2 minutes**
+- "Satellite data processing used to be incredibly complex"
+- **Satpy**: "One library handles all major satellites - it's like magic"
+- **EUMDAC**: "Direct access to EUMETSAT archive"
+- "The setup command shows you need conda-forge for scientific packages"
+- **Key message**: "Ask your colleagues what they use - don't reinvent the wheel"
+
+## Slide 12: Part 3 - Development Environment (Section intro)
 **Time: 30 seconds**
 - "Tools matter - good setup makes you 10x more productive"
 
-## Slide 11: Your Development Setup
+## Slide 13: Your Development Setup
 **Time: 3 minutes**
 - **VS Code**: "Free, works everywhere, amazing Python support"
 - Show VS Code if possible - highlight Python extension
@@ -99,7 +117,27 @@
 - Emphasize: "Don't aim for gold on day 1 - progress naturally"
 - Mention code reviews help progression
 
-## Slide 15: Testing Your Code
+## Slide 15: Single Responsibility Principle
+**Time: 3 minutes**
+- "Let's look at a concrete example of better code design"
+- **Before**: "This WeatherProcessor class does too much - reads files, calculates averages, AND saves reports"
+- "What happens when you want to change how files are read? You risk breaking the calculation logic"
+- **After**: "Each class has one clear job - much easier to test and modify"
+- "This is the Single Responsibility Principle - each class should have only one reason to change"
+- **Practical benefit**: "You can now easily swap file formats or calculation methods"
+- "This isn't just theory - it makes debugging and maintenance much easier"
+
+## Slide 16: Clean Code Principles  
+**Time: 2 minutes**
+- "Now let's see the broader principles that guide good code"
+- Walk through the key principles quickly
+- **Emphasize**: "Don't memorize these - just keep them in mind"
+- **Readable**: "If your colleague can't understand it, it's not good code"
+- **Simple**: "Complexity is the enemy of maintainability"
+- **DRY**: "Copy-paste is usually a code smell"
+- "These become natural with practice"
+
+## Slide 17: Testing Your Code
 **Time: 2 minutes**
 - "Testing seems like extra work until it saves you from a critical bug"
 - Share example: "Unit test caught an edge case in temperature conversion"
@@ -107,11 +145,11 @@
 - pytest is the standard - much better than unittest
 - "Tests are living documentation"
 
-## Slide 16: Part 5 - AI-Assisted Development (Section intro)
+## Slide 18: Part 5 - AI-Assisted Development (Section intro)
 **Time: 30 seconds**
 - "Let's talk about the elephant in the room - AI coding assistants"
 
-## Slide 17: Leveraging AI Tools
+## Slide 19: Leveraging AI Tools
 **Time: 3 minutes**
 - "AI is your junior assistant, not your replacement"
 - **Good uses**: Show the examples
@@ -152,15 +190,27 @@
 - Mention: "Don't be shy - everyone was a beginner once"
 - "Your 'stupid' question helps 10 other people"
 
-## Slide 22: Essential Resources
+## Slide 22: Professional Development Books
+**Time: 3 minutes**
+- "These books take you from coding to software craftsmanship"
+- **Python Mastery section**: 
+  - "Fluent Python is the definitive guide to advanced Python"
+  - "Effective Python gives you 90 specific techniques"
+- **Software Craftsmanship section**:
+  - "The Pragmatic Programmer is a classic - not just Python, but all software development"
+  - "Clean Code in Python applies clean code principles specifically to Python"
+- **Architecture Patterns**: "For when you're building larger systems"
+- **When to read**: "After 3-6 months of coding - when you know Python basics"
+- "Don't try to read them all at once - pick one and go deep"
+
+## Slide 23: Quick Reference Bookmarks
 **Time: 2 minutes**
 - "Screenshot this slide!"
-- **Books**: "One book thoroughly is better than skimming five"
-- **Python Crash Course**: "If you've never programmed, start here"
-- Point out Johnny Lin's book: "Written specifically for atmospheric scientists"
 - **Bookmarks**: "Add these to your browser bookmarks bar"
+- "These are your go-to references when you're stuck"
+- Mention: "The documentation quality in Python ecosystem is generally excellent"
 
-## Slide 23: Start Your Journey Today!
+## Slide 24: Start Your Journey Today!
 **Time: 3 minutes**
 - Recap the key message: "Pick your track, install Python, join community"
 - **Emphasize**: "The best time to start was yesterday, second best is today"
@@ -173,7 +223,7 @@
 
 ## General Tips for Presenter:
 
-1. **Total time**: Aim for 45 minutes, leaving 15 for questions
+1. **Total time**: Aim for 45-50 minutes, leaving 10-15 for questions
 
 2. **Engagement**: 
    - Ask for shows of hands

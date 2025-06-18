@@ -156,7 +156,9 @@
 
 ## 📖 Books
 
-### Python Crash Course (3rd Edition) - Eric Matthes
+### Foundational Learning
+
+#### Python Crash Course (3rd Edition) - Eric Matthes
 - **Publisher**: No Starch Press (2023)
 - **Pages**: 552
 - **Price**: ~$40 USD
@@ -178,7 +180,28 @@
   - Updated for modern Python (3.9+)
 - **Best practices taught**: PEP 8 style, virtual environments, Git basics
 
-### Python for Data Analysis (3rd Edition) - Wes McKinney
+#### A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences
+- **Author**: Johnny Wei-Bing Lin
+- **Publisher**: Self-published
+- **URL**: https://www.johnny-lin.com/pyintro/
+- **Price**: $35 print, FREE PDF for personal use
+- **Unique aspects**:
+  - All examples use atmospheric/ocean data
+  - Covers specific file formats (NetCDF, GRIB)
+  - Includes Fortran integration
+  - Real research workflows
+- **Topics covered**:
+  - Basic Python with met/ocean examples
+  - NumPy arrays as gridded fields
+  - Visualization of maps and cross-sections
+  - Time series analysis
+  - Simple modeling examples
+- **Exercise data**: Includes sample atmospheric datasets
+- **Why use it**: Only book specifically for atmospheric/ocean scientists
+
+### Data Science Focus
+
+#### Python for Data Analysis (3rd Edition) - Wes McKinney
 - **Publisher**: O'Reilly (2022)
 - **Pages**: 579
 - **Price**: ~$60 USD (free online at https://wesmckinney.com/book/)
@@ -199,26 +222,32 @@
 - **Code examples**: Downloadable Jupyter notebooks
 - **Why essential**: Written by Pandas creator, shows real workflows
 
-### A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences
-- **Author**: Johnny Wei-Bing Lin
-- **Publisher**: Self-published
-- **URL**: https://www.johnny-lin.com/pyintro/
-- **Price**: $35 print, FREE PDF for personal use
-- **Unique aspects**:
-  - All examples use atmospheric/ocean data
-  - Covers specific file formats (NetCDF, GRIB)
-  - Includes Fortran integration
-  - Real research workflows
-- **Topics covered**:
-  - Basic Python with met/ocean examples
-  - NumPy arrays as gridded fields
-  - Visualization of maps and cross-sections
-  - Time series analysis
-  - Simple modeling examples
-- **Exercise data**: Includes sample atmospheric datasets
-- **Why use it**: Only book specifically for atmospheric/ocean scientists
+### Professional Development
 
-### Effective Python (2nd Edition) - Brett Slatkin
+#### Python Mastery
+
+##### Fluent Python (2nd Edition) - Luciano Ramalho
+- **Publisher**: O'Reilly (2022)
+- **Pages**: 1012
+- **Price**: ~$70 USD
+- **URL**: https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/
+- **What it is**: Deep dive into Python's features and idioms
+- **Best for**: Intermediate to advanced Python developers
+- **Key topics**:
+  - Python data model
+  - Data structures and algorithms
+  - Functions as objects
+  - Object-oriented idioms
+  - Control flow and metaprogramming
+  - Concurrency and async
+- **New in 2nd edition**:
+  - Updated for Python 3.10
+  - Pattern matching
+  - Type hints throughout
+  - Async/await in depth
+- **Why valuable**: Teaches you to write truly Pythonic code
+
+##### Effective Python (2nd Edition) - Brett Slatkin
 - **Publisher**: Addison-Wesley (2019)
 - **URL**: https://effectivepython.com/
 - **What it is**: 90 specific ways to write better Python
@@ -238,22 +267,94 @@
   - Item 74: Consider memoryview and bytearray for Zero-Copy Bytes
 - **Why valuable**: Transforms working code into professional code
 
-### Clean Code - Robert C. Martin
+#### Software Craftsmanship
+
+##### The Pragmatic Programmer (20th Anniversary Edition) - David Thomas & Andrew Hunt
+- **Publisher**: Addison-Wesley (2019)
+- **Pages**: 352
+- **Price**: ~$50 USD
+- **URL**: https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/
+- **What it is**: Timeless advice for software developers
+- **Language-agnostic**: Principles apply to any language
+- **Key concepts**:
+  - DRY (Don't Repeat Yourself)
+  - Orthogonality
+  - Tracer bullets
+  - Prototypes and post-it notes
+  - Domain languages
+  - Estimating
+  - Refactoring
+  - Code generation
+- **New in 20th edition**:
+  - Updated examples for modern development
+  - New topics on security and concurrency
+  - Exercises and challenges
+- **Why essential**: Foundational text for professional programming
+
+##### Clean Code - Robert C. Martin
 - **Publisher**: Prentice Hall (2008)
 - **URL**: https://www.oreilly.com/library/view/clean-code-a/9780136083238/
 - **What it is**: Principles for writing maintainable code
 - **Language**: Examples in Java but principles universal
 - **Key concepts**:
   - Meaningful names
-  - Functions should do one thing
+  - Functions should do one thing (Single Responsibility Principle)
   - Comments are often failures
   - Error handling
   - Unit testing
+  - DRY (Don't Repeat Yourself)
+  - KISS (Keep It Simple, Stupid)
 - **Python-specific notes**: 
   - Python's "explicit is better than implicit"
   - Use Python idioms not Java patterns
   - Docstrings instead of comments
 - **Why read**: Your future self will thank you
+- **See also**: Clean Code Principles section in Testing & Code Quality
+
+##### Clean Code in Python - Mariano Anaya
+- **Publisher**: Packt (2018)
+- **Pages**: 332
+- **Price**: ~$40 USD
+- **URL**: https://www.packtpub.com/product/clean-code-in-python/9781788835831
+- **What it is**: Clean Code principles specifically for Python
+- **Advantages over Clean Code**:
+  - Python-specific examples
+  - Covers Python idioms
+  - Type hints and modern Python
+  - Decorators and context managers
+- **Topics covered**:
+  - Python-specific code formatting
+  - SOLID principles in Python
+  - Decorators for clean code
+  - Descriptors and properties
+  - Generators and iterators
+  - Testing and quality
+- **Why valuable**: Bridges gap between general principles and Python practice
+
+#### Architecture and Design
+
+##### Architecture Patterns with Python - Harry Percival & Bob Gregory
+- **Publisher**: O'Reilly (2020)
+- **Pages**: 304
+- **Price**: ~$50 USD (free online at https://www.cosmicpython.com/)
+- **URL**: https://www.cosmicpython.com/
+- **What it is**: Applying DDD, ports & adapters, and event-driven architecture to Python
+- **Prerequisites**: Solid Python knowledge, some experience with web apps
+- **Key patterns covered**:
+  - Repository pattern
+  - Service layer pattern
+  - Unit of Work pattern
+  - Aggregate pattern
+  - Domain events
+  - Message bus
+  - CQRS (Command Query Responsibility Segregation)
+- **Practical focus**:
+  - Real-world example throughout (allocation system)
+  - Test-driven development approach
+  - Evolutionary architecture
+  - Dealing with complexity
+- **Code**: Full example application on GitHub
+- **Why valuable**: Shows how to build maintainable, testable applications at scale
 
 ---
 
@@ -528,7 +629,7 @@
   - Check queue status online
   - Consider ERA5 monthly means for climatologies
 
-### Copernicus Marine Service (CMEMS)
+### Copernicus Marine Service
 - **Homepage**: https://marine.copernicus.eu/
 - **Toolbox**: https://pypi.org/project/copernicus-marine-client/
 - **Documentation**: https://help.marine.copernicus.eu/
@@ -577,6 +678,41 @@
   - "my" = multi-year (reanalysis)
   - Check spatial/temporal resolution
   - Note depth levels available
+
+### Additional Ocean/Climate Datasets via CDS
+- **What it is**: Ocean and climate datasets accessible through the Climate Data Store API (already covered above)
+- **Key ocean/climate variables available**:
+  - **Sea ice concentration and thickness**: ERA5, satellite observations
+  - **Sea surface temperature (SST)**: ERA5, satellite products, climate projections
+  - **Ocean heat content and sea level**: Reanalysis products, observational datasets
+  - **CMIP6 climate projections**: Future ocean scenarios including temperature, salinity, currents
+- **Access method**: Use the same CDS API setup described in the CDS API section above
+- **Example for ocean data**:
+  ```python
+  import cdsapi
+  c = cdsapi.Client()
+  
+  # Download SST data
+  c.retrieve(
+      'reanalysis-era5-single-levels',
+      {
+          'product_type': 'reanalysis',
+          'format': 'netcdf',
+          'variable': 'sea_surface_temperature',
+          'year': '2023',
+          'month': list(range(1, 13)),
+          'day': '15',  # Monthly sample
+          'time': '12:00',
+          'area': [60, -20, 30, 20],  # North Atlantic
+      },
+      'sst_north_atlantic_2023.nc'
+  )
+  ```
+- **Why use CDS for ocean data**: 
+  - Comprehensive climate projections (CMIP6)
+  - Long-term reanalysis datasets
+  - Harmonized access to multiple data sources
+  - Free access with registration
 
 ### EUMDAC (EUMETSAT Data Access Client)
 - **PyPI**: https://pypi.org/project/eumdac/
@@ -1464,6 +1600,64 @@
 ---
 
 ## 🧪 Testing & Code Quality
+
+### Clean Code Principles
+
+#### Single Responsibility Principle (SRP)
+- **What it is**: Each class or function should have only one reason to change
+- **Why it matters**: Makes code easier to test, modify, and understand
+- **Example**:
+  ```python
+  # Before: Multiple Responsibilities
+  class WeatherProcessor:
+      def read_data(self, filename):
+          with open(filename) as f:
+              return json.load(f)
+      
+      def calculate_average(self, data):
+          temps = [d['temp'] for d in data]
+          return sum(temps) / len(temps)
+      
+      def save_report(self, avg, filename):
+          with open(filename, 'w') as f:
+              f.write(f"Average: {avg}")
+  
+  # After: Single Responsibility
+  class WeatherDataReader:
+      def read(self, filename):
+          with open(filename) as f:
+              return json.load(f)
+  
+  class TemperatureCalculator:
+      def average(self, data):
+          temps = [d['temp'] for d in data]
+          return sum(temps) / len(temps)
+  
+  class ReportWriter:
+      def save(self, content, filename):
+          with open(filename, 'w') as f:
+              f.write(content)
+  ```
+- **Benefits**: 
+  - Easier to test individual components
+  - Changes to one responsibility don't affect others
+  - Code becomes more modular and reusable
+
+#### DRY (Don't Repeat Yourself)
+- **What it is**: Avoid duplicating code or logic
+- **Why it matters**: Reduces maintenance burden and bugs
+- **How to apply**:
+  - Extract common code into functions
+  - Use configuration files for repeated values
+  - Create reusable modules
+
+#### KISS (Keep It Simple, Stupid)
+- **What it is**: Favor simple solutions over complex ones
+- **Why it matters**: Simple code is easier to understand and maintain
+- **Guidelines**:
+  - Write code for humans first, computers second
+  - Avoid premature optimization
+  - Use built-in functions when possible
 
 ### pytest
 - **Homepage**: https://pytest.org/

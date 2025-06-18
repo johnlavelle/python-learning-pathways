@@ -240,8 +240,6 @@ import xarray
 import gsw  # oceanography
 ```
 
-<a href="https://pytroll.github.io/#getting-in-touch" style="color: #0066cc;">Join Pytroll Slack →</a>
-
 </div>
 <div>
 
@@ -289,21 +287,22 @@ Comprehensive atmospheric reanalysis from 1940-present with hourly data
 
 # Ocean & Marine Data
 
-**<a href="https://marine.copernicus.eu/" style="color: #0066cc;">Copernicus Marine</a>**
+**<a href="https://marine.copernicus.eu/" style="color: #0066cc;">Copernicus Marine Service</a>**
 ```python
 import copernicusmarine as cm
 cm.open_dataset(
     dataset_id="cmems_mod_glo_phy_anfc_0.083deg_P1D-m"
 )
 ```
-Provides ocean observations, analyses, forecasts, and reanalyses for European seas and global ocean
+Ocean observations, analyses, forecasts, and reanalyses for European seas and global ocean
 
-**<a href="https://climate.copernicus.eu/" style="color: #0066cc;">C3S Climate Data</a>**
-- Sea ice, SST, ocean indicators
-- Climate projections
-- <a href="https://cds.climate.copernicus.eu/api-how-to" style="color: #0066cc;">CDS API</a>
+**Additional Ocean/Climate Datasets via CDS:**
+- Sea ice concentration and thickness
+- Sea surface temperature (SST) 
+- Ocean heat content and sea level
+- CMIP6 climate projections
 
-<a href="https://pypi.org/project/copernicus-marine-client/" style="color: #0066cc;">Python Toolbox</a> • <a href="https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-introduction" style="color: #0066cc;">Documentation</a>
+<a href="https://pypi.org/project/copernicus-marine-client/" style="color: #0066cc;">Marine Python Client</a> • <a href="https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-introduction" style="color: #0066cc;">Documentation</a>
 
 ---
 
@@ -475,41 +474,6 @@ layout: section
 
 ---
 
-# Code Quality Progression
-
-<div class="grid grid-cols-2 gap-4 text-sm">
-<div>
-
-## Poor Python Code
-```python
-data = []
-for i in range(len(temps)):
-    if temps[i] > 0:
-        data.append(temps[i])
-```
-
-</div>
-<div>
-
-## Pythonic Code
-```python
-
-data = [t for t in temps if t > 0]
-
-# Or using NumPy
-data = temps[temps > 0]
-```
-
-</div>
-</div>
-
-**Learn from:** <a href="https://www.youtube.com/@ArjanCodes" style="color: #0066cc;">ArjanCodes</a> • <a href="https://www.youtube.com/@mCoding" style="color: #0066cc;">mCoding</a> • <a href="https://www.youtube.com/@realpython" style="color: #0066cc;">Real Python</a>
-
-**Professional Development Books:**
-- **<a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" style="color: #0066cc;">Fluent Python</a>** - Deep Python idioms
-- **<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer</a>** - Software craftsmanship
-
----
 
 # Testing Your Code
 
@@ -550,6 +514,89 @@ def test_celsius_to_kelvin():
 
 ---
 
+# Code Quality Progression
+
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div>
+
+## Poor Python Code
+```python
+data = []
+for i in range(len(temps)):
+    if temps[i] > 0:
+        data.append(temps[i])
+```
+
+</div>
+<div>
+
+## Pythonic Code
+```python
+
+data = [t for t in temps if t > 0]
+
+# Or using NumPy
+data = temps[temps > 0]
+```
+
+</div>
+</div>
+
+**Learn from:** <a href="https://www.youtube.com/@ArjanCodes" style="color: #0066cc;">ArjanCodes</a> • <a href="https://www.youtube.com/@mCoding" style="color: #0066cc;">mCoding</a> • <a href="https://www.youtube.com/@realpython" style="color: #0066cc;">Real Python</a>
+
+---
+
+# Single Responsibility Principle
+
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div>
+
+## Before: Multiple Responsibilities
+```python
+# Weather processor handles too many things
+class WeatherProcessor:
+    def read_data(self, filename):
+        with open(filename) as f:
+            return json.load(f)
+    
+    def calculate_average(self, data):
+        temps = [d['temp'] for d in data]
+        return sum(temps) / len(temps)
+    
+    def save_report(self, avg, filename):
+        with open(filename, 'w') as f:
+            f.write(f"Average: {avg}")
+```
+
+</div>
+<div>
+
+## After: Single Responsibility
+```python
+# Each class has one clear purpose
+class WeatherDataReader:
+    def read(self, filename):
+        with open(filename) as f:
+            return json.load(f)
+
+class TemperatureCalculator:
+    def average(self, data):
+        temps = [d['temp'] for d in data]
+        return sum(temps) / len(temps)
+
+class ReportWriter:
+    def save(self, content, filename):
+        with open(filename, 'w') as f:
+            f.write(content)
+```
+
+</div>
+</div>
+
+**Benefits:** Easier to test, modify, and reuse individual components
+
+---
+
 # <a href="https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29" style="color: #0066cc;">Clean Code Principles</a>
 
 1.  **Readable:** Clear, intuitive, easy to follow.
@@ -562,26 +609,7 @@ def test_celsius_to_kelvin():
 8.  **Clarity over Cleverness:** Write for humans first.
 9.  **Be Pragmatic:** Balance ideals with practical needs and deadlines. Choose appropriate complexity.
 
-
-**Book:** **<a href="https://www.packtpub.com/en-us/product/clean-code-in-python-9781800560215" style="color: #0066cc;">Clean Code in Python</a>** - Develop maintainable and efficient code, Second Edition
-
 **Video:** <a href="https://www.youtube.com/watch?v=ZZs0nsNyuqg" style="color: #0066cc;">Clean Code - Why You Should Care</a>
-
----
-
-# Book: **<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer</a>** 
-
-* **Not just about Python:** A classic book on the philosophy and practice of software development.
-* **Why read it?** Offers timeless advice on becoming a more effective and productive programmer.
-* **Key Themes:**
-    * Individual responsibility and craftsmanship.
-    * Tool mastery (know your editor, shell, VCS).
-    * Automation (testing, deployment).
-    * Designing for change and adaptability.
-    * Effective communication.
-* **Relevance:** Helps cultivate a professional mindset beyond just writing code that runs.
-
-
 
 ---
 layout: section
@@ -608,22 +636,22 @@ layout: section
 
 # LLM Comparison
 
-**<a href="https://chat.openai.com/" style="color: #0066cc;">ChatGPT</a>** - *Good for: General purpose*  
+**🇺🇸 <a href="https://chat.openai.com/" style="color: #0066cc;">ChatGPT</a>** - *Good for: General purpose*  
 Excellent at explaining complex concepts, debugging code, and providing step-by-step tutorials.
 
-**<a href="https://claude.ai/" style="color: #0066cc;">Claude</a>** - *Best for: Coding*  
+**🇺🇸 <a href="https://claude.ai/" style="color: #0066cc;">Claude</a>** - *Best for: Coding*  
 Handles large codebases (200K+ tokens), excellent at refactoring and architectural analysis.
 
-**<a href="https://gemini.google.com/" style="color: #0066cc;">Gemini</a>** - *Good for: Multimodal tasks*  
+**🇺🇸 <a href="https://gemini.google.com/" style="color: #0066cc;">Gemini</a>** - *Good for: Multimodal tasks*  
 Excellent at processing images, documents, and code together.
 
-**<a href="https://chat.mistral.ai/" style="color: #0066cc;">Le Chat</a>** - *Best for: Fast responses*  
+**🇫🇷 <a href="https://chat.mistral.ai/" style="color: #0066cc;">Le Chat</a>** - *Best for: Fast responses*  
 Ultra-fast generation with transparent reasoning mode.
 
-**<a href="https://www.jetbrains.com/ai/" style="color: #0066cc;">JetBrains AI</a>** - *Good for: PyCharm users*  
+**🇨🇿 <a href="https://www.jetbrains.com/ai/" style="color: #0066cc;">JetBrains AI</a>** - *Good for: PyCharm users*  
 Native PyCharm integration with intelligent refactoring suggestions.
 
-**<a href="https://github.com/features/copilot" style="color: #0066cc;">GitHub Copilot</a>** - *Good for: Code completion*  
+**🇺🇸 <a href="https://github.com/features/copilot" style="color: #0066cc;">GitHub Copilot</a>** - *Good for: Code completion*  
 Seamless IDE integration across VS Code, PyCharm, and Vim.
 
 **Remember:** AI is a powerful learning accelerator, but real mastery comes from understanding fundamentals.
@@ -655,6 +683,45 @@ layout: section
 <div class="mt-4 p-3 bg-blue-50 bg-opacity-50 rounded text-sm">
   <strong>Tip:</strong> All links are clickable and will open in a new tab
 </div>
+
+---
+
+# Professional Development Books
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+## Python Mastery
+**<a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" style="color: #0066cc;">Fluent Python (2nd Ed)</a>**
+- Deep dive into Python idioms
+- Advanced language features
+- Best for intermediate/advanced
+
+**<a href="https://effectivepython.com/" style="color: #0066cc;">Effective Python (2nd Ed)</a>**
+- 90 specific ways to write better Python
+- Practical tips and patterns
+- Great for all levels
+
+</div>
+<div>
+
+## Software Craftsmanship
+**<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer</a>**
+- Timeless software development wisdom
+- Tool mastery and automation
+- Professional mindset cultivation
+
+**<a href="https://www.packtpub.com/en-us/product/clean-code-in-python-9781800560215" style="color: #0066cc;">Clean Code in Python</a>**
+- Python-specific clean code practices
+- Design patterns and refactoring
+- Testing and documentation
+
+</div>
+</div>
+
+**<a href="https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/" style="color: #0066cc;">Architecture Patterns with Python</a>** - Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices by Harry Percival & Bob Gregory
+
+**When to read:** After 3-6 months of active Python coding
 
 ---
 

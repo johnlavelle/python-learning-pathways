@@ -41,14 +41,9 @@ Many researchers face similar challenges when starting their Python journey:
 ### 4. **Practical Orientation**
 - Focus on tools and techniques used in daily research work
 - Code examples that can be immediately applied
-- Best practices for scientific software development
+- Best practices for scientific software development, including clean code principles
 - Modern approaches including AI-assisted coding
 
-### 5. **Community Connection**
-- Direct links to join supportive communities
-- Guidance on where to ask questions
-- Introduction to domain-specific forums and Slack channels
-- Emphasis on the importance of peer learning
 
 ## Target Audience
 
