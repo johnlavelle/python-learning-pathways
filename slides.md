@@ -20,7 +20,7 @@ title: Python Learning Pathways
 
 # Pathways to Learn Python for Scientific Software Development
 
-**A Comprehensive Guide for DMI Researchers**
+**A learning guide for DMI researchers**
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
