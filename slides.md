@@ -58,42 +58,47 @@ transition: fade-out
 
 ---
 
-# Learning Path 
+# Your Python Learning Journey
 
 <div class="text-center mb-8">
 
 ```mermaid
 graph LR
-    A[Beginner] --> B[Scientific Python]
-    B --> C[Domain Tools]
-    C --> D[Best Practices]
+    A[Python Basics] --> B[Scientific Computing]
+    B --> C[Domain Applications]
+    C --> D[Professional Skills]
 ```
 
 </div>
 
-<div class="grid grid-cols-3 gap-4 text-sm">
+<div class="grid grid-cols-2 gap-6 text-sm">
 <div>
 
-## Phase 1: Foundations
-- Python syntax & concepts
-- Basic data structures
-- Simple scripts
+### **Phase 1:** Python Foundations
+- **Goal:** Write basic Python scripts confidently
+- Python syntax, data types, control flow
+- Functions, modules, and file I/O
+
+### **Phase 2:** Scientific Computing
+- **Goal:** Handle and visualize scientific data
+- NumPy arrays and mathematical operations
+- Pandas for data manipulation and analysis
+- Matplotlib for plotting and visualization
 
 </div>
 <div>
 
-## Phase 2: Scientific Stack
-- NumPy, Pandas, Xarray
-- Plotting with Matplotlib
-- Jupyter workflows
+### **Phase 3:** Domain Applications
+- **Goal:** Work with real meteorological/oceanographic data
+- Xarray for multi-dimensional data (NetCDF/GRIB)
+- Domain-specific libraries (MetPy, Satpy, etc.)
+- Data access APIs (ECMWF, Copernicus, etc.)
 
-</div>
-<div>
-
-## Phase 3: Advanced
-- Clean code principles
-- Version control
-- Testing & debugging
+### **Phase 4:** Professional Skills
+- **Goal:** Write maintainable, shareable code
+- Version control with Git and collaboration
+- Code testing, debugging, and optimization
+- Clean code principles and documentation
 
 </div>
 </div>
@@ -133,19 +138,17 @@ layout: section
 
 **First Project:** Port existing analysis
 
-**Next Book:** <a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" style="color: #0066cc;">Fluent Python</a> for Python mastery
-
 ---
 
 # Modern Learning Resources Comparison
 
-| Resource | Best For | Format | Time | Cost | 
-|----------|----------|---------|------|------|
-| **<a href="https://swcarpentry.github.io/python-novice-inflammation/" style="color: #0066cc;">Software Carpentry</a>** | Research beginners | Workshop-style | 2 days | Free |
-| **<a href="https://projectpythia.org/" style="color: #0066cc;">Project Pythia</a>** | Atmospheric scientists | Tutorials + Videos | Self-paced | Free | 
-| **<a href="https://realpython.com/" style="color: #0066cc;">Real Python</a>** | All levels | Articles + Courses | Ongoing | Free/Paid |
-| **<a href="https://www.codecademy.com/learn/learn-python-3" style="color: #0066cc;">Codecademy Python</a>** | Absolute beginners | Interactive | 25 hours | Free/Pro |
-| **<a href="https://www.coursera.org/specializations/python" style="color: #0066cc;">Python for Everybody</a>** | General programming | Video lectures | 8 months | Free/Paid |
+| Resource | Best For                 | Format | Time | Cost | 
+|----------|--------------------------|---------|------|------|
+| **<a href="https://swcarpentry.github.io/python-novice-inflammation/" style="color: #0066cc;">Software Carpentry</a>** | Research beginners       | Workshop-style | 2 days | Free |
+| **<a href="https://projectpythia.org/" style="color: #0066cc;">Project Pythia</a>** | Geoscientific scientists | Tutorials + Videos | Self-paced | Free | 
+| **<a href="https://realpython.com/" style="color: #0066cc;">Real Python</a>** | All levels               | Articles + Courses | Ongoing | Free/Paid |
+| **<a href="https://www.codecademy.com/learn/learn-python-3" style="color: #0066cc;">Codecademy Python</a>** | Absolute beginners       | Interactive | 25 hours | Free/Pro |
+| **<a href="https://www.coursera.org/specializations/python" style="color: #0066cc;">Python for Everybody</a>** | General programming      | Video lectures | 8 months | Free/Paid |
 
 <div class="mt-8 p-4 bg-green-100 bg-opacity-10 rounded-lg">
   <strong>Recommendation:</strong> Start with Software Carpentry + Project Pythia for the perfect research focus
@@ -686,27 +689,25 @@ layout: section
 
 ---
 
-# Professional Development Books
+# Python Mastery
 
 <div class="grid grid-cols-2 gap-6">
 <div>
 
-## Python Mastery
 **<a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/" style="color: #0066cc;">Fluent Python (2nd Ed)</a>**
 - Deep dive into Python idioms
 - Advanced language features
 - Best for intermediate/advanced
 
-**<a href="https://effectivepython.com/" style="color: #0066cc;">Effective Python (2nd Ed)</a>**
-- 90 specific ways to write better Python
-- Practical tips and patterns
-- Great for all levels
+**<a href="https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/" style="color: #0066cc;">Architecture Patterns with Python</a>** -
+- Test-Driven Development
+- Domain-Driven Design
+- Event-Driven Microservices
 
 </div>
 <div>
 
-## Software Craftsmanship
-**<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer</a>**
+**<a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" style="color: #0066cc;">The Pragmatic Programmer (20th Anniversary Edition)</a>**
 - Timeless software development wisdom
 - Tool mastery and automation
 - Professional mindset cultivation
@@ -719,17 +720,13 @@ layout: section
 </div>
 </div>
 
-**<a href="https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/" style="color: #0066cc;">Architecture Patterns with Python</a>** - Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices by Harry Percival & Bob Gregory
-
-**When to read:** After 3-6 months of active Python coding
-
 ---
 
 # Data Analysis Examples
 - **<a href="https://cookbooks.projectpythia.org/" style="color: #0066cc;">Pythia Cookbooks</a>** - Step-by-step tutorials
 - **<a href="https://gallery.pangeo.io/" style="color: #0066cc;">Pangeo Gallery</a>** - Real-world workflows
 - **<a href="https://github.com/pytroll/pytroll-examples" style="color: #0066cc;">Pytroll Examples</a>** - Satellite processing
-- **<a href="https://gitlab.dmi.dk/" style="color: #0066cc;">Search for relevant code</a>** - General
+- **<a href="https://gitlab.dmi.dk/" style="color: #0066cc;">DMI GitLab</a>** - Search for relevant code
 
 ---
 layout: center
@@ -737,7 +734,7 @@ class: text-center
 ---
 
 # Podcast on this talk
-25-minute AI podcast discussion covering all resources
+22-minute AI podcast discussion covering all resources
 
 <audio controls class="mt-2">
   <source src="./assets/Python_Pathways_Podcast.wav" type="audio/wav">
