@@ -47,7 +47,7 @@ transition: fade-out
 </div>
 <div>
 
-## Our Approach
+## Approach
 
 - Curated pathways by level
 - Focus on meteorology & oceanography
