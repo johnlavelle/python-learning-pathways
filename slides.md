@@ -49,8 +49,8 @@ transition: fade-out
 
 ## Approach
 
-- Curated pathways by level
-- Focus on meteorology & oceanography
+- Introduce learning resources
+- Focus on scientific / meteorological libraries   
 - Modern best practices
 
 </div>
@@ -164,7 +164,7 @@ layout: section
 
 ---
 
-# Essential Scientific Stack: Data Handling
+# Core Scientific Stack
 
 
 <div class="grid grid-cols-2 gap-8">
@@ -174,80 +174,98 @@ layout: section
 import numpy as np
 import pandas as pd
 import xarray as xr
+import matplotlib.pyplot as plt
 ```
 
 </div>
 <div>
 
-**Core Libraries:**
+**Essential for Everyone:**
 * **NumPy**: Efficient array computing and mathematical operations
 * **Pandas**: Tabular data analysis with DataFrames  
 * **Xarray**: Labeled multi-dimensional arrays for NetCDF/climate data
+* **Matplotlib**: Foundation for all scientific plotting
 
 </div>
 </div>
 
-<div class="flex gap-6 justify-center mt-6">
+<div class="flex gap-4 justify-center mt-6 flex-wrap">
   <a href="https://numpy.org/doc/stable/user/absolute_beginners.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">NumPy Guide</a>
   <a href="https://pandas.pydata.org/docs/user_guide/10min.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Pandas Tutorial</a>
   <a href="https://docs.xarray.dev/en/stable/getting-started-guide/quick-overview.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Xarray Intro</a>
+  <a href="https://matplotlib.org/stable/tutorials/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Matplotlib Tutorials</a>
 </div>
 
-**Learning Order:** NumPy (1 week) → Pandas (1 week) → Xarray (2 weeks) → Domain tools
+**Learning Order:** NumPy (1 week) → Pandas (1 week) → Matplotlib (1 week) → Xarray (2 weeks)
 
 ---
 
-# Essential Scientific Stack: Visualization Tools
+# Specialized Libraries
+
+<div class="grid grid-cols-2 gap-6 text-sm">
+<div>
+
+## **Geospatial & Projections**
+- <a href="https://pyproj4.github.io/pyproj/" style="color: #0066cc;">**pyproj**</a> - Coordinate transformations
+- <a href="https://rasterio.readthedocs.io/" style="color: #0066cc;">**rasterio**</a> - Raster data (GeoTIFF, etc.)
+- <a href="https://geopandas.org/" style="color: #0066cc;">**geopandas**</a> - Geospatial data analysis
+
+## **Machine Learning**
+- <a href="https://pytorch.org/" style="color: #0066cc;">**PyTorch**</a> - Deep learning framework
+- <a href="https://jax.readthedocs.io/" style="color: #0066cc;">**JAX**</a> - High-performance scientific computing
+- <a href="https://scikit-learn.org/" style="color: #0066cc;">**scikit-learn**</a> - Traditional ML algorithms
+
+## **Performance & Computing**
+- <a href="https://dask.org/" style="color: #0066cc;">**dask**</a> - Parallel computing
+- <a href="https://numba.pydata.org/" style="color: #0066cc;">**numba**</a> - JIT compilation for speed
+- <a href="https://ray.io/" style="color: #0066cc;">**ray**</a> - Distributed computing
+
+</div>
+<div>
+
+## **Scientific Computing**
+- <a href="https://scipy.org/" style="color: #0066cc;">**scipy**</a> - Algorithms & statistical functions
+- <a href="https://www.sympy.org/" style="color: #0066cc;">**sympy**</a> - Symbolic mathematics
+- <a href="https://github.com/Unidata/cftime" style="color: #0066cc;">**cftime**</a> - Calendar-aware datetime
+
+## **Model Integration**
+- <a href="https://f90nml.readthedocs.io/" style="color: #0066cc;">**f90nml**</a> - Fortran namelist parsing
+- <a href="https://unidata.github.io/netcdf4-python/" style="color: #0066cc;">**netCDF4**</a> - Direct NetCDF access
+- <a href="https://github.com/ecmwf/cfgrib" style="color: #0066cc;">**cfgrib**</a> - GRIB file handling
+
+## **Visualization & Web**
+- <a href="https://plotly.com/python/" style="color: #0066cc;">**plotly**</a> - Interactive plots
+- <a href="https://streamlit.io/" style="color: #0066cc;">**streamlit**</a> - Web apps for science
+- <a href="https://bokeh.org/" style="color: #0066cc;">**bokeh**</a> - Interactive visualization
+
+</div>
+</div>
+
+---
+
+# Meteorology & Oceanography
 
 
 <div class="grid grid-cols-2 gap-8">
 <div>
 
 ```python
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
-import holoviews as hv
-```
-
-</div>
-<div>
-
-**Core Libraries:**
-* **Matplotlib**: Foundation plotting library for static graphs
-* **Cartopy**: Map projections and geospatial plotting
-* **HoloViews**: High-level data visualization with interactivity
-
-</div>
-</div>
-
-<div class="flex gap-6 justify-center mt-6">
-  <a href="https://matplotlib.org/stable/tutorials/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Matplotlib</a>
-  <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Cartopy</a>
-  <a href="https://holoviews.org/getting_started/Introduction.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">HoloViews</a>
-</div>
-
----
-
-# Scientific Stack: Domain-Specific Tools
-
-
-<div class="grid grid-cols-2 gap-8">
-<div>
-
-```python
-# Atmosphere
+# Atmosphere & Maps
 import metpy
+import cartopy.crs as ccrs
 import satpy
+
 # Ocean  
-import xarray
 import gsw  # oceanography
+import xgcm  # grid operations
 ```
 
 </div>
 <div>
 
-**Core Libraries:**
+**Specialized Libraries:**
 * **MetPy**: Meteorological calculations and weather analysis
+* **Cartopy**: Map projections and geospatial plotting
 * **Satpy**: Reading and processing satellite data
 * **GSW**: Oceanographic thermodynamics (TEOS-10)
 * **xgcm**: Grid-aware operations for ocean/atmosphere models
@@ -255,18 +273,41 @@ import gsw  # oceanography
 </div>
 </div>
 
-<div class="flex gap-6 justify-center mt-6">
+<div class="flex gap-4 justify-center mt-6 flex-wrap">
   <a href="https://unidata.github.io/MetPy/latest/tutorials/index.html" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">MetPy</a>
+  <a href="https://scitools.org.uk/cartopy/docs/latest/" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Cartopy</a>
+  <a href="https://satpy.readthedocs.io/" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">Satpy</a>
   <a href="https://teos-10.github.io/GSW-Python/" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">GSW</a>
   <a href="https://xgcm.readthedocs.io/" style="color: #0066cc; padding: 8px 16px; border: 1px solid #0066cc; border-radius: 4px;">xgcm</a>
 </div>
 
+<div class="mt-4 p-3 bg-blue-50 bg-opacity-30 rounded text-sm">
+  <strong>Join the community:</strong> <a href="https://pytroll.github.io/#getting-in-touch" style="color: #0066cc;">Pytroll Slack</a> for satellite/weather Python discussions
+</div>
 
 ---
 
-# Weather & Climate Data Access
+## Satellite Data
 
-## Atmosphere/Land Data
+**<a href="https://satpy.readthedocs.io/" style="color: #0066cc;">Satpy</a>** (Multi-sensor)
+```python
+from satpy import Scene
+scn = Scene(filenames=files)
+scn.load(['natural_color'])
+```
+Python library for reading and processing earth-observing satellite data
+
+**<a href="https://user.eumetsat.int/resources/user-guides/eumetsat-data-access-client-eumdac-guide" style="color: #0066cc;">EUMDAC</a>**
+```python
+import eumdac
+```
+Access EUMETSAT's entire satellite data archive programmatically
+
+**Setup:** `conda install -c conda-forge satpy xarray cfgrib`
+
+---
+
+## Data Access: Atmosphere/Land Data
 
 **<a href="https://github.com/ecmwf/ecmwf-opendata" style="color: #0066cc;">ECMWF Open Data</a>**
 ```python
@@ -288,7 +329,7 @@ Comprehensive atmospheric reanalysis from 1940-present with hourly data
 
 ---
 
-# Ocean & Marine Data
+## Data Access: Ocean & Marine Data
 
 **<a href="https://marine.copernicus.eu/" style="color: #0066cc;">Copernicus Marine Service</a>**
 ```python
@@ -309,30 +350,11 @@ Ocean observations, analyses, forecasts, and reanalyses for European seas and gl
 
 ---
 
-# Satellite Data
-
-**<a href="https://satpy.readthedocs.io/" style="color: #0066cc;">Satpy</a>** (Multi-sensor)
-```python
-from satpy import Scene
-scn = Scene(filenames=files)
-scn.load(['natural_color'])
-```
-Python library for reading and processing earth-observing satellite data
-
-**<a href="https://user.eumetsat.int/resources/user-guides/eumetsat-data-access-client-eumdac-guide" style="color: #0066cc;">EUMDAC</a>**
-```python
-import eumdac
-```
-Access EUMETSAT's entire satellite data archive programmatically
-
-**Setup:** `conda install -c conda-forge satpy xarray cfgrib`
-
----
-
 
 <div class="flex items-center justify-center h-full text-center">
 Ask your colleagues what libraries they use for your domain.
 </div>
+
 
 ---
 layout: section
