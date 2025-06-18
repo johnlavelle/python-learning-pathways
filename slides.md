@@ -37,7 +37,7 @@ transition: fade-out
 <div class="grid grid-cols-2 gap-8">
 <div>
 
-## The Challenge
+## Challenge
 
 - Python ecosystem is **vast**
 - Scientific computing needs
@@ -142,16 +142,16 @@ layout: section
 
 # Modern Learning Resources Comparison
 
-| Resource | Best For                 | Format | Time | Cost | 
-|----------|--------------------------|---------|------|------|
-| **<a href="https://swcarpentry.github.io/python-novice-inflammation/" style="color: #0066cc;">Software Carpentry</a>** | Research beginners       | Workshop-style | 2 days | Free |
-| **<a href="https://projectpythia.org/" style="color: #0066cc;">Project Pythia</a>** | Geoscientific scientists | Tutorials + Videos | Self-paced | Free | 
-| **<a href="https://realpython.com/" style="color: #0066cc;">Real Python</a>** | All levels               | Articles + Courses | Ongoing | Free/Paid |
-| **<a href="https://www.codecademy.com/learn/learn-python-3" style="color: #0066cc;">Codecademy Python</a>** | Absolute beginners       | Interactive | 25 hours | Free/Pro |
-| **<a href="https://www.coursera.org/specializations/python" style="color: #0066cc;">Python for Everybody</a>** | General programming      | Video lectures | 8 months | Free/Paid |
+| Resource | Best For            | Format | Time | Cost | 
+|----------|---------------------|---------|------|------|
+| **<a href="https://swcarpentry.github.io/python-novice-inflammation/" style="color: #0066cc;">Software Carpentry</a>** | Research beginners  | Workshop-style | 2 days | Free |
+| **<a href="https://projectpythia.org/" style="color: #0066cc;">Project Pythia</a>** | Geoscientists       | Tutorials + Videos | Self-paced | Free | 
+| **<a href="https://realpython.com/" style="color: #0066cc;">Real Python</a>** | All levels          | Articles + Courses | Ongoing | Free/Paid |
+| **<a href="https://www.codecademy.com/learn/learn-python-3" style="color: #0066cc;">Codecademy Python</a>** | Absolute beginners  | Interactive | 25 hours | Free/Pro |
+| **<a href="https://www.coursera.org/specializations/python" style="color: #0066cc;">Python for Everybody</a>** | General programming | Video lectures | 8 months | Free/Paid |
 
 <div class="mt-8 p-4 bg-green-100 bg-opacity-10 rounded-lg">
-  <strong>Recommendation:</strong> Start with Software Carpentry + Project Pythia for the perfect research focus
+  <strong>Recommendation:</strong> Start with Software Carpentry or Project Pythia, depending on your experience
 </div>
 
 ---
@@ -305,7 +305,7 @@ Ocean observations, analyses, forecasts, and reanalyses for European seas and gl
 - Ocean heat content and sea level
 - CMIP6 climate projections
 
-<a href="https://pypi.org/project/copernicus-marine-client/" style="color: #0066cc;">Marine Python Client</a> • <a href="https://help.marine.copernicus.eu/en/articles/7970514-copernicus-marine-toolbox-introduction" style="color: #0066cc;">Documentation</a>
+**Setup:** `uv pip install copernicusmarine`
 
 ---
 
@@ -325,11 +325,9 @@ import eumdac
 ```
 Access EUMETSAT's entire satellite data archive programmatically
 
-**Setup:** 
- * `conda install -c conda-forge satpy xarray cfgrib`
- * `uv pip install copernicusmarine`
+**Setup:** `conda install -c conda-forge satpy xarray cfgrib`
 
-----
+---
 
 
 <div class="flex items-center justify-center h-full text-center">
@@ -734,7 +732,7 @@ class: text-center
 ---
 
 # Podcast on this talk
-22-minute AI podcast discussion covering all resources
+22-minute AI podcast discussion
 
 <audio controls class="mt-2">
   <source src="./assets/Python_Pathways_Podcast.wav" type="audio/wav">
