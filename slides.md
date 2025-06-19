@@ -740,7 +740,7 @@ layout: section
 - Advanced language features
 - Best for intermediate/advanced
 
-**<a href="https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/" style="color: #0066cc;">Architecture Patterns with Python</a>** -
+**<a href="https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/" style="color: #0066cc;">Architecture Patterns with Python</a>**
 - Test-Driven Development
 - Domain-Driven Design
 - Event-Driven Microservices
