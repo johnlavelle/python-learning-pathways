@@ -90,7 +90,7 @@ graph LR
 
 ### **Phase 3:** Domain Applications
 - **Goal:** Work with real meteorological/oceanographic data
-- Xarray for multi-dimensional data (NetCDF/GRIB)
+- Xarray for multi-dimensional data (NetCDF/Zarr)
 - Domain-specific libraries (MetPy, Satpy, etc.)
 - Data access APIs (ECMWF, Copernicus, etc.)
 
@@ -206,9 +206,9 @@ import matplotlib.pyplot as plt
 <div>
 
 ## **Geospatial & Projections**
-- <a href="https://pyproj4.github.io/pyproj/" style="color: #0066cc;">**pyproj**</a> - Coordinate transformations
 - <a href="https://rasterio.readthedocs.io/" style="color: #0066cc;">**rasterio**</a> - Raster data (GeoTIFF, etc.)
 - <a href="https://geopandas.org/" style="color: #0066cc;">**geopandas**</a> - Geospatial data analysis
+- <a href="https://pyproj4.github.io/pyproj/" style="color: #0066cc;">**pyproj**</a> - Coordinate transformations
 
 ## **Machine Learning**
 - <a href="https://pytorch.org/" style="color: #0066cc;">**PyTorch**</a> - Deep learning framework
@@ -226,17 +226,18 @@ import matplotlib.pyplot as plt
 ## **Scientific Computing**
 - <a href="https://scipy.org/" style="color: #0066cc;">**scipy**</a> - Algorithms & statistical functions
 - <a href="https://www.sympy.org/" style="color: #0066cc;">**sympy**</a> - Symbolic mathematics
-- <a href="https://github.com/Unidata/cftime" style="color: #0066cc;">**cftime**</a> - Calendar-aware datetime
+- <a href="https://www.statsmodels.org/stable/index.html" style="color: #0066cc;">**statsmodels**</a> -  Statistical models,
 
-## **Model Integration**
-- <a href="https://f90nml.readthedocs.io/" style="color: #0066cc;">**f90nml**</a> - Fortran namelist parsing
-- <a href="https://unidata.github.io/netcdf4-python/" style="color: #0066cc;">**netCDF4**</a> - Direct NetCDF access
-- <a href="https://github.com/ecmwf/cfgrib" style="color: #0066cc;">**cfgrib**</a> - GRIB file handling
+## **Data Access**
+- <a href="https://zarr.dev/" style="color: #0066cc;">**Zarr**</a> - Efficient multidimensional data format
+- <a href="https://stacspec.org/" style="color: #0066cc;">**PySTAC**</a> - SpatioTemporal Asset Catalogs
+- <a href="https://intake.readthedocs.io/en/latest/" style="color: #0066cc;">**Intake**</a> - Data access and distribution
+
 
 ## **Visualization & Web**
 - <a href="https://plotly.com/python/" style="color: #0066cc;">**plotly**</a> - Interactive plots
+- <a href="https://holoviews.org/" style="color: #0066cc;">**holoviews**</a> - Annotate your data and let it visualize itself
 - <a href="https://streamlit.io/" style="color: #0066cc;">**streamlit**</a> - Web apps for science
-- <a href="https://bokeh.org/" style="color: #0066cc;">**bokeh**</a> - Interactive visualization
 
 </div>
 </div>
@@ -339,12 +340,6 @@ cm.open_dataset(
 )
 ```
 Ocean observations, analyses, forecasts, and reanalyses for European seas and global ocean
-
-**Additional Ocean/Climate Datasets via CDS:**
-- Sea ice concentration and thickness
-- Sea surface temperature (SST) 
-- Ocean heat content and sea level
-- CMIP6 climate projections
 
 **Setup:** `uv pip install copernicusmarine`
 
@@ -449,14 +444,40 @@ pip install uv
 
 **Usage Examples:**
 ```bash
-# Install packages
-uv pip install numpy pandas xarray
 # Create virtual environment
 uv venv myenv
 source myenv/bin/activate  # Linux/Mac
+# Install packages
+uv pip install numpy pandas xarray
 ```
 
 **Video:** <a href="https://www.youtube.com/watch?v=qh98qOND6MI" style="color: #0066cc;">ArjanCodes/uv</a>
+
+---
+
+# Environment Management: pixi
+
+<a href="https://pixi.sh/latest/" style="color: #0066cc;">`pixi`</a> Pixi is a fast, modern, and reproducible package management tool
+
+**Benefits:**
+- Uses `uv` internally for fast PyPI resolution
+- Built-in environment management
+
+**Install pixi:**
+```bash
+curl -fsSL https://pixi.sh/install.sh | bash
+```
+
+**Usage Examples:**
+```bash
+# Initialize a new project
+pixi init myproject
+cd myproject
+# Add conda dependencies
+pixi add numpy pandas xarray cartopy
+# Run commands in the environment
+pixi run python script.py
+```
 
 ---
 
@@ -695,7 +716,7 @@ layout: section
 - <a href="https://docs.xarray.dev/" style="color: #0066cc;">Xarray Docs</a> - Multidimensional data
 - <a href="https://matplotlib.org/stable/tutorials/" style="color: #0066cc;">Matplotlib Tutorials</a> - Plotting
 
-**Domain Tools:**
+**Domain Libraries:**
 - <a href="https://satpy.readthedocs.io/en/stable/auto_examples/index.html" style="color: #0066cc;">Satpy Gallery</a> - Satellite examples
 - <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html" style="color: #0066cc;">Cartopy Examples</a> - Map plotting
 - <a href="https://unidata.github.io/MetPy/latest/tutorials/index.html" style="color: #0066cc;">MetPy Tutorials</a> - Meteorology
