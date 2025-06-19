@@ -226,7 +226,7 @@ import matplotlib.pyplot as plt
 ## **Scientific Computing**
 - <a href="https://scipy.org/" style="color: #0066cc;">**scipy**</a> - Algorithms & statistical functions
 - <a href="https://www.sympy.org/" style="color: #0066cc;">**sympy**</a> - Symbolic mathematics
-- <a href="https://www.statsmodels.org/stable/index.html" style="color: #0066cc;">**statsmodels**</a> -  Statistical models,
+- <a href="https://www.statsmodels.org/stable/index.html" style="color: #0066cc;">**statsmodels**</a> -  Statistical models
 
 ## **Data Access**
 - <a href="https://zarr.dev/" style="color: #0066cc;">**Zarr**</a> - Efficient multidimensional data format
@@ -716,7 +716,7 @@ layout: section
 - <a href="https://docs.xarray.dev/" style="color: #0066cc;">Xarray Docs</a> - Multidimensional data
 - <a href="https://matplotlib.org/stable/tutorials/" style="color: #0066cc;">Matplotlib Tutorials</a> - Plotting
 
-**Domain Libraries:**
+**Domain Specific:**
 - <a href="https://satpy.readthedocs.io/en/stable/auto_examples/index.html" style="color: #0066cc;">Satpy Gallery</a> - Satellite examples
 - <a href="https://scitools.org.uk/cartopy/docs/latest/gallery/index.html" style="color: #0066cc;">Cartopy Examples</a> - Map plotting
 - <a href="https://unidata.github.io/MetPy/latest/tutorials/index.html" style="color: #0066cc;">MetPy Tutorials</a> - Meteorology
