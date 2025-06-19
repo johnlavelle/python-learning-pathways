@@ -405,11 +405,10 @@ layout: section
 
 ---
 
-# Environment Management: Miniconda
+# Environment Management: Miniforge
 
-**Using <a href="https://docs.conda.io/en/latest/miniconda.html" style="color: #0066cc;">Miniconda</a>** - the standard for scientific Python
-- No licensing restrictions
-- Same features as Anaconda
+**Using <a href="https://github.com/conda-forge/miniforge" style="color: #0066cc;">Miniforge</a>** - a conda distribution for scientific Python
+- Community-driven, fully open source
 - Installs pre-compiled binaries (not just Python packages)
 
 ```bash
@@ -417,13 +416,13 @@ layout: section
 conda create -n dmi-work python=3.11
 conda activate dmi-work
 
-# Install scientific stack from conda-forge
-conda install -c conda-forge \
-  cartopy gdal netcdf4 pandas xarray
+# Install scientific stack (conda-forge is default)
+conda install cartopy gdal netcdf4 pandas xarray
+
+# Or use mamba for faster installs
+mamba install cartopy gdal netcdf4 pandas xarray
 ```
 
-**Main Benefit over pip-only:**
-- Handles non-Python dependencies (GDAL, PROJ, etc.)
 
 **Resources:** <a href="https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html" style="color: #0066cc;">Conda cheat sheet</a> • <a href="https://conda-forge.org/packages/" style="color: #0066cc;">Conda-forge packages</a>
 
